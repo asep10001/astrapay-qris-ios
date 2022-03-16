@@ -1,0 +1,17 @@
+Index: .idea/xcode.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"XcodeMetaData\" PROJECT_DIR=\"$PROJECT_DIR$\" PROJECT_FILE=\"$PROJECT_DIR$/qris-sdk-2.xcodeproj\" />\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/xcode.xml b/.idea/xcode.xml
+--- a/.idea/xcode.xml	(revision 994334ce96a59e349ff812591e24448760bf3dad)
++++ b/.idea/xcode.xml	(date 1647402968302)
+@@ -1,4 +1,4 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="XcodeMetaData" PROJECT_DIR="$PROJECT_DIR$" PROJECT_FILE="$PROJECT_DIR$/qris-sdk-2.xcodeproj" />
++  <component name="XcodeMetaData" PROJECT_DIR="$PROJECT_DIR$" PROJECT_FILE="$PROJECT_DIR$/qris-sdk-2.xcworkspace" COCOAPODS_PROJECT_EXCLUDED="true" />
+ </project>
+\ No newline at end of file
