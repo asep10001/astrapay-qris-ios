@@ -1,0 +1,6 @@
+framework module Pods_qris_sdk_2 {
+  umbrella header "Pods-qris-sdk-2-umbrella.h"
+
+  export *
+  module * { export * }
+}
