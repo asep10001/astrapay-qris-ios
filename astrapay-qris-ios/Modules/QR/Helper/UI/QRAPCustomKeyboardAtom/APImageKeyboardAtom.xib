@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRAPImageKeyboardAtom" customModule="astrapay" customModuleProvider="target">
+            <connections>
+                <outlet property="coreButtonKeyboard" destination="YmI-b0-pZY" id="MYQ-nW-adZ"/>
+                <outlet property="coreContainerKeyboard" destination="DBl-jG-JXp" id="gaa-K4-NxP"/>
+                <outlet property="coreImageKeyboard" destination="jUB-wV-1rj" id="HfY-cC-esG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="208" height="154"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DBl-jG-JXp">
+                    <rect key="frame" x="0.0" y="0.0" width="208" height="154"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmI-b0-pZY">
+                            <rect key="frame" x="0.0" y="0.0" width="208" height="154"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal">
+                                <color key="titleColor" red="0.01176470588" green="0.46274509800000002" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jUB-wV-1rj">
+                            <rect key="frame" x="87" y="66.5" width="34" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="YfF-lJ-hby"/>
+                                <constraint firstAttribute="width" constant="34" id="aMD-o2-iuK"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="YmI-b0-pZY" firstAttribute="leading" secondItem="DBl-jG-JXp" secondAttribute="leading" id="JX4-TM-mXX"/>
+                        <constraint firstAttribute="trailing" secondItem="YmI-b0-pZY" secondAttribute="trailing" id="OAl-dG-U00"/>
+                        <constraint firstItem="jUB-wV-1rj" firstAttribute="centerY" secondItem="DBl-jG-JXp" secondAttribute="centerY" id="WPO-0G-aeV"/>
+                        <constraint firstItem="YmI-b0-pZY" firstAttribute="top" secondItem="DBl-jG-JXp" secondAttribute="top" id="dFa-yo-Cvw"/>
+                        <constraint firstAttribute="bottom" secondItem="YmI-b0-pZY" secondAttribute="bottom" id="vhI-79-qVJ"/>
+                        <constraint firstItem="jUB-wV-1rj" firstAttribute="centerX" secondItem="DBl-jG-JXp" secondAttribute="centerX" id="yXa-1f-mQg"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="DBl-jG-JXp" secondAttribute="bottom" id="ATO-Fl-lDL"/>
+                <constraint firstItem="DBl-jG-JXp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fj5-1i-YQb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="DBl-jG-JXp" secondAttribute="trailing" id="qDb-gy-AGi"/>
+                <constraint firstItem="DBl-jG-JXp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="vLr-bZ-0O6"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-11.594202898550726" y="-117.85714285714285"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Barlow-Medium.ttf">
+            <string>Barlow-Medium</string>
+        </array>
+        <array key="Barlow-Regular.ttf">
+            <string>Barlow-Regular</string>
+        </array>
+        <array key="Barlow-SemiBold.ttf">
+            <string>Barlow-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="QRMerchantInfoTvCell" customModule="astrapay" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ii5-Ae-2y8">
+                        <rect key="frame" x="14" y="26" width="292" height="108"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61K-Jn-SaO">
+                                <rect key="frame" x="0.0" y="0.0" width="292" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bayar ke" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoe-sQ-jY3" customClass="UILabelInterSemiBold" customModule="astrapay" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="292" height="20"/>
+                                        <fontDescription key="fontDescription" name="Barlow-SemiBold" family="Barlow" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="aoe-sQ-jY3" firstAttribute="top" secondItem="61K-Jn-SaO" secondAttribute="top" id="7u5-qp-Lxy"/>
+                                    <constraint firstAttribute="trailing" secondItem="aoe-sQ-jY3" secondAttribute="trailing" id="Msd-Aq-8hG"/>
+                                    <constraint firstAttribute="bottom" secondItem="aoe-sQ-jY3" secondAttribute="bottom" id="d8m-BL-LlR"/>
+                                    <constraint firstItem="aoe-sQ-jY3" firstAttribute="leading" secondItem="61K-Jn-SaO" secondAttribute="leading" id="g8d-ab-7ba"/>
+                                    <constraint firstAttribute="height" constant="20" id="xDP-Im-qs4"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I83-fO-FG1">
+                                <rect key="frame" x="0.0" y="28" width="292" height="80"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s1i-a0-peB">
+                                        <rect key="frame" x="0.0" y="5" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.082409250409999996" green="0.14396427749999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="eVN-tr-wF6"/>
+                                            <constraint firstAttribute="width" constant="70" id="nLg-mm-uTQ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MgL-Mb-kvP">
+                                        <rect key="frame" x="86" y="8.5" width="206" height="63"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mkR-E3-d1t">
+                                                <rect key="frame" x="0.0" y="0.0" width="206" height="63"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kopi Kenangan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odz-ZO-0hL" customClass="UILabelInterSemiBold" customModule="astrapay" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="206" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="ipt-yF-dI4"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pondok Labu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IsQ-9B-c8Q" customClass="UILabelInterRegular" customModule="astrapay" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="21" width="206" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="Cxl-S3-vBZ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Barlow-Medium" family="Barlow" pointSize="15"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02/10/2020 20:58:16" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xed-Co-FUt" customClass="UILabelInterRegular" customModule="astrapay" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="42" width="206" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="i1f-s6-zju"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="12"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="mkR-E3-d1t" firstAttribute="leading" secondItem="MgL-Mb-kvP" secondAttribute="leading" id="HgU-BC-cgn"/>
+                                            <constraint firstAttribute="bottom" secondItem="mkR-E3-d1t" secondAttribute="bottom" id="TFE-GL-6Gq"/>
+                                            <constraint firstItem="mkR-E3-d1t" firstAttribute="top" secondItem="MgL-Mb-kvP" secondAttribute="top" id="UrJ-FL-u9I"/>
+                                            <constraint firstAttribute="trailing" secondItem="mkR-E3-d1t" secondAttribute="trailing" id="fe3-hJ-AeO"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srT-yE-dJa">
+                                        <rect key="frame" x="10" y="15" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="kgO-YY-K8i"/>
+                                            <constraint firstAttribute="width" constant="50" id="xba-mP-gLn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="MgL-Mb-kvP" firstAttribute="centerY" secondItem="I83-fO-FG1" secondAttribute="centerY" id="7Vl-KC-Mke"/>
+                                    <constraint firstItem="MgL-Mb-kvP" firstAttribute="leading" secondItem="s1i-a0-peB" secondAttribute="trailing" constant="16" id="DVc-2F-rhW"/>
+                                    <constraint firstAttribute="height" constant="80" id="Dxf-oq-6MW"/>
+                                    <constraint firstAttribute="trailing" secondItem="MgL-Mb-kvP" secondAttribute="trailing" id="Mag-7t-tXQ"/>
+                                    <constraint firstItem="srT-yE-dJa" firstAttribute="leading" secondItem="I83-fO-FG1" secondAttribute="leading" constant="10" id="Ooy-RP-RN0"/>
+                                    <constraint firstItem="s1i-a0-peB" firstAttribute="centerY" secondItem="I83-fO-FG1" secondAttribute="centerY" id="mQ4-PG-Rdo"/>
+                                    <constraint firstItem="srT-yE-dJa" firstAttribute="centerY" secondItem="I83-fO-FG1" secondAttribute="centerY" id="nkw-fi-jWf"/>
+                                    <constraint firstItem="s1i-a0-peB" firstAttribute="leading" secondItem="I83-fO-FG1" secondAttribute="leading" id="zka-gj-9k1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Ii5-Ae-2y8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="1BE-dL-aNS"/>
+                    <constraint firstAttribute="bottom" secondItem="Ii5-Ae-2y8" secondAttribute="bottom" constant="16" id="kE5-cl-abv"/>
+                    <constraint firstAttribute="trailing" secondItem="Ii5-Ae-2y8" secondAttribute="trailing" constant="14" id="yX3-2y-FEb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="ivLabelOutlet" destination="s1i-a0-peB" id="Y6q-L5-sxE"/>
+                <outlet property="lbLokasiMerchantOutlet" destination="IsQ-9B-c8Q" id="Ggt-kz-UOV"/>
+                <outlet property="lbMerchantNameOutlet" destination="Odz-ZO-0hL" id="Cce-Rg-5hE"/>
+                <outlet property="lblBuyToOutlet" destination="aoe-sQ-jY3" id="kye-cb-r6x"/>
+                <outlet property="lblDateTransactionOutlet" destination="xed-Co-FUt" id="YHh-Uh-50q"/>
+                <outlet property="lblImageNameMerchant" destination="srT-yE-dJa" id="K5D-6E-d3D"/>
+                <outlet property="viewBuyToOutlet" destination="61K-Jn-SaO" id="4sw-ag-foV"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="69.642857142857139"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="IsQ-9B-c8Q">
+            <size key="intrinsicContentSize" width="90" height="18"/>
+        </designable>
+        <designable name="Odz-ZO-0hL">
+            <size key="intrinsicContentSize" width="113.5" height="20.5"/>
+        </designable>
+        <designable name="aoe-sQ-jY3">
+            <size key="intrinsicContentSize" width="65" height="20.5"/>
+        </designable>
+        <designable name="xed-Co-FUt">
+            <size key="intrinsicContentSize" width="119" height="14.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailPaymentSelectedViewPaylaterMauCash" customModule="astrapay" customModuleProvider="target">
+            <connections>
+                <outlet property="balanceText" destination="ggq-Dx-uv3" id="yV7-wq-cji"/>
+                <outlet property="checkImage" destination="0Cn-sB-5Cv" id="jAP-Vf-Gdm"/>
+                <outlet property="containerView" destination="iyo-Ff-C6a" id="05k-hI-UFV"/>
+                <outlet property="limitTidakCukup" destination="bqP-AJ-7pe" id="tV3-kq-msw"/>
+                <outlet property="paymentImage" destination="yG5-bY-zvc" id="Mo2-nW-O9Y"/>
+                <outlet property="paymentName" destination="ZOE-XI-oDw" id="gMJ-XV-bLG"/>
+                <outlet property="poweredByMauCash" destination="SvC-PO-hZf" id="1II-yu-kEe"/>
+                <outlet property="saldoTidakCukup" destination="SvC-PO-hZf" id="D9x-By-dB1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1Hl-jM-SD9">
+            <rect key="frame" x="0.0" y="0.0" width="431" height="268"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyo-Ff-C6a" userLabel="ContainerView">
+                    <rect key="frame" x="0.0" y="8" width="431" height="160"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_icon_small" translatesAutoresizingMaskIntoConstraints="NO" id="yG5-bY-zvc" userLabel="Payment Image">
+                            <rect key="frame" x="17" y="60" width="30" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="7Vd-u2-3IB"/>
+                                <constraint firstAttribute="height" constant="40" id="xzw-J7-FeE"/>
+                            </constraints>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Cn-sB-5Cv" userLabel="checkImage">
+                            <rect key="frame" x="382" y="60" width="30" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="ZTU-fM-lP8"/>
+                                <constraint firstAttribute="height" constant="40" id="eNu-yl-12J"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZKU-tf-Fpf">
+                            <rect key="frame" x="71" y="54.5" width="41.5" height="51"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOE-XI-oDw" userLabel="paymentName">
+                                    <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggq-Dx-uv3" userLabel="balanceText">
+                                    <rect key="frame" x="0.0" y="30.5" width="41.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Ma8-lf-1Vw">
+                            <rect key="frame" x="71" y="110.5" width="41.5" height="43"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SvC-PO-hZf" userLabel="powered by maucash">
+                                    <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqP-AJ-7pe" userLabel="limit tidak cukup">
+                                    <rect key="frame" x="0.0" y="22.5" width="41.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="7Uv-Ea-6rV"/>
+                        <constraint firstItem="ZKU-tf-Fpf" firstAttribute="leading" secondItem="yG5-bY-zvc" secondAttribute="trailing" constant="24" id="Mdi-fq-QAQ"/>
+                        <constraint firstItem="0Cn-sB-5Cv" firstAttribute="centerY" secondItem="iyo-Ff-C6a" secondAttribute="centerY" id="Rcp-fz-ciD"/>
+                        <constraint firstItem="Ma8-lf-1Vw" firstAttribute="leading" secondItem="iyo-Ff-C6a" secondAttribute="leading" constant="71" id="ZaH-9Z-aQO"/>
+                        <constraint firstItem="yG5-bY-zvc" firstAttribute="centerY" secondItem="iyo-Ff-C6a" secondAttribute="centerY" id="bP9-PZ-Vj3"/>
+                        <constraint firstItem="ZKU-tf-Fpf" firstAttribute="centerY" secondItem="iyo-Ff-C6a" secondAttribute="centerY" id="h9b-ht-yD6"/>
+                        <constraint firstAttribute="trailing" secondItem="0Cn-sB-5Cv" secondAttribute="trailing" constant="19" id="kcn-nb-X8r"/>
+                        <constraint firstItem="Ma8-lf-1Vw" firstAttribute="top" secondItem="ZKU-tf-Fpf" secondAttribute="bottom" constant="5" id="lnJ-Ns-bI5"/>
+                        <constraint firstItem="yG5-bY-zvc" firstAttribute="leading" secondItem="iyo-Ff-C6a" secondAttribute="leading" constant="17" id="roK-0v-9Ao"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VGF-YT-6LO"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="iyo-Ff-C6a" firstAttribute="top" secondItem="1Hl-jM-SD9" secondAttribute="top" constant="8" id="D7B-qA-lyo"/>
+                <constraint firstItem="iyo-Ff-C6a" firstAttribute="leading" secondItem="1Hl-jM-SD9" secondAttribute="leading" id="HMO-hM-COv"/>
+                <constraint firstItem="iyo-Ff-C6a" firstAttribute="trailing" secondItem="1Hl-jM-SD9" secondAttribute="trailing" id="XMf-8p-74S"/>
+                <constraint firstItem="iyo-Ff-C6a" firstAttribute="bottom" secondItem="1Hl-jM-SD9" secondAttribute="bottom" constant="8" id="fgM-RK-j4x"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="331.15942028985512" y="381.02678571428572"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="main_icon_small" width="50" height="50"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

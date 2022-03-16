@@ -1,0 +1,6 @@
+framework module Pods_astrapay_qris_ios {
+  umbrella header "Pods-astrapay-qris-ios-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,15 +7,178 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DD45003219D55FE71078FED /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45BD05AD9D652749D0116 /* UIColorExtension.swift */; };
+		2DD4500F85D3B99EF711B9F0 /* QRNewTransactionFlowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45BE4FC1D6AFEA7C034CF /* QRNewTransactionFlowViewModel.swift */; };
+		2DD45017248F94AB1AE2BD82 /* DetailPaymentSelectedViewPaylaterMauCash.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45ACF804E3141382F33FF /* DetailPaymentSelectedViewPaylaterMauCash.xib */; };
+		2DD4501F1046615962818A08 /* QRDetailPaymentTvCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD454FE269E1A5841352FB2 /* QRDetailPaymentTvCell.xib */; };
+		2DD45030E2D5335C03FD35C8 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45F71857F84DE81EA20BB /* DictionaryExtension.swift */; };
+		2DD450595B7E7D7A87EBBFCF /* APImageKeyboardAtom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD459F02551EF1210E68597 /* APImageKeyboardAtom.xib */; };
+		2DD450723B9BDF83F2535EA4 /* QRAPPopUpNoteTransferVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45B18E003434865A58090 /* QRAPPopUpNoteTransferVC.xib */; };
+		2DD4507C7FAB5071A5D144C0 /* QRPopUpOTP.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45786E0B460C8A300C1F8 /* QRPopUpOTP.xib */; };
+		2DD450800FC1ECA1A7AACD7A /* QRPLMCBillDetailPaymentTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45F8CF48BE40D85481DC3 /* QRPLMCBillDetailPaymentTVCell.swift */; };
+		2DD4508B7D5AC6022C7C3D08 /* QRBaseColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4574A2C49E795DC666E3F /* QRBaseColor.swift */; };
+		2DD45091F2ECCD1DD0F31E44 /* GetDetailTransaksi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45516A0AF696B094E4FC1 /* GetDetailTransaksi.swift */; };
+		2DD45095A89599439AA1D8CA /* QRTransactionIsProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45B07A9C76AF1C04193D4 /* QRTransactionIsProcessViewController.swift */; };
+		2DD4509CB94E575C49D252F0 /* QRCameraControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45090A95D6C05112D5EBF /* QRCameraControlView.swift */; };
+		2DD450B4F6F815D5B3FD0160 /* QRAPButtonAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD457F7A01485397400B942 /* QRAPButtonAtom.swift */; };
+		2DD450E5B126F15B9E91093E /* InterThin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45E4EA7A8F0828B897866 /* InterThin.ttf */; };
+		2DD450EB3972C49F9D9D0E3C /* QRInquiryDtoViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4571AF896A30B44EDE2E3 /* QRInquiryDtoViewData.swift */; };
+		2DD451073BAB5F48DB4CD273 /* QRLoadingStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45EEE6495ADAAEF837012 /* QRLoadingStateView.xib */; };
+		2DD4510CD7C1DDDD710598DC /* QRTransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45E50ECE28BB4BA1CF6DE /* QRTransactionDetailViewController.swift */; };
+		2DD4510CE4887DB060E135C4 /* QRTransactionDetailTopTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45878C97B64AF25D57B87 /* QRTransactionDetailTopTVCell.xib */; };
+		2DD4512876F0B09751E6A37A /* QRTransactionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4592425B795586152D9CE /* QRTransactionDetailViewModel.swift */; };
+		2DD45139EE42954CEBFB5B14 /* QRTrxDetailItemTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45B3D4A673D7DF2B1DBB4 /* QRTrxDetailItemTVCell.swift */; };
+		2DD451547A25D519E81E5E26 /* QRResultPaymentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45D5C238153CAC2BC9F3A /* QRResultPaymentView.xib */; };
+		2DD4515CC5DD68548207F997 /* inProgressLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45BD00073E4C85ED38A3F /* inProgressLottie.json */; };
+		2DD4518E5818057672F22193 /* QRPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45C06E0667404E0673EDC /* QRPopUp.xib */; };
+		2DD451989743B83136D3A177 /* QRAPTransactionDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45153145434CF531436F7 /* QRAPTransactionDetailVC.swift */; };
+		2DD451A12635C0B52FFF20ED /* BarlowExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45260A7F4023E67BEA018 /* BarlowExtraBold.ttf */; };
+		2DD451CC33617758B36CB238 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4578ADDBBCE530A3112DD /* Service.swift */; };
+		2DD451DA3D6DCD4E2EAF7F98 /* QRInputLoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD458F2451614F938DBB833 /* QRInputLoginTextField.swift */; };
+		2DD4520AEB4D0CC6E21F8EB9 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD451D56EB821381DE84FCA /* UIViewControllerExtension.swift */; };
+		2DD4522ABA6CA7504603543B /* QrInquiryDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD453B6A071900B35984BE7 /* QrInquiryDto.swift */; };
+		2DD4523C9253DCF643E7669E /* QRDetailPaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45DF787C73ECC05ED949B /* QRDetailPaymentViewModel.swift */; };
+		2DD4523F9336CB689D9D3072 /* QRPLMCDetailPaymentTVCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4581EEE18F90356FD2D76 /* QRPLMCDetailPaymentTVCellViewModel.swift */; };
+		2DD452497E0A2EBAE4A738E8 /* QRDetailPaymentTVCellAstrapay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD453D410C2773B9F0E5C14 /* QRDetailPaymentTVCellAstrapay.swift */; };
+		2DD45253034060D7A647E1C0 /* InterRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DD455565B57E7893357A8AF /* InterRegular.ttf */; };
+		2DD45258E606914FB881120B /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45EF52FB86C7DA1755082 /* UILabelExtension.swift */; };
+		2DD45274E3E21C75C0D77BA0 /* QRCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45A6B247C95CCDF405EA0 /* QRCameraView.swift */; };
+		2DD45281D83FBE7233E89D2C /* QRInputAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45BB062C46CC1A20CE76C /* QRInputAmountViewController.swift */; };
+		2DD452BD8C10D4CE4606B28A /* QRStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45F9613812F3598B3912D /* QRStoryboard.storyboard */; };
+		2DD452D029533C14528F00CB /* QRInputAmountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD4508B619CD84F160BB1CA /* QRInputAmountViewController.xib */; };
+		2DD452DDAB9C8A4E0E4FE9C5 /* QRGaleryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45D2A9BB52B0ADFC82C0C /* QRGaleryPicker.swift */; };
+		2DD452EF8B95E6BE4FBDAC63 /* QRColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4508F0CB2E2A1E8EBF63A /* QRColor.swift */; };
+		2DD452F86D1713E1B5989789 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45E70B7C4C9C38FD8775A /* DateFormatterExtension.swift */; };
+		2DD452F948700004F8FEE554 /* BarlowThin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DD4501CB975B01CE96AFCF2 /* BarlowThin.ttf */; };
+		2DD4531E1B545EF444DA7526 /* QRUILabelInterMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45A388B9321F85809BD68 /* QRUILabelInterMedium.swift */; };
+		2DD45323DEEF03FF637C969A /* QRGenericResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4560E51620BC8F9D8FB6D /* QRGenericResult.swift */; };
+		2DD45331E7DD57302FB808C2 /* QRAPPopUpNoteTransferVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45B84BDE5F6F92E0C2FCB /* QRAPPopUpNoteTransferVC.swift */; };
+		2DD4534B03821A5CA4684164 /* QRSelectPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4538A5317715136303C3A /* QRSelectPaymentView.swift */; };
+		2DD453650878C999858D2829 /* BarlowSemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DD454938DFAF9FA744EF1FF /* BarlowSemiBold.ttf */; };
+		2DD4537F4C8A297C70D92926 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45FBF6EDE872D6196DEB1 /* QRViewController.swift */; };
+		2DD45381149C3699285BFA87 /* NumericExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45F0B77AD13E7714F9247 /* NumericExtension.swift */; };
+		2DD4539075F471B5E7DE9DA4 /* QRAPImageKeyboardAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45ED27A05D6E56216FA5B /* QRAPImageKeyboardAtom.swift */; };
+		2DD4539EC9C1E2A59849785C /* QRAPFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4541A460716552443EA25 /* QRAPFormatter.swift */; };
+		2DD453EEB94F46C3F2A2C72D /* QRUILabelInterThin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45B2A9CBF17B706A181D5 /* QRUILabelInterThin.swift */; };
+		2DD45413ABD03B63E7BE5E19 /* InterBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45B533B13D1F4CD37A400 /* InterBlack.ttf */; };
+		2DD4541BF273000164C03CF2 /* ViewInputText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45553FBBC1F45286944DA /* ViewInputText.xib */; };
+		2DD4542B3C5DD0C72F6178FE /* QRErrorConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD450163BA76064D48BD9D7 /* QRErrorConstant.swift */; };
+		2DD4545B4655C27E6BB8FBF2 /* QRTrxDetailItemTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45A2EC8740D14F4B1B43F /* QRTrxDetailItemTVCell.xib */; };
+		2DD454A87AC0D8896AECC9FF /* QRUILabelInterExtraBold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45195723C707F62846CD2 /* QRUILabelInterExtraBold.swift */; };
+		2DD454C0F4B7EE826F725E4E /* QRAPTransactionDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45BA5B4E6B419CBC545D2 /* QRAPTransactionDetailVC.xib */; };
+		2DD454C601E03D93C027A284 /* QRNominalTransactionTvCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD455B9ADEB657812866504 /* QRNominalTransactionTvCell.xib */; };
+		2DD455087E6FA89FB09E8191 /* TransactionPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45A3475FA875312FE73AD /* TransactionPin.swift */; };
+		2DD4551C003EDB7474AEF089 /* ViewInputText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45B0D5F9E63F554672713 /* ViewInputText.swift */; };
+		2DD4553EB5E5E20CE06DE838 /* QRNewTransactionFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4539495EC89B1FAC8CA55 /* QRNewTransactionFlowViewController.swift */; };
+		2DD4554FB51547706C36083C /* QRInquiryQrisDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45F55E8AFFBF21919F6AA /* QRInquiryQrisDto.swift */; };
+		2DD4555B4D4519B81EF38BC6 /* QRTransactionIsProcessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45AED5638C315C472B903 /* QRTransactionIsProcessViewModel.swift */; };
+		2DD455AA29503D59FEDF39E4 /* QRPLMCDetailPaymentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD455250A672259E03683BF /* QRPLMCDetailPaymentView.xib */; };
+		2DD455B5C60C9BC32D5EDFBA /* BarlowMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45B95A87F418E22CF9B1C /* BarlowMedium.ttf */; };
+		2DD455BFAC58698EB085D326 /* PaylaterDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45C1361FE87B9EBF88FC5 /* PaylaterDto.swift */; };
+		2DD455C5A67BECB10B53D38E /* QRPopUpOTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4578BF7B7E61D7A1225C3 /* QRPopUpOTP.swift */; };
+		2DD455F0ED6B749C833A1D26 /* BarlowRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DD456A8B28CFAA9079487E2 /* BarlowRegular.ttf */; };
+		2DD455FF72784B16D9CFF7DA /* failedLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45F4C4B49B06362E3B8B6 /* failedLottie.json */; };
+		2DD456057FA63BB832D5A678 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45C13792BBBCD17522CA6 /* Container.swift */; };
+		2DD4560E13A5AF0566FD7544 /* QRInputAmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD459742CFD6CA129375969 /* QRInputAmountViewModel.swift */; };
+		2DD45623E6D8DA4E77FB2446 /* QRConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4538F4FA01DB8DCF8718F /* QRConstant.swift */; };
+		2DD45632A0EBFBA048ACCAFB /* QRGetDetailTransaksiDtoViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD450B98D14A269584AF2C4 /* QRGetDetailTransaksiDtoViewData.swift */; };
+		2DD45634265062A612C536BE /* QRDetailTransactionTvCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45E6EC38B715327C37E02 /* QRDetailTransactionTvCell.swift */; };
+		2DD456368BC4BE937F1AF3DF /* QRUILabelInterLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD454B2350940B3F338FDF6 /* QRUILabelInterLight.swift */; };
+		2DD45638BFCF79B07A3F04FE /* BarlowBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DD4576F81312EC1BE35D04B /* BarlowBold.ttf */; };
+		2DD456507DA1DBEA103DA4AD /* ApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45AD1B9CF481D12C6BA15 /* ApiPath.swift */; };
+		2DD4565D3E95A9C67894C33F /* QRDetailPaymentTVCellAstrapay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD457F2B7165E14820F9307 /* QRDetailPaymentTVCellAstrapay.xib */; };
+		2DD4567321DEE7619A1B7816 /* DetailPaymentSelectedViewAstrapay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45E364DDD342CD7642BEC /* DetailPaymentSelectedViewAstrapay.xib */; };
+		2DD4568882794503B6A54E88 /* QRUILabelInterBlack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD459B700C345E389147B5D /* QRUILabelInterBlack.swift */; };
+		2DD456A8F420B1D9D32F42A5 /* QRResultPaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4530E67B475F21E092830 /* QRResultPaymentViewModel.swift */; };
+		2DD456D0EE7938F04E49245B /* BaseUrlMobileGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45C53A54C6312C0241F29 /* BaseUrlMobileGateway.swift */; };
+		2DD456F951BC211E04FDC64F /* QRPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45654452802318A679D4E /* QRPopUp.swift */; };
+		2DD456FB5B2E51989C5F24C7 /* QRPopUpPIN.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45C5F96DE3889C0AC21ED /* QRPopUpPIN.xib */; };
+		2DD45702774EEC4A3AF523D6 /* QRAPTransactionDetailPopupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45B95338CFD7D7AC0D3A4 /* QRAPTransactionDetailPopupModel.swift */; };
+		2DD4570A636B1F7BC062DF35 /* InterMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45E5583E84317DB7099A6 /* InterMedium.ttf */; };
+		2DD45714A286DC982434BA8C /* DetailPaymentSelectedViewPaylaterMauCash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45DFADA351F610B7175A7 /* DetailPaymentSelectedViewPaylaterMauCash.swift */; };
+		2DD4571D732F2E3AC9CFC99B /* QRResendOtpDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45EEF95153F301CF5AEC3 /* QRResendOtpDto.swift */; };
+		2DD457295D8357FA8CA14478 /* QRButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD459FCE42D6C7A620A0730 /* QRButton.swift */; };
+		2DD4574EA14A2591594D3A38 /* NSDictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4563362913F100E458A10 /* NSDictionaryExtension.swift */; };
+		2DD457D134674EC8A7B02AD0 /* QRNominalTransactionTvCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD451780386605B9BDAF26D /* QRNominalTransactionTvCell.swift */; };
+		2DD457DB5CCE7B89C86E5B61 /* QRInputKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45854E349078F44D3C81A /* QRInputKeyboardView.xib */; };
+		2DD457E31CF467E4E686DA90 /* InterLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DD4520B02E60285374FC28E /* InterLight.ttf */; };
+		2DD457FA81A7CCC2DD086EEA /* QRUILabelInterExtraLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45F2416CB7E9CC1D49F49 /* QRUILabelInterExtraLight.swift */; };
+		2DD45875FB1A1FFE4DA04F28 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45E7D3E7641066DB8B1F4 /* UIFontExtension.swift */; };
+		2DD4587973938804D3312DFE /* QREncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD457F23B489B792C36DF12 /* QREncryptor.swift */; };
+		2DD458D8C8FD062E5B4AB92F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45B9E6F268CD041B36D81 /* UIViewExtension.swift */; };
+		2DD458DD029BC58037BB1D40 /* InterExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45B249C4E99DD2BA4FAF4 /* InterExtraBold.ttf */; };
+		2DD458F50E66F1BBDC19239A /* loadingLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DD4577DF3E4D1FF871A6E0E /* loadingLottie.json */; };
+		2DD4591141C814DFF8F0D067 /* QRAPBillPaymentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4590992CD86EADFA6042D /* QRAPBillPaymentsModel.swift */; };
+		2DD45917B4CAF937159D8F4D /* successLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45DADD946918115072AB8 /* successLottie.json */; };
+		2DD45946D81CBFFC9F6CF4F2 /* QRMerchantInfoTvCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4538D8E2C945FE652E7FE /* QRMerchantInfoTvCell.swift */; };
+		2DD459659EDA7B9E70B60F8E /* QRTransactionDetailBottomTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45C5DFDE1B470CE6DCDE6 /* QRTransactionDetailBottomTVCell.xib */; };
+		2DD459751A0D82BE43AD004E /* CacheAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD451B5FF401C7176B68C3B /* CacheAuthentication.swift */; };
+		2DD4598B49C4D54DBD2BF0A4 /* QRDetailPaymentTVCellAstrapayViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD459C01C41256EB23018E3 /* QRDetailPaymentTVCellAstrapayViewMode.swift */; };
+		2DD4598DBD5BAFA7CC39E8C3 /* QRAPCustomKeyboardAtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD452F127790CCF99031668 /* QRAPCustomKeyboardAtom.swift */; };
+		2DD4599922D341D3F40DB2D5 /* QRDetailPaymentTVCellPLMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD458C550221A39EC219D7B /* QRDetailPaymentTVCellPLMC.swift */; };
+		2DD459AA356AEA83035647AE /* QRPLMCDetailPaymentTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD459B70EFB5026F2B58F91 /* QRPLMCDetailPaymentTVCell.xib */; };
+		2DD459BD9AA79244D20F81C7 /* QrEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45847C4671D4B827601B9 /* QrEncryptor.swift */; };
+		2DD459FA5E8C91E6E27F59DB /* QRButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45D6BDBA55932BDA2836D /* QRButton.xib */; };
+		2DD45A3DA46E4414A9915CBA /* scan.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45E9EDF5F69FC46790836 /* scan.json */; };
+		2DD45A5D6380D247D8955A78 /* QRTransactionDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45EBA7E8DEE1BA87B1F80 /* QRTransactionDetailVC.swift */; };
+		2DD45AA90337A67B7F3CFECB /* TransactionOtp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45A593AA0B240057892AE /* TransactionOtp.swift */; };
+		2DD45AB251489002D215EC52 /* BarlowLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DD455310E1415CF2E324913 /* BarlowLight.ttf */; };
+		2DD45AC073F94A0AAE80E8A0 /* QRUILabelInterSemiBold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4587326C4D963AB4702A3 /* QRUILabelInterSemiBold.swift */; };
+		2DD45AC6A380CACBDE28C96C /* QRTransactionDetailMiddleTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45D45A20506D0F587C06B /* QRTransactionDetailMiddleTVCell.xib */; };
+		2DD45AD57043C00F7C9B29D0 /* QRInquiryQrisDtoViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD455EDBA8D53EC630FC5B9 /* QRInquiryQrisDtoViewData.swift */; };
+		2DD45ADD3A5D28F835BA10AC /* QRPopUpPINViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45B29312743F5B4E9EDDD /* QRPopUpPINViewModel.swift */; };
+		2DD45AFA1E44E7427F0208D1 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45D0FAE1BF46524BCB88C /* Route.swift */; };
+		2DD45B1CCB17E8FF06EC9CFB /* QRResultPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4508451AAB99C5E31CF08 /* QRResultPaymentViewController.swift */; };
+		2DD45B283725DCD662E40123 /* AES-256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45341C9F9ACA6A8CB694C /* AES-256.swift */; };
+		2DD45B3E52402EA813EFE0F0 /* QRResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45C1966DB9062C9065A34 /* QRResponse.swift */; };
+		2DD45B5D64F88119C123F8A9 /* QRDetailPaymentTvCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45229BBD7342858955696 /* QRDetailPaymentTvCell.swift */; };
+		2DD45B706D6B1CB6C101528D /* QRTransactionDetailBottomTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4501AEED9DF881C11AF31 /* QRTransactionDetailBottomTVCell.swift */; };
+		2DD45B919591CD05CE10D6D8 /* QRPaylaterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45D95B2A869BBEE36CFF7 /* QRPaylaterClient.swift */; };
+		2DD45BA6C5D7DA53927CF7A5 /* QRLottieAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45DDE349C9F61E4D3B208 /* QRLottieAnimationView.swift */; };
+		2DD45BC4AA135F0E182D9B7E /* QRTransactionDetailTopTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4513712A4799DEACD15B0 /* QRTransactionDetailTopTVCell.swift */; };
+		2DD45C262EFD44254B20BDCB /* QRLoadingStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD457FF2330D0BAA3A40721 /* QRLoadingStateView.swift */; };
+		2DD45C52BF0188483DD9489C /* InterSemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DD458BDC5C4B2C8998EE57D /* InterSemiBold.ttf */; };
+		2DD45C76DECB815908632C82 /* QRAPButtonAtom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD4532CD1F34CDD071203A6 /* QRAPButtonAtom.xib */; };
+		2DD45C783FCDE94A518D91CE /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD454E4F53CD32117A49726 /* StringExtension.swift */; };
+		2DD45C900F6900D39E54F415 /* QRCameraControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45CE48E35B01354D0C705 /* QRCameraControlView.xib */; };
+		2DD45D03F53DB3C48E3773E7 /* QRPLMCBillDetailPaymentTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD451DD136F884F4978322D /* QRPLMCBillDetailPaymentTVCell.xib */; };
+		2DD45D09F39B659FC621C87C /* QRPopUpPIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD452ACF922F22530264940 /* QRPopUpPIN.swift */; };
+		2DD45D1445DAE12839C77C0E /* DetailPaymentSelectedViewAstrapay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45B484E64B978F54627BA /* DetailPaymentSelectedViewAstrapay.swift */; };
+		2DD45D18A04E3A234A21FE27 /* APCustomKeyboardAtom.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45F4B7C3EA622DBCE13B1 /* APCustomKeyboardAtom.xib */; };
+		2DD45D2355CFA67ECAFB9BBC /* QRClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45505F5B11FA43AE60A22 /* QRClient.swift */; };
+		2DD45D250A68394744CC743C /* QRLKPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45C63F7A00352E4A03C42 /* QRLKPinView.swift */; };
+		2DD45D3C1C6F36C7ADA2D4EF /* QRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4558D260672444D20B1A6 /* QRViewModel.swift */; };
+		2DD45DB18618E398213B710D /* InterBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45BF096647EA4C83A31FF /* InterBold.ttf */; };
+		2DD45DB198F3564A92A24937 /* QRUILabelInterBold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45F818FD2030E8708C7ED /* QRUILabelInterBold.swift */; };
+		2DD45DBAF241AB266B9E186D /* AstrapayErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45AC02245200B6753A48C /* AstrapayErrorResponse.swift */; };
+		2DD45DC330567EE7F2B97CFF /* BarlowBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DD457916B08B7ECEE525538 /* BarlowBlack.ttf */; };
+		2DD45DD87F65EE16F20D5572 /* BarlowExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45F0A904D777DA5865BCC /* BarlowExtraLight.ttf */; };
+		2DD45DEF24C80C17ED29C1F0 /* QRInputKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4547A0BE2FED1F3CB064C /* QRInputKeyboardView.swift */; };
+		2DD45E07CCE6A6FB2DFFD95D /* InterExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DD4514D0B7619E91E7A027A /* InterExtraLight.ttf */; };
+		2DD45E40FD68863D8BD91BA9 /* QRTransactionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD450E41FD4C48CF2456C58 /* QRTransactionDetailViewController.xib */; };
+		2DD45EA3C84FF95444C76C8E /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD456C645D48384812E68B0 /* Api.swift */; };
+		2DD45EB3FD14EFDE6EFB6214 /* QRNewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD45FD03B09041E432C2C67 /* QRNewRouter.swift */; };
+		2DD45F19A187DBDA12539906 /* QRLottieAnimationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD4539D83D964ADEC16AAE9 /* QRLottieAnimationView.xib */; };
+		2DD45F1AFC25F1016C19ECFA /* QRTransactionDetailMiddleTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD454FB0F475AD9643C7ACF /* QRTransactionDetailMiddleTVCell.swift */; };
+		2DD45F2C6C82C666A8900690 /* QRDetailTransactionTvCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45B48FF65620183BD170A /* QRDetailTransactionTvCell.xib */; };
+		2DD45F38B6E3846FB2621E48 /* QRUILabelInterRegular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4523991583F20235995FC /* QRUILabelInterRegular.swift */; };
+		2DD45F417EAE648E5ED29DC8 /* QRTransactionIsProcessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD4522A7F67D204AB18F51A /* QRTransactionIsProcessView.xib */; };
+		2DD45F6C4F24AD8F807095D7 /* UI in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45D402664A9A6AF2DD5B6 /* UI */; };
+		2DD45FA6ED8B71B2B8C45F54 /* QRNewReaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4562E8A149065D88A9202 /* QRNewReaderProtocol.swift */; };
+		2DD45FCF9E1C057E88378D08 /* QRMerchantInfoTvCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD45B4E9CC02D2EB0B3003D /* QRMerchantInfoTvCell.xib */; };
+		536E81CB81F050AA7FC5D0EB /* Pods_astrapay_qris_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0BAAA8DDFA037A099A3F09 /* Pods_astrapay_qris_iosTests.framework */; };
+		5438C28D8615F594AB1DF73F /* Pods_astrapay_qris_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7580C2AA73CA9ECDD15BA47 /* Pods_astrapay_qris_ios.framework */; };
+		8D22CA34C550838332CA08EF /* Pods_astrapay_qris_ios_astrapay_qris_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDC8B14BDD642318F47F2CF1 /* Pods_astrapay_qris_ios_astrapay_qris_iosUITests.framework */; };
 		D54F48D327DF3AD100CF38AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54F48D227DF3AD100CF38AF /* AppDelegate.swift */; };
 		D54F48D527DF3AD100CF38AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54F48D427DF3AD100CF38AF /* SceneDelegate.swift */; };
-		D54F48D727DF3AD100CF38AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54F48D627DF3AD100CF38AF /* ViewController.swift */; };
+		D54F48D727DF3AD100CF38AF /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54F48D627DF3AD100CF38AF /* HomeVC.swift */; };
 		D54F48DA27DF3AD100CF38AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D54F48D827DF3AD100CF38AF /* Main.storyboard */; };
 		D54F48DC27DF3AD300CF38AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D54F48DB27DF3AD300CF38AF /* Assets.xcassets */; };
 		D54F48DF27DF3AD300CF38AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D54F48DD27DF3AD300CF38AF /* LaunchScreen.storyboard */; };
 		D54F48EA27DF3AD300CF38AF /* astrapay_qris_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54F48E927DF3AD300CF38AF /* astrapay_qris_iosTests.swift */; };
 		D54F48F427DF3AD300CF38AF /* astrapay_qris_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54F48F327DF3AD300CF38AF /* astrapay_qris_iosUITests.swift */; };
 		D54F48F627DF3AD300CF38AF /* astrapay_qris_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54F48F527DF3AD300CF38AF /* astrapay_qris_iosUITestsLaunchTests.swift */; };
+		D54F490A27DF3C3500CF38AF /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54F490927DF3C3500CF38AF /* HomeRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +199,176 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2DD450163BA76064D48BD9D7 /* QRErrorConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRErrorConstant.swift; sourceTree = "<group>"; };
+		2DD4501AEED9DF881C11AF31 /* QRTransactionDetailBottomTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRTransactionDetailBottomTVCell.swift; sourceTree = "<group>"; };
+		2DD4501CB975B01CE96AFCF2 /* BarlowThin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = BarlowThin.ttf; sourceTree = "<group>"; };
+		2DD4508451AAB99C5E31CF08 /* QRResultPaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRResultPaymentViewController.swift; sourceTree = "<group>"; };
+		2DD4508B619CD84F160BB1CA /* QRInputAmountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRInputAmountViewController.xib; sourceTree = "<group>"; };
+		2DD4508F0CB2E2A1E8EBF63A /* QRColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRColor.swift; sourceTree = "<group>"; };
+		2DD45090A95D6C05112D5EBF /* QRCameraControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCameraControlView.swift; sourceTree = "<group>"; };
+		2DD450B98D14A269584AF2C4 /* QRGetDetailTransaksiDtoViewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRGetDetailTransaksiDtoViewData.swift; sourceTree = "<group>"; };
+		2DD450E41FD4C48CF2456C58 /* QRTransactionDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRTransactionDetailViewController.xib; sourceTree = "<group>"; };
+		2DD4513712A4799DEACD15B0 /* QRTransactionDetailTopTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRTransactionDetailTopTVCell.swift; sourceTree = "<group>"; };
+		2DD4514D0B7619E91E7A027A /* InterExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = InterExtraLight.ttf; sourceTree = "<group>"; };
+		2DD45153145434CF531436F7 /* QRAPTransactionDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRAPTransactionDetailVC.swift; sourceTree = "<group>"; };
+		2DD451780386605B9BDAF26D /* QRNominalTransactionTvCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRNominalTransactionTvCell.swift; sourceTree = "<group>"; };
+		2DD45195723C707F62846CD2 /* QRUILabelInterExtraBold.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRUILabelInterExtraBold.swift; sourceTree = "<group>"; };
+		2DD451B5FF401C7176B68C3B /* CacheAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheAuthentication.swift; sourceTree = "<group>"; };
+		2DD451D56EB821381DE84FCA /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		2DD451DD136F884F4978322D /* QRPLMCBillDetailPaymentTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRPLMCBillDetailPaymentTVCell.xib; sourceTree = "<group>"; };
+		2DD4520B02E60285374FC28E /* InterLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = InterLight.ttf; sourceTree = "<group>"; };
+		2DD45229BBD7342858955696 /* QRDetailPaymentTvCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRDetailPaymentTvCell.swift; sourceTree = "<group>"; };
+		2DD4522A7F67D204AB18F51A /* QRTransactionIsProcessView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRTransactionIsProcessView.xib; sourceTree = "<group>"; };
+		2DD4523991583F20235995FC /* QRUILabelInterRegular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRUILabelInterRegular.swift; sourceTree = "<group>"; };
+		2DD45260A7F4023E67BEA018 /* BarlowExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = BarlowExtraBold.ttf; sourceTree = "<group>"; };
+		2DD452ACF922F22530264940 /* QRPopUpPIN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRPopUpPIN.swift; sourceTree = "<group>"; };
+		2DD452F127790CCF99031668 /* QRAPCustomKeyboardAtom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRAPCustomKeyboardAtom.swift; sourceTree = "<group>"; };
+		2DD4530E67B475F21E092830 /* QRResultPaymentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRResultPaymentViewModel.swift; sourceTree = "<group>"; };
+		2DD4532CD1F34CDD071203A6 /* QRAPButtonAtom.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRAPButtonAtom.xib; sourceTree = "<group>"; };
+		2DD45341C9F9ACA6A8CB694C /* AES-256.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AES-256.swift"; sourceTree = "<group>"; };
+		2DD4538A5317715136303C3A /* QRSelectPaymentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRSelectPaymentView.swift; sourceTree = "<group>"; };
+		2DD4538D8E2C945FE652E7FE /* QRMerchantInfoTvCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRMerchantInfoTvCell.swift; sourceTree = "<group>"; };
+		2DD4538F4FA01DB8DCF8718F /* QRConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRConstant.swift; sourceTree = "<group>"; };
+		2DD4539495EC89B1FAC8CA55 /* QRNewTransactionFlowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRNewTransactionFlowViewController.swift; sourceTree = "<group>"; };
+		2DD4539D83D964ADEC16AAE9 /* QRLottieAnimationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRLottieAnimationView.xib; sourceTree = "<group>"; };
+		2DD453B6A071900B35984BE7 /* QrInquiryDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrInquiryDto.swift; sourceTree = "<group>"; };
+		2DD453D410C2773B9F0E5C14 /* QRDetailPaymentTVCellAstrapay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRDetailPaymentTVCellAstrapay.swift; sourceTree = "<group>"; };
+		2DD4541A460716552443EA25 /* QRAPFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRAPFormatter.swift; sourceTree = "<group>"; };
+		2DD4547A0BE2FED1F3CB064C /* QRInputKeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRInputKeyboardView.swift; sourceTree = "<group>"; };
+		2DD454938DFAF9FA744EF1FF /* BarlowSemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = BarlowSemiBold.ttf; sourceTree = "<group>"; };
+		2DD454B2350940B3F338FDF6 /* QRUILabelInterLight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRUILabelInterLight.swift; sourceTree = "<group>"; };
+		2DD454E4F53CD32117A49726 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		2DD454FB0F475AD9643C7ACF /* QRTransactionDetailMiddleTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRTransactionDetailMiddleTVCell.swift; sourceTree = "<group>"; };
+		2DD454FE269E1A5841352FB2 /* QRDetailPaymentTvCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRDetailPaymentTvCell.xib; sourceTree = "<group>"; };
+		2DD45505F5B11FA43AE60A22 /* QRClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRClient.swift; sourceTree = "<group>"; };
+		2DD45516A0AF696B094E4FC1 /* GetDetailTransaksi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetDetailTransaksi.swift; sourceTree = "<group>"; };
+		2DD455250A672259E03683BF /* QRPLMCDetailPaymentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRPLMCDetailPaymentView.xib; sourceTree = "<group>"; };
+		2DD455310E1415CF2E324913 /* BarlowLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = BarlowLight.ttf; sourceTree = "<group>"; };
+		2DD45553FBBC1F45286944DA /* ViewInputText.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewInputText.xib; sourceTree = "<group>"; };
+		2DD455565B57E7893357A8AF /* InterRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = InterRegular.ttf; sourceTree = "<group>"; };
+		2DD4558D260672444D20B1A6 /* QRViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRViewModel.swift; sourceTree = "<group>"; };
+		2DD455B9ADEB657812866504 /* QRNominalTransactionTvCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRNominalTransactionTvCell.xib; sourceTree = "<group>"; };
+		2DD455EDBA8D53EC630FC5B9 /* QRInquiryQrisDtoViewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRInquiryQrisDtoViewData.swift; sourceTree = "<group>"; };
+		2DD4560E51620BC8F9D8FB6D /* QRGenericResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRGenericResult.swift; sourceTree = "<group>"; };
+		2DD4562E8A149065D88A9202 /* QRNewReaderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRNewReaderProtocol.swift; sourceTree = "<group>"; };
+		2DD4563362913F100E458A10 /* NSDictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDictionaryExtension.swift; sourceTree = "<group>"; };
+		2DD45654452802318A679D4E /* QRPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRPopUp.swift; sourceTree = "<group>"; };
+		2DD456A8B28CFAA9079487E2 /* BarlowRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = BarlowRegular.ttf; sourceTree = "<group>"; };
+		2DD456C645D48384812E68B0 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		2DD4571AF896A30B44EDE2E3 /* QRInquiryDtoViewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRInquiryDtoViewData.swift; sourceTree = "<group>"; };
+		2DD4574A2C49E795DC666E3F /* QRBaseColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRBaseColor.swift; sourceTree = "<group>"; };
+		2DD4576F81312EC1BE35D04B /* BarlowBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = BarlowBold.ttf; sourceTree = "<group>"; };
+		2DD4577DF3E4D1FF871A6E0E /* loadingLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadingLottie.json; sourceTree = "<group>"; };
+		2DD45786E0B460C8A300C1F8 /* QRPopUpOTP.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRPopUpOTP.xib; sourceTree = "<group>"; };
+		2DD4578ADDBBCE530A3112DD /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		2DD4578BF7B7E61D7A1225C3 /* QRPopUpOTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRPopUpOTP.swift; sourceTree = "<group>"; };
+		2DD457916B08B7ECEE525538 /* BarlowBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = BarlowBlack.ttf; sourceTree = "<group>"; };
+		2DD457F23B489B792C36DF12 /* QREncryptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QREncryptor.swift; sourceTree = "<group>"; };
+		2DD457F2B7165E14820F9307 /* QRDetailPaymentTVCellAstrapay.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRDetailPaymentTVCellAstrapay.xib; sourceTree = "<group>"; };
+		2DD457F7A01485397400B942 /* QRAPButtonAtom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRAPButtonAtom.swift; sourceTree = "<group>"; };
+		2DD457FF2330D0BAA3A40721 /* QRLoadingStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRLoadingStateView.swift; sourceTree = "<group>"; };
+		2DD4581EEE18F90356FD2D76 /* QRPLMCDetailPaymentTVCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRPLMCDetailPaymentTVCellViewModel.swift; sourceTree = "<group>"; };
+		2DD45847C4671D4B827601B9 /* QrEncryptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrEncryptor.swift; sourceTree = "<group>"; };
+		2DD45854E349078F44D3C81A /* QRInputKeyboardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRInputKeyboardView.xib; sourceTree = "<group>"; };
+		2DD4587326C4D963AB4702A3 /* QRUILabelInterSemiBold.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRUILabelInterSemiBold.swift; sourceTree = "<group>"; };
+		2DD45878C97B64AF25D57B87 /* QRTransactionDetailTopTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRTransactionDetailTopTVCell.xib; sourceTree = "<group>"; };
+		2DD458BDC5C4B2C8998EE57D /* InterSemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = InterSemiBold.ttf; sourceTree = "<group>"; };
+		2DD458C550221A39EC219D7B /* QRDetailPaymentTVCellPLMC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRDetailPaymentTVCellPLMC.swift; sourceTree = "<group>"; };
+		2DD458F2451614F938DBB833 /* QRInputLoginTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRInputLoginTextField.swift; sourceTree = "<group>"; };
+		2DD4590992CD86EADFA6042D /* QRAPBillPaymentsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRAPBillPaymentsModel.swift; sourceTree = "<group>"; };
+		2DD4592425B795586152D9CE /* QRTransactionDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRTransactionDetailViewModel.swift; sourceTree = "<group>"; };
+		2DD459742CFD6CA129375969 /* QRInputAmountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRInputAmountViewModel.swift; sourceTree = "<group>"; };
+		2DD459B700C345E389147B5D /* QRUILabelInterBlack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRUILabelInterBlack.swift; sourceTree = "<group>"; };
+		2DD459B70EFB5026F2B58F91 /* QRPLMCDetailPaymentTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRPLMCDetailPaymentTVCell.xib; sourceTree = "<group>"; };
+		2DD459C01C41256EB23018E3 /* QRDetailPaymentTVCellAstrapayViewMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRDetailPaymentTVCellAstrapayViewMode.swift; sourceTree = "<group>"; };
+		2DD459F02551EF1210E68597 /* APImageKeyboardAtom.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = APImageKeyboardAtom.xib; sourceTree = "<group>"; };
+		2DD459FCE42D6C7A620A0730 /* QRButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRButton.swift; sourceTree = "<group>"; };
+		2DD45A2EC8740D14F4B1B43F /* QRTrxDetailItemTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRTrxDetailItemTVCell.xib; sourceTree = "<group>"; };
+		2DD45A3475FA875312FE73AD /* TransactionPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionPin.swift; sourceTree = "<group>"; };
+		2DD45A388B9321F85809BD68 /* QRUILabelInterMedium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRUILabelInterMedium.swift; sourceTree = "<group>"; };
+		2DD45A593AA0B240057892AE /* TransactionOtp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionOtp.swift; sourceTree = "<group>"; };
+		2DD45A6B247C95CCDF405EA0 /* QRCameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCameraView.swift; sourceTree = "<group>"; };
+		2DD45AC02245200B6753A48C /* AstrapayErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstrapayErrorResponse.swift; sourceTree = "<group>"; };
+		2DD45ACF804E3141382F33FF /* DetailPaymentSelectedViewPaylaterMauCash.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailPaymentSelectedViewPaylaterMauCash.xib; sourceTree = "<group>"; };
+		2DD45AD1B9CF481D12C6BA15 /* ApiPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiPath.swift; sourceTree = "<group>"; };
+		2DD45AED5638C315C472B903 /* QRTransactionIsProcessViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRTransactionIsProcessViewModel.swift; sourceTree = "<group>"; };
+		2DD45B07A9C76AF1C04193D4 /* QRTransactionIsProcessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRTransactionIsProcessViewController.swift; sourceTree = "<group>"; };
+		2DD45B0D5F9E63F554672713 /* ViewInputText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInputText.swift; sourceTree = "<group>"; };
+		2DD45B18E003434865A58090 /* QRAPPopUpNoteTransferVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRAPPopUpNoteTransferVC.xib; sourceTree = "<group>"; };
+		2DD45B249C4E99DD2BA4FAF4 /* InterExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = InterExtraBold.ttf; sourceTree = "<group>"; };
+		2DD45B29312743F5B4E9EDDD /* QRPopUpPINViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRPopUpPINViewModel.swift; sourceTree = "<group>"; };
+		2DD45B2A9CBF17B706A181D5 /* QRUILabelInterThin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRUILabelInterThin.swift; sourceTree = "<group>"; };
+		2DD45B3D4A673D7DF2B1DBB4 /* QRTrxDetailItemTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRTrxDetailItemTVCell.swift; sourceTree = "<group>"; };
+		2DD45B484E64B978F54627BA /* DetailPaymentSelectedViewAstrapay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPaymentSelectedViewAstrapay.swift; sourceTree = "<group>"; };
+		2DD45B48FF65620183BD170A /* QRDetailTransactionTvCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRDetailTransactionTvCell.xib; sourceTree = "<group>"; };
+		2DD45B4E9CC02D2EB0B3003D /* QRMerchantInfoTvCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRMerchantInfoTvCell.xib; sourceTree = "<group>"; };
+		2DD45B533B13D1F4CD37A400 /* InterBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = InterBlack.ttf; sourceTree = "<group>"; };
+		2DD45B84BDE5F6F92E0C2FCB /* QRAPPopUpNoteTransferVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRAPPopUpNoteTransferVC.swift; sourceTree = "<group>"; };
+		2DD45B95338CFD7D7AC0D3A4 /* QRAPTransactionDetailPopupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRAPTransactionDetailPopupModel.swift; sourceTree = "<group>"; };
+		2DD45B95A87F418E22CF9B1C /* BarlowMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = BarlowMedium.ttf; sourceTree = "<group>"; };
+		2DD45B9E6F268CD041B36D81 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		2DD45BA5B4E6B419CBC545D2 /* QRAPTransactionDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRAPTransactionDetailVC.xib; sourceTree = "<group>"; };
+		2DD45BB062C46CC1A20CE76C /* QRInputAmountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRInputAmountViewController.swift; sourceTree = "<group>"; };
+		2DD45BD00073E4C85ED38A3F /* inProgressLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = inProgressLottie.json; sourceTree = "<group>"; };
+		2DD45BD05AD9D652749D0116 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		2DD45BE4FC1D6AFEA7C034CF /* QRNewTransactionFlowViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRNewTransactionFlowViewModel.swift; sourceTree = "<group>"; };
+		2DD45BF096647EA4C83A31FF /* InterBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = InterBold.ttf; sourceTree = "<group>"; };
+		2DD45C06E0667404E0673EDC /* QRPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRPopUp.xib; sourceTree = "<group>"; };
+		2DD45C1361FE87B9EBF88FC5 /* PaylaterDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaylaterDto.swift; sourceTree = "<group>"; };
+		2DD45C13792BBBCD17522CA6 /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		2DD45C1966DB9062C9065A34 /* QRResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRResponse.swift; sourceTree = "<group>"; };
+		2DD45C53A54C6312C0241F29 /* BaseUrlMobileGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUrlMobileGateway.swift; sourceTree = "<group>"; };
+		2DD45C5DFDE1B470CE6DCDE6 /* QRTransactionDetailBottomTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRTransactionDetailBottomTVCell.xib; sourceTree = "<group>"; };
+		2DD45C5F96DE3889C0AC21ED /* QRPopUpPIN.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRPopUpPIN.xib; sourceTree = "<group>"; };
+		2DD45C63F7A00352E4A03C42 /* QRLKPinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRLKPinView.swift; sourceTree = "<group>"; };
+		2DD45CE48E35B01354D0C705 /* QRCameraControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRCameraControlView.xib; sourceTree = "<group>"; };
+		2DD45D0FAE1BF46524BCB88C /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		2DD45D2A9BB52B0ADFC82C0C /* QRGaleryPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRGaleryPicker.swift; sourceTree = "<group>"; };
+		2DD45D402664A9A6AF2DD5B6 /* UI */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UI; sourceTree = "<group>"; };
+		2DD45D45A20506D0F587C06B /* QRTransactionDetailMiddleTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRTransactionDetailMiddleTVCell.xib; sourceTree = "<group>"; };
+		2DD45D5C238153CAC2BC9F3A /* QRResultPaymentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRResultPaymentView.xib; sourceTree = "<group>"; };
+		2DD45D6BDBA55932BDA2836D /* QRButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRButton.xib; sourceTree = "<group>"; };
+		2DD45D95B2A869BBEE36CFF7 /* QRPaylaterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRPaylaterClient.swift; sourceTree = "<group>"; };
+		2DD45DADD946918115072AB8 /* successLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = successLottie.json; sourceTree = "<group>"; };
+		2DD45DDE349C9F61E4D3B208 /* QRLottieAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRLottieAnimationView.swift; sourceTree = "<group>"; };
+		2DD45DF787C73ECC05ED949B /* QRDetailPaymentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRDetailPaymentViewModel.swift; sourceTree = "<group>"; };
+		2DD45DFADA351F610B7175A7 /* DetailPaymentSelectedViewPaylaterMauCash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPaymentSelectedViewPaylaterMauCash.swift; sourceTree = "<group>"; };
+		2DD45E364DDD342CD7642BEC /* DetailPaymentSelectedViewAstrapay.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailPaymentSelectedViewAstrapay.xib; sourceTree = "<group>"; };
+		2DD45E4EA7A8F0828B897866 /* InterThin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = InterThin.ttf; sourceTree = "<group>"; };
+		2DD45E50ECE28BB4BA1CF6DE /* QRTransactionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRTransactionDetailViewController.swift; sourceTree = "<group>"; };
+		2DD45E5583E84317DB7099A6 /* InterMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = InterMedium.ttf; sourceTree = "<group>"; };
+		2DD45E6EC38B715327C37E02 /* QRDetailTransactionTvCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRDetailTransactionTvCell.swift; sourceTree = "<group>"; };
+		2DD45E70B7C4C9C38FD8775A /* DateFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
+		2DD45E7D3E7641066DB8B1F4 /* UIFontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		2DD45E9EDF5F69FC46790836 /* scan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = scan.json; sourceTree = "<group>"; };
+		2DD45EBA7E8DEE1BA87B1F80 /* QRTransactionDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRTransactionDetailVC.swift; sourceTree = "<group>"; };
+		2DD45ED27A05D6E56216FA5B /* QRAPImageKeyboardAtom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRAPImageKeyboardAtom.swift; sourceTree = "<group>"; };
+		2DD45EEE6495ADAAEF837012 /* QRLoadingStateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRLoadingStateView.xib; sourceTree = "<group>"; };
+		2DD45EEF95153F301CF5AEC3 /* QRResendOtpDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRResendOtpDto.swift; sourceTree = "<group>"; };
+		2DD45EF52FB86C7DA1755082 /* UILabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		2DD45F0A904D777DA5865BCC /* BarlowExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file.ttf; path = BarlowExtraLight.ttf; sourceTree = "<group>"; };
+		2DD45F0B77AD13E7714F9247 /* NumericExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericExtension.swift; sourceTree = "<group>"; };
+		2DD45F2416CB7E9CC1D49F49 /* QRUILabelInterExtraLight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRUILabelInterExtraLight.swift; sourceTree = "<group>"; };
+		2DD45F4B7C3EA622DBCE13B1 /* APCustomKeyboardAtom.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = APCustomKeyboardAtom.xib; sourceTree = "<group>"; };
+		2DD45F4C4B49B06362E3B8B6 /* failedLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = failedLottie.json; sourceTree = "<group>"; };
+		2DD45F55E8AFFBF21919F6AA /* QRInquiryQrisDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRInquiryQrisDto.swift; sourceTree = "<group>"; };
+		2DD45F71857F84DE81EA20BB /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		2DD45F818FD2030E8708C7ED /* QRUILabelInterBold.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRUILabelInterBold.swift; sourceTree = "<group>"; };
+		2DD45F8CF48BE40D85481DC3 /* QRPLMCBillDetailPaymentTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRPLMCBillDetailPaymentTVCell.swift; sourceTree = "<group>"; };
+		2DD45F9613812F3598B3912D /* QRStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRStoryboard.storyboard; sourceTree = "<group>"; };
+		2DD45FBF6EDE872D6196DEB1 /* QRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
+		2DD45FD03B09041E432C2C67 /* QRNewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRNewRouter.swift; sourceTree = "<group>"; };
+		69DB05C7E085495CDBE4C8C6 /* Pods-astrapay-qris-ios-astrapay-qris-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-astrapay-qris-ios-astrapay-qris-iosUITests.release.xcconfig"; path = "Target Support Files/Pods-astrapay-qris-ios-astrapay-qris-iosUITests/Pods-astrapay-qris-ios-astrapay-qris-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A5FC8E9F0DEA6F6BA03A4FF1 /* Pods-astrapay-qris-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-astrapay-qris-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-astrapay-qris-iosTests/Pods-astrapay-qris-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B946D562823B09550AA72A19 /* Pods-astrapay-qris-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-astrapay-qris-ios.release.xcconfig"; path = "Target Support Files/Pods-astrapay-qris-ios/Pods-astrapay-qris-ios.release.xcconfig"; sourceTree = "<group>"; };
+		BB0BAAA8DDFA037A099A3F09 /* Pods_astrapay_qris_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_astrapay_qris_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7580C2AA73CA9ECDD15BA47 /* Pods_astrapay_qris_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_astrapay_qris_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7F9F04AD33A6F03F658F209 /* Pods-astrapay-qris-ios-astrapay-qris-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-astrapay-qris-ios-astrapay-qris-iosUITests.debug.xcconfig"; path = "Target Support Files/Pods-astrapay-qris-ios-astrapay-qris-iosUITests/Pods-astrapay-qris-ios-astrapay-qris-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D1FCB9D66B115C0DB73B5D01 /* Pods-astrapay-qris-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-astrapay-qris-iosTests.release.xcconfig"; path = "Target Support Files/Pods-astrapay-qris-iosTests/Pods-astrapay-qris-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 		D54F48CF27DF3AD100CF38AF /* astrapay-qris-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "astrapay-qris-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D54F48D227DF3AD100CF38AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D54F48D427DF3AD100CF38AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D54F48D627DF3AD100CF38AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D54F48D627DF3AD100CF38AF /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		D54F48D927DF3AD100CF38AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D54F48DB27DF3AD300CF38AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D54F48DE27DF3AD300CF38AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +378,9 @@
 		D54F48EF27DF3AD300CF38AF /* astrapay-qris-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "astrapay-qris-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D54F48F327DF3AD300CF38AF /* astrapay_qris_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = astrapay_qris_iosUITests.swift; sourceTree = "<group>"; };
 		D54F48F527DF3AD300CF38AF /* astrapay_qris_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = astrapay_qris_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D54F490927DF3C3500CF38AF /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		DE7CEF5DE35C11E4FF2355DD /* Pods-astrapay-qris-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-astrapay-qris-ios.debug.xcconfig"; path = "Target Support Files/Pods-astrapay-qris-ios/Pods-astrapay-qris-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		FDC8B14BDD642318F47F2CF1 /* Pods_astrapay_qris_ios_astrapay_qris_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_astrapay_qris_ios_astrapay_qris_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +388,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5438C28D8615F594AB1DF73F /* Pods_astrapay_qris_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +396,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				536E81CB81F050AA7FC5D0EB /* Pods_astrapay_qris_iosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +404,792 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D22CA34C550838332CA08EF /* Pods_astrapay_qris_ios_astrapay_qris_iosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DD45020DF00D2AE4CE6D475 /* QrNewRouter */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45FD03B09041E432C2C67 /* QRNewRouter.swift */,
+			);
+			path = QrNewRouter;
+			sourceTree = "<group>";
+		};
+		2DD450699C4E1E8445457F66 /* QRTransactionDetailTopCell */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45878C97B64AF25D57B87 /* QRTransactionDetailTopTVCell.xib */,
+				2DD4513712A4799DEACD15B0 /* QRTransactionDetailTopTVCell.swift */,
+			);
+			path = QRTransactionDetailTopCell;
+			sourceTree = "<group>";
+		};
+		2DD450721259CA58E80DB9DF /* QRInputLoginTextField */ = {
+			isa = PBXGroup;
+			children = (
+				2DD458F2451614F938DBB833 /* QRInputLoginTextField.swift */,
+			);
+			path = QRInputLoginTextField;
+			sourceTree = "<group>";
+		};
+		2DD450BC7180749F55B2E801 /* Otp */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45EEF95153F301CF5AEC3 /* QRResendOtpDto.swift */,
+			);
+			path = Otp;
+			sourceTree = "<group>";
+		};
+		2DD451203BB7F508A185E328 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2DD454EB15CFF8C57FC71648 /* UI */,
+				2DD4540762DD695ED62161E4 /* Font */,
+				2DD45B1C0232B3D577672B59 /* Color */,
+				2DD45924C70B0226F0BBF225 /* Container */,
+				2DD45C26B8D99F84A3BEBA16 /* Encryptor */,
+				2DD45AA2DEE2E97A50288F9B /* Extension */,
+				2DD4524CA238DC0ABD7D0DEF /* QRConstant */,
+				2DD459459D0B65BBE5DCC245 /* QRResponse */,
+				2DD45541A76E42DA40C805E9 /* QREncryptor */,
+				2DD45020DF00D2AE4CE6D475 /* QrNewRouter */,
+				2DD457B870C2703F05AF7EF2 /* AuthenticationQR */,
+				2DD4595DD79CB9E7C29B5BC6 /* BaseUrlMobileGateway */,
+				2DD45B25F2F84152FF45FA3F /* Api */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		2DD4513205EF99108059AB9C /* QRTransactionDetailMiddleCell */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45D45A20506D0F587C06B /* QRTransactionDetailMiddleTVCell.xib */,
+				2DD454FB0F475AD9643C7ACF /* QRTransactionDetailMiddleTVCell.swift */,
+			);
+			path = QRTransactionDetailMiddleCell;
+			sourceTree = "<group>";
+		};
+		2DD4522242E84E58F704A6DC /* QRUITextField */ = {
+			isa = PBXGroup;
+			children = (
+				2DD450721259CA58E80DB9DF /* QRInputLoginTextField */,
+			);
+			path = QRUITextField;
+			sourceTree = "<group>";
+		};
+		2DD4524CA238DC0ABD7D0DEF /* QRConstant */ = {
+			isa = PBXGroup;
+			children = (
+				2DD4538F4FA01DB8DCF8718F /* QRConstant.swift */,
+				2DD450163BA76064D48BD9D7 /* QRErrorConstant.swift */,
+			);
+			path = QRConstant;
+			sourceTree = "<group>";
+		};
+		2DD4525C96062DF6152E25A5 /* QRLoadingStateView */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45EEE6495ADAAEF837012 /* QRLoadingStateView.xib */,
+				2DD457FF2330D0BAA3A40721 /* QRLoadingStateView.swift */,
+			);
+			path = QRLoadingStateView;
+			sourceTree = "<group>";
+		};
+		2DD45262AF84C75AA3123965 /* QRView */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45C2C112E3373B44A0A7F /* InquiryViewData */,
+				2DD4558D260672444D20B1A6 /* QRViewModel.swift */,
+				2DD45FBF6EDE872D6196DEB1 /* QRViewController.swift */,
+				2DD45F9613812F3598B3912D /* QRStoryboard.storyboard */,
+			);
+			path = QRView;
+			sourceTree = "<group>";
+		};
+		2DD452B1FBF1E6C33F518F2E /* QrGeneralDto */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45C1966DB9062C9065A34 /* QRResponse.swift */,
+			);
+			path = QrGeneralDto;
+			sourceTree = "<group>";
+		};
+		2DD452DB9755F1D36EB01280 /* QRPopUpPIN */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45C5F96DE3889C0AC21ED /* QRPopUpPIN.xib */,
+				2DD452ACF922F22530264940 /* QRPopUpPIN.swift */,
+				2DD45B29312743F5B4E9EDDD /* QRPopUpPINViewModel.swift */,
+			);
+			path = QRPopUpPIN;
+			sourceTree = "<group>";
+		};
+		2DD45404D78E86C44F489E01 /* QRNominalTransactionTvCell */ = {
+			isa = PBXGroup;
+			children = (
+				2DD455B9ADEB657812866504 /* QRNominalTransactionTvCell.xib */,
+				2DD451780386605B9BDAF26D /* QRNominalTransactionTvCell.swift */,
+			);
+			path = QRNominalTransactionTvCell;
+			sourceTree = "<group>";
+		};
+		2DD4540762DD695ED62161E4 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				2DD4567A43F68AB5A1FBF2C3 /* Inter */,
+				2DD45839FF2C165ED2B6B680 /* Barlow */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		2DD4543FDA4C866D83542400 /* QRInputAmountView */ = {
+			isa = PBXGroup;
+			children = (
+				2DD459742CFD6CA129375969 /* QRInputAmountViewModel.swift */,
+				2DD4508B619CD84F160BB1CA /* QRInputAmountViewController.xib */,
+				2DD45BB062C46CC1A20CE76C /* QRInputAmountViewController.swift */,
+			);
+			path = QRInputAmountView;
+			sourceTree = "<group>";
+		};
+		2DD4544E066B9DB672471F49 /* QRDetailPaymentTvCell */ = {
+			isa = PBXGroup;
+			children = (
+				2DD454FE269E1A5841352FB2 /* QRDetailPaymentTvCell.xib */,
+				2DD45229BBD7342858955696 /* QRDetailPaymentTvCell.swift */,
+			);
+			path = QRDetailPaymentTvCell;
+			sourceTree = "<group>";
+		};
+		2DD454AA7A45B70B56EB9C2D /* QRTransactionDetailPopup */ = {
+			isa = PBXGroup;
+			children = (
+				2DD459E2E6912C1EDA63F997 /* Model */,
+				2DD45BA5B4E6B419CBC545D2 /* QRAPTransactionDetailVC.xib */,
+				2DD45EBA7E8DEE1BA87B1F80 /* QRTransactionDetailVC.swift */,
+				2DD45153145434CF531436F7 /* QRAPTransactionDetailVC.swift */,
+			);
+			path = QRTransactionDetailPopup;
+			sourceTree = "<group>";
+		};
+		2DD454EB15CFF8C57FC71648 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2DD4567E6C0BBE164C6B96D2 /* QRButton */,
+				2DD4508F0CB2E2A1E8EBF63A /* QRColor.swift */,
+				2DD45DAB4775995FCB002BA4 /* QRAPButtonAtom */,
+				2DD45B64D4E68883C92DE054 /* QRUILabelsPart1 */,
+				2DD457E70D935D01A039CCAD /* QRKeyboard */,
+				2DD45CC122667B54CBEB612C /* QRAPCustomKeyboardAtom */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2DD454F9222C3E3FBD81DB5F /* GetDetailTransaksiComponent */ = {
+			isa = PBXGroup;
+			children = (
+				2DD4590AB1C489A97194D3B6 /* QRTrxDetailItemTVCell */,
+				2DD450699C4E1E8445457F66 /* QRTransactionDetailTopCell */,
+				2DD45A0482BDE798C132F348 /* QRTransactionDetailBottomCell */,
+				2DD4513205EF99108059AB9C /* QRTransactionDetailMiddleCell */,
+			);
+			path = GetDetailTransaksiComponent;
+			sourceTree = "<group>";
+		};
+		2DD45541A76E42DA40C805E9 /* QREncryptor */ = {
+			isa = PBXGroup;
+			children = (
+				2DD457F23B489B792C36DF12 /* QREncryptor.swift */,
+			);
+			path = QREncryptor;
+			sourceTree = "<group>";
+		};
+		2DD4555DB8701C59737971CC /* QRDetailPaymentTVCellAstrapay */ = {
+			isa = PBXGroup;
+			children = (
+				2DD457F2B7165E14820F9307 /* QRDetailPaymentTVCellAstrapay.xib */,
+				2DD453D410C2773B9F0E5C14 /* QRDetailPaymentTVCellAstrapay.swift */,
+				2DD459C01C41256EB23018E3 /* QRDetailPaymentTVCellAstrapayViewMode.swift */,
+			);
+			path = QRDetailPaymentTVCellAstrapay;
+			sourceTree = "<group>";
+		};
+		2DD455B19294F1866C922CAC /* QRScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45262AF84C75AA3123965 /* QRView */,
+				2DD4543FDA4C866D83542400 /* QRInputAmountView */,
+				2DD45832BF41C7D81006E902 /* QRResultPaymentView */,
+				2DD45C840E870454661D2870 /* QRNewTransactionView */,
+				2DD45B26B144E4B9CAEA99E1 /* QRTransactionIsProcess */,
+				2DD4575C1D33E3F298D51F83 /* QRTransactionDetailView */,
+			);
+			path = QRScreen;
+			sourceTree = "<group>";
+		};
+		2DD45633DE272E735BBAD205 /* SelectPaymentMethodComponent */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45B6BA1AA498A2E99D7AF /* QRPLMCDetailPaymentTVCell */,
+				2DD4555DB8701C59737971CC /* QRDetailPaymentTVCellAstrapay */,
+			);
+			path = SelectPaymentMethodComponent;
+			sourceTree = "<group>";
+		};
+		2DD45656FB185B3E0A7C9F4E /* QrUI */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45E4151A57DC188B824AE /* Client */,
+				2DD455B19294F1866C922CAC /* QRScreen */,
+				2DD45D0FBC73F4F9FFA050E8 /* Component */,
+			);
+			path = QrUI;
+			sourceTree = "<group>";
+		};
+		2DD4567A43F68AB5A1FBF2C3 /* Inter */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45BF096647EA4C83A31FF /* InterBold.ttf */,
+				2DD45E4EA7A8F0828B897866 /* InterThin.ttf */,
+				2DD45B533B13D1F4CD37A400 /* InterBlack.ttf */,
+				2DD4520B02E60285374FC28E /* InterLight.ttf */,
+				2DD45E5583E84317DB7099A6 /* InterMedium.ttf */,
+				2DD455565B57E7893357A8AF /* InterRegular.ttf */,
+				2DD458BDC5C4B2C8998EE57D /* InterSemiBold.ttf */,
+				2DD45B249C4E99DD2BA4FAF4 /* InterExtraBold.ttf */,
+				2DD4514D0B7619E91E7A027A /* InterExtraLight.ttf */,
+			);
+			path = Inter;
+			sourceTree = "<group>";
+		};
+		2DD4567E6C0BBE164C6B96D2 /* QRButton */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45D6BDBA55932BDA2836D /* QRButton.xib */,
+				2DD459FCE42D6C7A620A0730 /* QRButton.swift */,
+			);
+			path = QRButton;
+			sourceTree = "<group>";
+		};
+		2DD456A34D7EB59D14EB987A /* DetailPaymentSelectedPaylaterMauCash */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45ACF804E3141382F33FF /* DetailPaymentSelectedViewPaylaterMauCash.xib */,
+				2DD45DFADA351F610B7175A7 /* DetailPaymentSelectedViewPaylaterMauCash.swift */,
+			);
+			path = DetailPaymentSelectedPaylaterMauCash;
+			sourceTree = "<group>";
+		};
+		2DD4575C1D33E3F298D51F83 /* QRTransactionDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45775C8D52F76F507B5C3 /* GetDetailViewData */,
+				2DD4592425B795586152D9CE /* QRTransactionDetailViewModel.swift */,
+				2DD450E41FD4C48CF2456C58 /* QRTransactionDetailViewController.xib */,
+				2DD45E50ECE28BB4BA1CF6DE /* QRTransactionDetailViewController.swift */,
+			);
+			path = QRTransactionDetailView;
+			sourceTree = "<group>";
+		};
+		2DD45775C8D52F76F507B5C3 /* GetDetailViewData */ = {
+			isa = PBXGroup;
+			children = (
+				2DD450B98D14A269584AF2C4 /* QRGetDetailTransaksiDtoViewData.swift */,
+			);
+			path = GetDetailViewData;
+			sourceTree = "<group>";
+		};
+		2DD457B870C2703F05AF7EF2 /* AuthenticationQR */ = {
+			isa = PBXGroup;
+			children = (
+				2DD451B5FF401C7176B68C3B /* CacheAuthentication.swift */,
+			);
+			path = AuthenticationQR;
+			sourceTree = "<group>";
+		};
+		2DD457E70D935D01A039CCAD /* QRKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45B0D5F9E63F554672713 /* ViewInputText.swift */,
+				2DD45553FBBC1F45286944DA /* ViewInputText.xib */,
+			);
+			path = QRKeyboard;
+			sourceTree = "<group>";
+		};
+		2DD4580C7D13E0F0E2C88A82 /* QRCameraView */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45A6B247C95CCDF405EA0 /* QRCameraView.swift */,
+			);
+			path = QRCameraView;
+			sourceTree = "<group>";
+		};
+		2DD45818DC267D75764442AF /* Inquiry */ = {
+			isa = PBXGroup;
+			children = (
+				2DD453B6A071900B35984BE7 /* QrInquiryDto.swift */,
+				2DD45F55E8AFFBF21919F6AA /* QRInquiryQrisDto.swift */,
+			);
+			path = Inquiry;
+			sourceTree = "<group>";
+		};
+		2DD45832BF41C7D81006E902 /* QRResultPaymentView */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45D5C238153CAC2BC9F3A /* QRResultPaymentView.xib */,
+				2DD4530E67B475F21E092830 /* QRResultPaymentViewModel.swift */,
+				2DD4508451AAB99C5E31CF08 /* QRResultPaymentViewController.swift */,
+			);
+			path = QRResultPaymentView;
+			sourceTree = "<group>";
+		};
+		2DD45839FF2C165ED2B6B680 /* Barlow */ = {
+			isa = PBXGroup;
+			children = (
+				2DD4576F81312EC1BE35D04B /* BarlowBold.ttf */,
+				2DD4501CB975B01CE96AFCF2 /* BarlowThin.ttf */,
+				2DD457916B08B7ECEE525538 /* BarlowBlack.ttf */,
+				2DD455310E1415CF2E324913 /* BarlowLight.ttf */,
+				2DD45B95A87F418E22CF9B1C /* BarlowMedium.ttf */,
+				2DD456A8B28CFAA9079487E2 /* BarlowRegular.ttf */,
+				2DD454938DFAF9FA744EF1FF /* BarlowSemiBold.ttf */,
+				2DD45260A7F4023E67BEA018 /* BarlowExtraBold.ttf */,
+				2DD45F0A904D777DA5865BCC /* BarlowExtraLight.ttf */,
+			);
+			path = Barlow;
+			sourceTree = "<group>";
+		};
+		2DD4587FDBD58E4ED5065C57 /* QRNewReader */ = {
+			isa = PBXGroup;
+			children = (
+				2DD4562E8A149065D88A9202 /* QRNewReaderProtocol.swift */,
+			);
+			path = QRNewReader;
+			sourceTree = "<group>";
+		};
+		2DD45881A9748A1B1A442D95 /* ErrorResponse */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45AC02245200B6753A48C /* AstrapayErrorResponse.swift */,
+			);
+			path = ErrorResponse;
+			sourceTree = "<group>";
+		};
+		2DD458BC219DE9773C822FF3 /* QRDetailTransactionTvCell */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45B48FF65620183BD170A /* QRDetailTransactionTvCell.xib */,
+				2DD45E6EC38B715327C37E02 /* QRDetailTransactionTvCell.swift */,
+			);
+			path = QRDetailTransactionTvCell;
+			sourceTree = "<group>";
+		};
+		2DD458CD3B1AC6EC8B1E3D25 /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45D402664A9A6AF2DD5B6 /* UI */,
+				2DD45E9EDF5F69FC46790836 /* scan.json */,
+				2DD45656FB185B3E0A7C9F4E /* QrUI */,
+				2DD45E4250C52C3178CAF1C2 /* Model */,
+				2DD451203BB7F508A185E328 /* Helper */,
+			);
+			path = QR;
+			sourceTree = "<group>";
+		};
+		2DD4590AB1C489A97194D3B6 /* QRTrxDetailItemTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45A2EC8740D14F4B1B43F /* QRTrxDetailItemTVCell.xib */,
+				2DD45B3D4A673D7DF2B1DBB4 /* QRTrxDetailItemTVCell.swift */,
+			);
+			path = QRTrxDetailItemTVCell;
+			sourceTree = "<group>";
+		};
+		2DD45924C70B0226F0BBF225 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45C13792BBBCD17522CA6 /* Container.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		2DD459459D0B65BBE5DCC245 /* QRResponse */ = {
+			isa = PBXGroup;
+			children = (
+				2DD4560E51620BC8F9D8FB6D /* QRGenericResult.swift */,
+			);
+			path = QRResponse;
+			sourceTree = "<group>";
+		};
+		2DD4595DD79CB9E7C29B5BC6 /* BaseUrlMobileGateway */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45C53A54C6312C0241F29 /* BaseUrlMobileGateway.swift */,
+			);
+			path = BaseUrlMobileGateway;
+			sourceTree = "<group>";
+		};
+		2DD4598E70305A5EE152219C /* QRNewPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45C06E0667404E0673EDC /* QRPopUp.xib */,
+				2DD45654452802318A679D4E /* QRPopUp.swift */,
+			);
+			path = QRNewPopUp;
+			sourceTree = "<group>";
+		};
+		2DD459E2E6912C1EDA63F997 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45B95338CFD7D7AC0D3A4 /* QRAPTransactionDetailPopupModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2DD459E913FCAFC006C937FA /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45A593AA0B240057892AE /* TransactionOtp.swift */,
+				2DD45A3475FA875312FE73AD /* TransactionPin.swift */,
+				2DD45516A0AF696B094E4FC1 /* GetDetailTransaksi.swift */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		2DD45A0482BDE798C132F348 /* QRTransactionDetailBottomCell */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45C5DFDE1B470CE6DCDE6 /* QRTransactionDetailBottomTVCell.xib */,
+				2DD4501AEED9DF881C11AF31 /* QRTransactionDetailBottomTVCell.swift */,
+			);
+			path = QRTransactionDetailBottomCell;
+			sourceTree = "<group>";
+		};
+		2DD45A8BE3BFEAD687E59DB9 /* QRLKPINView */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45C63F7A00352E4A03C42 /* QRLKPinView.swift */,
+			);
+			path = QRLKPINView;
+			sourceTree = "<group>";
+		};
+		2DD45AA2DEE2E97A50288F9B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2DD4541A460716552443EA25 /* QRAPFormatter.swift */,
+				2DD454E4F53CD32117A49726 /* StringExtension.swift */,
+				2DD45E7D3E7641066DB8B1F4 /* UIFontExtension.swift */,
+				2DD45B9E6F268CD041B36D81 /* UIViewExtension.swift */,
+				2DD45F0B77AD13E7714F9247 /* NumericExtension.swift */,
+				2DD45BD05AD9D652749D0116 /* UIColorExtension.swift */,
+				2DD45EF52FB86C7DA1755082 /* UILabelExtension.swift */,
+				2DD45F71857F84DE81EA20BB /* DictionaryExtension.swift */,
+				2DD4563362913F100E458A10 /* NSDictionaryExtension.swift */,
+				2DD45E70B7C4C9C38FD8775A /* DateFormatterExtension.swift */,
+				2DD451D56EB821381DE84FCA /* UIViewControllerExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2DD45AAB91DDAC8004BC5702 /* DetailPaymentSelectedViewAstrapay */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45E364DDD342CD7642BEC /* DetailPaymentSelectedViewAstrapay.xib */,
+				2DD45B484E64B978F54627BA /* DetailPaymentSelectedViewAstrapay.swift */,
+			);
+			path = DetailPaymentSelectedViewAstrapay;
+			sourceTree = "<group>";
+		};
+		2DD45AD9BC3D8E80F4EE2862 /* QRDetailPaymentSelected */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45AAB91DDAC8004BC5702 /* DetailPaymentSelectedViewAstrapay */,
+				2DD456A34D7EB59D14EB987A /* DetailPaymentSelectedPaylaterMauCash */,
+			);
+			path = QRDetailPaymentSelected;
+			sourceTree = "<group>";
+		};
+		2DD45B1C0232B3D577672B59 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				2DD4574A2C49E795DC666E3F /* QRBaseColor.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		2DD45B25F2F84152FF45FA3F /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				2DD456C645D48384812E68B0 /* Api.swift */,
+				2DD45D0FAE1BF46524BCB88C /* Route.swift */,
+				2DD45AD1B9CF481D12C6BA15 /* ApiPath.swift */,
+				2DD4578ADDBBCE530A3112DD /* Service.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		2DD45B26B144E4B9CAEA99E1 /* QRTransactionIsProcess */ = {
+			isa = PBXGroup;
+			children = (
+				2DD4522A7F67D204AB18F51A /* QRTransactionIsProcessView.xib */,
+				2DD45AED5638C315C472B903 /* QRTransactionIsProcessViewModel.swift */,
+				2DD45B07A9C76AF1C04193D4 /* QRTransactionIsProcessViewController.swift */,
+			);
+			path = QRTransactionIsProcess;
+			sourceTree = "<group>";
+		};
+		2DD45B39B82AF09A7EA5F58B /* QRPopUpOTP */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45786E0B460C8A300C1F8 /* QRPopUpOTP.xib */,
+				2DD4578BF7B7E61D7A1225C3 /* QRPopUpOTP.swift */,
+			);
+			path = QRPopUpOTP;
+			sourceTree = "<group>";
+		};
+		2DD45B64D4E68883C92DE054 /* QRUILabelsPart1 */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45F818FD2030E8708C7ED /* QRUILabelInterBold.swift */,
+				2DD45B2A9CBF17B706A181D5 /* QRUILabelInterThin.swift */,
+				2DD459B700C345E389147B5D /* QRUILabelInterBlack.swift */,
+				2DD454B2350940B3F338FDF6 /* QRUILabelInterLight.swift */,
+				2DD45A388B9321F85809BD68 /* QRUILabelInterMedium.swift */,
+				2DD4523991583F20235995FC /* QRUILabelInterRegular.swift */,
+				2DD4587326C4D963AB4702A3 /* QRUILabelInterSemiBold.swift */,
+				2DD45195723C707F62846CD2 /* QRUILabelInterExtraBold.swift */,
+				2DD45F2416CB7E9CC1D49F49 /* QRUILabelInterExtraLight.swift */,
+			);
+			path = QRUILabelsPart1;
+			sourceTree = "<group>";
+		};
+		2DD45B6BA1AA498A2E99D7AF /* QRPLMCDetailPaymentTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				2DD459B70EFB5026F2B58F91 /* QRPLMCDetailPaymentTVCell.xib */,
+				2DD458C550221A39EC219D7B /* QRDetailPaymentTVCellPLMC.swift */,
+				2DD4581EEE18F90356FD2D76 /* QRPLMCDetailPaymentTVCellViewModel.swift */,
+			);
+			path = QRPLMCDetailPaymentTVCell;
+			sourceTree = "<group>";
+		};
+		2DD45B9A0BEA39BC997FC631 /* Lottie Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45F4C4B49B06362E3B8B6 /* failedLottie.json */,
+				2DD4577DF3E4D1FF871A6E0E /* loadingLottie.json */,
+				2DD45DADD946918115072AB8 /* successLottie.json */,
+				2DD45BD00073E4C85ED38A3F /* inProgressLottie.json */,
+			);
+			path = "Lottie Assets";
+			sourceTree = "<group>";
+		};
+		2DD45BA184648A7AE0EB71EF /* QRPLMCDetailPaymentView */ = {
+			isa = PBXGroup;
+			children = (
+				2DD4538A5317715136303C3A /* QRSelectPaymentView.swift */,
+				2DD455250A672259E03683BF /* QRPLMCDetailPaymentView.xib */,
+				2DD45DF787C73ECC05ED949B /* QRDetailPaymentViewModel.swift */,
+			);
+			path = QRPLMCDetailPaymentView;
+			sourceTree = "<group>";
+		};
+		2DD45BC824782024BC9FF220 /* QRMerchantInfoTvCell */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45B4E9CC02D2EB0B3003D /* QRMerchantInfoTvCell.xib */,
+				2DD4538D8E2C945FE652E7FE /* QRMerchantInfoTvCell.swift */,
+			);
+			path = QRMerchantInfoTvCell;
+			sourceTree = "<group>";
+		};
+		2DD45C26B8D99F84A3BEBA16 /* Encryptor */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45847C4671D4B827601B9 /* QrEncryptor.swift */,
+				2DD45341C9F9ACA6A8CB694C /* AES-256.swift */,
+			);
+			path = Encryptor;
+			sourceTree = "<group>";
+		};
+		2DD45C2C112E3373B44A0A7F /* InquiryViewData */ = {
+			isa = PBXGroup;
+			children = (
+				2DD4571AF896A30B44EDE2E3 /* QRInquiryDtoViewData.swift */,
+				2DD455EDBA8D53EC630FC5B9 /* QRInquiryQrisDtoViewData.swift */,
+			);
+			path = InquiryViewData;
+			sourceTree = "<group>";
+		};
+		2DD45C3268598BBAB68AEC02 /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				2DD450BC7180749F55B2E801 /* Otp */,
+				2DD45818DC267D75764442AF /* Inquiry */,
+				2DD45C3B93C61DE97381A7E3 /* Paylater */,
+				2DD459E913FCAFC006C937FA /* Transaction */,
+				2DD452B1FBF1E6C33F518F2E /* QrGeneralDto */,
+				2DD45881A9748A1B1A442D95 /* ErrorResponse */,
+			);
+			path = Dto;
+			sourceTree = "<group>";
+		};
+		2DD45C3B93C61DE97381A7E3 /* Paylater */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45C1361FE87B9EBF88FC5 /* PaylaterDto.swift */,
+			);
+			path = Paylater;
+			sourceTree = "<group>";
+		};
+		2DD45C7F06C8F0437F50D8CB /* QRInputKeyboardView */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45854E349078F44D3C81A /* QRInputKeyboardView.xib */,
+				2DD4547A0BE2FED1F3CB064C /* QRInputKeyboardView.swift */,
+			);
+			path = QRInputKeyboardView;
+			sourceTree = "<group>";
+		};
+		2DD45C840E870454661D2870 /* QRNewTransactionView */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45BE4FC1D6AFEA7C034CF /* QRNewTransactionFlowViewModel.swift */,
+				2DD4539495EC89B1FAC8CA55 /* QRNewTransactionFlowViewController.swift */,
+			);
+			path = QRNewTransactionView;
+			sourceTree = "<group>";
+		};
+		2DD45CC122667B54CBEB612C /* QRAPCustomKeyboardAtom */ = {
+			isa = PBXGroup;
+			children = (
+				2DD452F127790CCF99031668 /* QRAPCustomKeyboardAtom.swift */,
+				2DD45F4B7C3EA622DBCE13B1 /* APCustomKeyboardAtom.xib */,
+				2DD45ED27A05D6E56216FA5B /* QRAPImageKeyboardAtom.swift */,
+				2DD459F02551EF1210E68597 /* APImageKeyboardAtom.xib */,
+			);
+			path = QRAPCustomKeyboardAtom;
+			sourceTree = "<group>";
+		};
+		2DD45D0FBC73F4F9FFA050E8 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				2DD4598E70305A5EE152219C /* QRNewPopUp */,
+				2DD45B39B82AF09A7EA5F58B /* QRPopUpOTP */,
+				2DD452DB9755F1D36EB01280 /* QRPopUpPIN */,
+				2DD45A8BE3BFEAD687E59DB9 /* QRLKPINView */,
+				2DD4587FDBD58E4ED5065C57 /* QRNewReader */,
+				2DD45F34293E324D9BF270B4 /* QRNotePopUp */,
+				2DD4580C7D13E0F0E2C88A82 /* QRCameraView */,
+				2DD4522242E84E58F704A6DC /* QRUITextField */,
+				2DD45DDC47BD5D0599A6ED20 /* QRGaleryPicker */,
+				2DD45E629D945F52B571D594 /* QRCameraControlView */,
+				2DD45C7F06C8F0437F50D8CB /* QRInputKeyboardView */,
+				2DD45BC824782024BC9FF220 /* QRMerchantInfoTvCell */,
+				2DD4544E066B9DB672471F49 /* QRDetailPaymentTvCell */,
+				2DD45AD9BC3D8E80F4EE2862 /* QRDetailPaymentSelected */,
+				2DD45BA184648A7AE0EB71EF /* QRPLMCDetailPaymentView */,
+				2DD454AA7A45B70B56EB9C2D /* QRTransactionDetailPopup */,
+				2DD458BC219DE9773C822FF3 /* QRDetailTransactionTvCell */,
+				2DD45404D78E86C44F489E01 /* QRNominalTransactionTvCell */,
+				2DD454F9222C3E3FBD81DB5F /* GetDetailTransaksiComponent */,
+				2DD45633DE272E735BBAD205 /* SelectPaymentMethodComponent */,
+				2DD45D5B7567501C9186EC4A /* QRPLMCBillDetailPaymentTVCell */,
+				2DD4525C96062DF6152E25A5 /* QRLoadingStateView */,
+				2DD45E3CCBF0F51DD22B9978 /* QRLottieView */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		2DD45D5B7567501C9186EC4A /* QRPLMCBillDetailPaymentTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				2DD451DD136F884F4978322D /* QRPLMCBillDetailPaymentTVCell.xib */,
+				2DD45F8CF48BE40D85481DC3 /* QRPLMCBillDetailPaymentTVCell.swift */,
+			);
+			path = QRPLMCBillDetailPaymentTVCell;
+			sourceTree = "<group>";
+		};
+		2DD45DAB4775995FCB002BA4 /* QRAPButtonAtom */ = {
+			isa = PBXGroup;
+			children = (
+				2DD4532CD1F34CDD071203A6 /* QRAPButtonAtom.xib */,
+				2DD457F7A01485397400B942 /* QRAPButtonAtom.swift */,
+			);
+			path = QRAPButtonAtom;
+			sourceTree = "<group>";
+		};
+		2DD45DDC47BD5D0599A6ED20 /* QRGaleryPicker */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45D2A9BB52B0ADFC82C0C /* QRGaleryPicker.swift */,
+			);
+			path = QRGaleryPicker;
+			sourceTree = "<group>";
+		};
+		2DD45E3CCBF0F51DD22B9978 /* QRLottieView */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45B9A0BEA39BC997FC631 /* Lottie Assets */,
+				2DD4539D83D964ADEC16AAE9 /* QRLottieAnimationView.xib */,
+				2DD45DDE349C9F61E4D3B208 /* QRLottieAnimationView.swift */,
+			);
+			path = QRLottieView;
+			sourceTree = "<group>";
+		};
+		2DD45E4151A57DC188B824AE /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45C3268598BBAB68AEC02 /* Dto */,
+				2DD45505F5B11FA43AE60A22 /* QRClient.swift */,
+				2DD45D95B2A869BBEE36CFF7 /* QRPaylaterClient.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		2DD45E4250C52C3178CAF1C2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2DD4590992CD86EADFA6042D /* QRAPBillPaymentsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2DD45E629D945F52B571D594 /* QRCameraControlView */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45CE48E35B01354D0C705 /* QRCameraControlView.xib */,
+				2DD45090A95D6C05112D5EBF /* QRCameraControlView.swift */,
+			);
+			path = QRCameraControlView;
+			sourceTree = "<group>";
+		};
+		2DD45F34293E324D9BF270B4 /* QRNotePopUp */ = {
+			isa = PBXGroup;
+			children = (
+				2DD45B18E003434865A58090 /* QRAPPopUpNoteTransferVC.xib */,
+				2DD45B84BDE5F6F92E0C2FCB /* QRAPPopUpNoteTransferVC.swift */,
+			);
+			path = QRNotePopUp;
+			sourceTree = "<group>";
+		};
+		9CD66B9F1AAC1B46EF977869 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE7CEF5DE35C11E4FF2355DD /* Pods-astrapay-qris-ios.debug.xcconfig */,
+				B946D562823B09550AA72A19 /* Pods-astrapay-qris-ios.release.xcconfig */,
+				C7F9F04AD33A6F03F658F209 /* Pods-astrapay-qris-ios-astrapay-qris-iosUITests.debug.xcconfig */,
+				69DB05C7E085495CDBE4C8C6 /* Pods-astrapay-qris-ios-astrapay-qris-iosUITests.release.xcconfig */,
+				A5FC8E9F0DEA6F6BA03A4FF1 /* Pods-astrapay-qris-iosTests.debug.xcconfig */,
+				D1FCB9D66B115C0DB73B5D01 /* Pods-astrapay-qris-iosTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D54F48C627DF3AD100CF38AF = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +1197,8 @@
 				D54F48E827DF3AD300CF38AF /* astrapay-qris-iosTests */,
 				D54F48F227DF3AD300CF38AF /* astrapay-qris-iosUITests */,
 				D54F48D027DF3AD100CF38AF /* Products */,
+				9CD66B9F1AAC1B46EF977869 /* Pods */,
+				ED21B2321DFA61773196D071 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +1215,9 @@
 		D54F48D127DF3AD100CF38AF /* astrapay-qris-ios */ = {
 			isa = PBXGroup;
 			children = (
+				D54F490227DF3BAD00CF38AF /* Modules */,
 				D54F48D227DF3AD100CF38AF /* AppDelegate.swift */,
 				D54F48D427DF3AD100CF38AF /* SceneDelegate.swift */,
-				D54F48D627DF3AD100CF38AF /* ViewController.swift */,
-				D54F48D827DF3AD100CF38AF /* Main.storyboard */,
 				D54F48DB27DF3AD300CF38AF /* Assets.xcassets */,
 				D54F48DD27DF3AD300CF38AF /* LaunchScreen.storyboard */,
 				D54F48E027DF3AD300CF38AF /* Info.plist */,
@@ -127,6 +1242,67 @@
 			path = "astrapay-qris-iosUITests";
 			sourceTree = "<group>";
 		};
+		D54F490227DF3BAD00CF38AF /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D54F490427DF3BC000CF38AF /* Home */,
+				2DD458CD3B1AC6EC8B1E3D25 /* QR */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D54F490427DF3BC000CF38AF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D54F490727DF3BE600CF38AF /* Scenes */,
+				D54F490627DF3BD600CF38AF /* Storyboard */,
+				D54F490527DF3BCF00CF38AF /* Router */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D54F490527DF3BCF00CF38AF /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D54F490927DF3C3500CF38AF /* HomeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		D54F490627DF3BD600CF38AF /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D54F48D827DF3AD100CF38AF /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		D54F490727DF3BE600CF38AF /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D54F490827DF3BF600CF38AF /* View Controller */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D54F490827DF3BF600CF38AF /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D54F48D627DF3AD100CF38AF /* HomeVC.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		ED21B2321DFA61773196D071 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C7580C2AA73CA9ECDD15BA47 /* Pods_astrapay_qris_ios.framework */,
+				FDC8B14BDD642318F47F2CF1 /* Pods_astrapay_qris_ios_astrapay_qris_iosUITests.framework */,
+				BB0BAAA8DDFA037A099A3F09 /* Pods_astrapay_qris_iosTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +1310,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D54F48F927DF3AD300CF38AF /* Build configuration list for PBXNativeTarget "astrapay-qris-ios" */;
 			buildPhases = (
+				574766061AA9C4C2E78D2BEA /* [CP] Check Pods Manifest.lock */,
 				D54F48CB27DF3AD100CF38AF /* Sources */,
 				D54F48CC27DF3AD100CF38AF /* Frameworks */,
 				D54F48CD27DF3AD100CF38AF /* Resources */,
+				F3A8808E69D16D52EABCCDA6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +1329,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D54F48FC27DF3AD300CF38AF /* Build configuration list for PBXNativeTarget "astrapay-qris-iosTests" */;
 			buildPhases = (
+				92CAF760707B71D78D71B9E0 /* [CP] Check Pods Manifest.lock */,
 				D54F48E127DF3AD300CF38AF /* Sources */,
 				D54F48E227DF3AD300CF38AF /* Frameworks */,
 				D54F48E327DF3AD300CF38AF /* Resources */,
@@ -169,9 +1348,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D54F48FF27DF3AD300CF38AF /* Build configuration list for PBXNativeTarget "astrapay-qris-iosUITests" */;
 			buildPhases = (
+				2072EABDBF40CA56AA032854 /* [CP] Check Pods Manifest.lock */,
 				D54F48EB27DF3AD300CF38AF /* Sources */,
 				D54F48EC27DF3AD300CF38AF /* Frameworks */,
 				D54F48ED27DF3AD300CF38AF /* Resources */,
+				1BA1A9307AC9F7EE9DE19759 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -234,6 +1415,63 @@
 				D54F48DF27DF3AD300CF38AF /* LaunchScreen.storyboard in Resources */,
 				D54F48DC27DF3AD300CF38AF /* Assets.xcassets in Resources */,
 				D54F48DA27DF3AD100CF38AF /* Main.storyboard in Resources */,
+				2DD45F6C4F24AD8F807095D7 /* UI in Resources */,
+				2DD45A3DA46E4414A9915CBA /* scan.json in Resources */,
+				2DD452BD8C10D4CE4606B28A /* QRStoryboard.storyboard in Resources */,
+				2DD452D029533C14528F00CB /* QRInputAmountViewController.xib in Resources */,
+				2DD451547A25D519E81E5E26 /* QRResultPaymentView.xib in Resources */,
+				2DD45F417EAE648E5ED29DC8 /* QRTransactionIsProcessView.xib in Resources */,
+				2DD45E40FD68863D8BD91BA9 /* QRTransactionDetailViewController.xib in Resources */,
+				2DD4518E5818057672F22193 /* QRPopUp.xib in Resources */,
+				2DD4507C7FAB5071A5D144C0 /* QRPopUpOTP.xib in Resources */,
+				2DD456FB5B2E51989C5F24C7 /* QRPopUpPIN.xib in Resources */,
+				2DD450723B9BDF83F2535EA4 /* QRAPPopUpNoteTransferVC.xib in Resources */,
+				2DD45C900F6900D39E54F415 /* QRCameraControlView.xib in Resources */,
+				2DD457DB5CCE7B89C86E5B61 /* QRInputKeyboardView.xib in Resources */,
+				2DD45FCF9E1C057E88378D08 /* QRMerchantInfoTvCell.xib in Resources */,
+				2DD4501F1046615962818A08 /* QRDetailPaymentTvCell.xib in Resources */,
+				2DD4567321DEE7619A1B7816 /* DetailPaymentSelectedViewAstrapay.xib in Resources */,
+				2DD45017248F94AB1AE2BD82 /* DetailPaymentSelectedViewPaylaterMauCash.xib in Resources */,
+				2DD455AA29503D59FEDF39E4 /* QRPLMCDetailPaymentView.xib in Resources */,
+				2DD454C0F4B7EE826F725E4E /* QRAPTransactionDetailVC.xib in Resources */,
+				2DD45F2C6C82C666A8900690 /* QRDetailTransactionTvCell.xib in Resources */,
+				2DD454C601E03D93C027A284 /* QRNominalTransactionTvCell.xib in Resources */,
+				2DD4545B4655C27E6BB8FBF2 /* QRTrxDetailItemTVCell.xib in Resources */,
+				2DD4510CE4887DB060E135C4 /* QRTransactionDetailTopTVCell.xib in Resources */,
+				2DD459659EDA7B9E70B60F8E /* QRTransactionDetailBottomTVCell.xib in Resources */,
+				2DD45AC6A380CACBDE28C96C /* QRTransactionDetailMiddleTVCell.xib in Resources */,
+				2DD459AA356AEA83035647AE /* QRPLMCDetailPaymentTVCell.xib in Resources */,
+				2DD4565D3E95A9C67894C33F /* QRDetailPaymentTVCellAstrapay.xib in Resources */,
+				2DD45D03F53DB3C48E3773E7 /* QRPLMCBillDetailPaymentTVCell.xib in Resources */,
+				2DD459FA5E8C91E6E27F59DB /* QRButton.xib in Resources */,
+				2DD45C76DECB815908632C82 /* QRAPButtonAtom.xib in Resources */,
+				2DD45DB18618E398213B710D /* InterBold.ttf in Resources */,
+				2DD450E5B126F15B9E91093E /* InterThin.ttf in Resources */,
+				2DD45413ABD03B63E7BE5E19 /* InterBlack.ttf in Resources */,
+				2DD457E31CF467E4E686DA90 /* InterLight.ttf in Resources */,
+				2DD4570A636B1F7BC062DF35 /* InterMedium.ttf in Resources */,
+				2DD45253034060D7A647E1C0 /* InterRegular.ttf in Resources */,
+				2DD45C52BF0188483DD9489C /* InterSemiBold.ttf in Resources */,
+				2DD458DD029BC58037BB1D40 /* InterExtraBold.ttf in Resources */,
+				2DD45E07CCE6A6FB2DFFD95D /* InterExtraLight.ttf in Resources */,
+				2DD45638BFCF79B07A3F04FE /* BarlowBold.ttf in Resources */,
+				2DD452F948700004F8FEE554 /* BarlowThin.ttf in Resources */,
+				2DD45DC330567EE7F2B97CFF /* BarlowBlack.ttf in Resources */,
+				2DD45AB251489002D215EC52 /* BarlowLight.ttf in Resources */,
+				2DD455B5C60C9BC32D5EDFBA /* BarlowMedium.ttf in Resources */,
+				2DD455F0ED6B749C833A1D26 /* BarlowRegular.ttf in Resources */,
+				2DD453650878C999858D2829 /* BarlowSemiBold.ttf in Resources */,
+				2DD451A12635C0B52FFF20ED /* BarlowExtraBold.ttf in Resources */,
+				2DD45DD87F65EE16F20D5572 /* BarlowExtraLight.ttf in Resources */,
+				2DD4541BF273000164C03CF2 /* ViewInputText.xib in Resources */,
+				2DD45D18A04E3A234A21FE27 /* APCustomKeyboardAtom.xib in Resources */,
+				2DD450595B7E7D7A87EBBFCF /* APImageKeyboardAtom.xib in Resources */,
+				2DD451073BAB5F48DB4CD273 /* QRLoadingStateView.xib in Resources */,
+				2DD455FF72784B16D9CFF7DA /* failedLottie.json in Resources */,
+				2DD458F50E66F1BBDC19239A /* loadingLottie.json in Resources */,
+				2DD45917B4CAF937159D8F4D /* successLottie.json in Resources */,
+				2DD4515CC5DD68548207F997 /* inProgressLottie.json in Resources */,
+				2DD45F19A187DBDA12539906 /* QRLottieAnimationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +1491,220 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1BA1A9307AC9F7EE9DE19759 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-astrapay-qris-ios-astrapay-qris-iosUITests/Pods-astrapay-qris-ios-astrapay-qris-iosUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-astrapay-qris-ios-astrapay-qris-iosUITests/Pods-astrapay-qris-ios-astrapay-qris-iosUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-astrapay-qris-ios-astrapay-qris-iosUITests/Pods-astrapay-qris-ios-astrapay-qris-iosUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2072EABDBF40CA56AA032854 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-astrapay-qris-ios-astrapay-qris-iosUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		574766061AA9C4C2E78D2BEA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-astrapay-qris-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92CAF760707B71D78D71B9E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-astrapay-qris-iosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3A8808E69D16D52EABCCDA6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-astrapay-qris-ios/Pods-astrapay-qris-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-astrapay-qris-ios/Pods-astrapay-qris-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-astrapay-qris-ios/Pods-astrapay-qris-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D54F48CB27DF3AD100CF38AF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D54F48D727DF3AD100CF38AF /* ViewController.swift in Sources */,
+				D54F48D727DF3AD100CF38AF /* HomeVC.swift in Sources */,
+				D54F490A27DF3C3500CF38AF /* HomeRouter.swift in Sources */,
 				D54F48D327DF3AD100CF38AF /* AppDelegate.swift in Sources */,
 				D54F48D527DF3AD100CF38AF /* SceneDelegate.swift in Sources */,
+				2DD4571D732F2E3AC9CFC99B /* QRResendOtpDto.swift in Sources */,
+				2DD4522ABA6CA7504603543B /* QrInquiryDto.swift in Sources */,
+				2DD4554FB51547706C36083C /* QRInquiryQrisDto.swift in Sources */,
+				2DD455BFAC58698EB085D326 /* PaylaterDto.swift in Sources */,
+				2DD45AA90337A67B7F3CFECB /* TransactionOtp.swift in Sources */,
+				2DD455087E6FA89FB09E8191 /* TransactionPin.swift in Sources */,
+				2DD45091F2ECCD1DD0F31E44 /* GetDetailTransaksi.swift in Sources */,
+				2DD45B3E52402EA813EFE0F0 /* QRResponse.swift in Sources */,
+				2DD45DBAF241AB266B9E186D /* AstrapayErrorResponse.swift in Sources */,
+				2DD45D2355CFA67ECAFB9BBC /* QRClient.swift in Sources */,
+				2DD45B919591CD05CE10D6D8 /* QRPaylaterClient.swift in Sources */,
+				2DD450EB3972C49F9D9D0E3C /* QRInquiryDtoViewData.swift in Sources */,
+				2DD45AD57043C00F7C9B29D0 /* QRInquiryQrisDtoViewData.swift in Sources */,
+				2DD45D3C1C6F36C7ADA2D4EF /* QRViewModel.swift in Sources */,
+				2DD4537F4C8A297C70D92926 /* QRViewController.swift in Sources */,
+				2DD4560E13A5AF0566FD7544 /* QRInputAmountViewModel.swift in Sources */,
+				2DD45281D83FBE7233E89D2C /* QRInputAmountViewController.swift in Sources */,
+				2DD456A8F420B1D9D32F42A5 /* QRResultPaymentViewModel.swift in Sources */,
+				2DD45B1CCB17E8FF06EC9CFB /* QRResultPaymentViewController.swift in Sources */,
+				2DD4500F85D3B99EF711B9F0 /* QRNewTransactionFlowViewModel.swift in Sources */,
+				2DD4553EB5E5E20CE06DE838 /* QRNewTransactionFlowViewController.swift in Sources */,
+				2DD4555B4D4519B81EF38BC6 /* QRTransactionIsProcessViewModel.swift in Sources */,
+				2DD45095A89599439AA1D8CA /* QRTransactionIsProcessViewController.swift in Sources */,
+				2DD45632A0EBFBA048ACCAFB /* QRGetDetailTransaksiDtoViewData.swift in Sources */,
+				2DD4512876F0B09751E6A37A /* QRTransactionDetailViewModel.swift in Sources */,
+				2DD4510CD7C1DDDD710598DC /* QRTransactionDetailViewController.swift in Sources */,
+				2DD456F951BC211E04FDC64F /* QRPopUp.swift in Sources */,
+				2DD455C5A67BECB10B53D38E /* QRPopUpOTP.swift in Sources */,
+				2DD45D09F39B659FC621C87C /* QRPopUpPIN.swift in Sources */,
+				2DD45ADD3A5D28F835BA10AC /* QRPopUpPINViewModel.swift in Sources */,
+				2DD45D250A68394744CC743C /* QRLKPinView.swift in Sources */,
+				2DD45FA6ED8B71B2B8C45F54 /* QRNewReaderProtocol.swift in Sources */,
+				2DD45331E7DD57302FB808C2 /* QRAPPopUpNoteTransferVC.swift in Sources */,
+				2DD45274E3E21C75C0D77BA0 /* QRCameraView.swift in Sources */,
+				2DD451DA3D6DCD4E2EAF7F98 /* QRInputLoginTextField.swift in Sources */,
+				2DD452DDAB9C8A4E0E4FE9C5 /* QRGaleryPicker.swift in Sources */,
+				2DD4509CB94E575C49D252F0 /* QRCameraControlView.swift in Sources */,
+				2DD45DEF24C80C17ED29C1F0 /* QRInputKeyboardView.swift in Sources */,
+				2DD45946D81CBFFC9F6CF4F2 /* QRMerchantInfoTvCell.swift in Sources */,
+				2DD45B5D64F88119C123F8A9 /* QRDetailPaymentTvCell.swift in Sources */,
+				2DD45D1445DAE12839C77C0E /* DetailPaymentSelectedViewAstrapay.swift in Sources */,
+				2DD45714A286DC982434BA8C /* DetailPaymentSelectedViewPaylaterMauCash.swift in Sources */,
+				2DD4534B03821A5CA4684164 /* QRSelectPaymentView.swift in Sources */,
+				2DD4523C9253DCF643E7669E /* QRDetailPaymentViewModel.swift in Sources */,
+				2DD45702774EEC4A3AF523D6 /* QRAPTransactionDetailPopupModel.swift in Sources */,
+				2DD45A5D6380D247D8955A78 /* QRTransactionDetailVC.swift in Sources */,
+				2DD451989743B83136D3A177 /* QRAPTransactionDetailVC.swift in Sources */,
+				2DD45634265062A612C536BE /* QRDetailTransactionTvCell.swift in Sources */,
+				2DD457D134674EC8A7B02AD0 /* QRNominalTransactionTvCell.swift in Sources */,
+				2DD45139EE42954CEBFB5B14 /* QRTrxDetailItemTVCell.swift in Sources */,
+				2DD45BC4AA135F0E182D9B7E /* QRTransactionDetailTopTVCell.swift in Sources */,
+				2DD45B706D6B1CB6C101528D /* QRTransactionDetailBottomTVCell.swift in Sources */,
+				2DD45F1AFC25F1016C19ECFA /* QRTransactionDetailMiddleTVCell.swift in Sources */,
+				2DD4599922D341D3F40DB2D5 /* QRDetailPaymentTVCellPLMC.swift in Sources */,
+				2DD4523F9336CB689D9D3072 /* QRPLMCDetailPaymentTVCellViewModel.swift in Sources */,
+				2DD452497E0A2EBAE4A738E8 /* QRDetailPaymentTVCellAstrapay.swift in Sources */,
+				2DD4598B49C4D54DBD2BF0A4 /* QRDetailPaymentTVCellAstrapayViewMode.swift in Sources */,
+				2DD450800FC1ECA1A7AACD7A /* QRPLMCBillDetailPaymentTVCell.swift in Sources */,
+				2DD4591141C814DFF8F0D067 /* QRAPBillPaymentsModel.swift in Sources */,
+				2DD457295D8357FA8CA14478 /* QRButton.swift in Sources */,
+				2DD452EF8B95E6BE4FBDAC63 /* QRColor.swift in Sources */,
+				2DD450B4F6F815D5B3FD0160 /* QRAPButtonAtom.swift in Sources */,
+				2DD45DB198F3564A92A24937 /* QRUILabelInterBold.swift in Sources */,
+				2DD453EEB94F46C3F2A2C72D /* QRUILabelInterThin.swift in Sources */,
+				2DD4568882794503B6A54E88 /* QRUILabelInterBlack.swift in Sources */,
+				2DD456368BC4BE937F1AF3DF /* QRUILabelInterLight.swift in Sources */,
+				2DD4531E1B545EF444DA7526 /* QRUILabelInterMedium.swift in Sources */,
+				2DD45F38B6E3846FB2621E48 /* QRUILabelInterRegular.swift in Sources */,
+				2DD45AC073F94A0AAE80E8A0 /* QRUILabelInterSemiBold.swift in Sources */,
+				2DD454A87AC0D8896AECC9FF /* QRUILabelInterExtraBold.swift in Sources */,
+				2DD457FA81A7CCC2DD086EEA /* QRUILabelInterExtraLight.swift in Sources */,
+				2DD4508B7D5AC6022C7C3D08 /* QRBaseColor.swift in Sources */,
+				2DD456057FA63BB832D5A678 /* Container.swift in Sources */,
+				2DD459BD9AA79244D20F81C7 /* QrEncryptor.swift in Sources */,
+				2DD4539EC9C1E2A59849785C /* QRAPFormatter.swift in Sources */,
+				2DD45C783FCDE94A518D91CE /* StringExtension.swift in Sources */,
+				2DD45875FB1A1FFE4DA04F28 /* UIFontExtension.swift in Sources */,
+				2DD458D8C8FD062E5B4AB92F /* UIViewExtension.swift in Sources */,
+				2DD45381149C3699285BFA87 /* NumericExtension.swift in Sources */,
+				2DD45003219D55FE71078FED /* UIColorExtension.swift in Sources */,
+				2DD45258E606914FB881120B /* UILabelExtension.swift in Sources */,
+				2DD45030E2D5335C03FD35C8 /* DictionaryExtension.swift in Sources */,
+				2DD4574EA14A2591594D3A38 /* NSDictionaryExtension.swift in Sources */,
+				2DD452F86D1713E1B5989789 /* DateFormatterExtension.swift in Sources */,
+				2DD4520AEB4D0CC6E21F8EB9 /* UIViewControllerExtension.swift in Sources */,
+				2DD45623E6D8DA4E77FB2446 /* QRConstant.swift in Sources */,
+				2DD4542B3C5DD0C72F6178FE /* QRErrorConstant.swift in Sources */,
+				2DD45323DEEF03FF637C969A /* QRGenericResult.swift in Sources */,
+				2DD4587973938804D3312DFE /* QREncryptor.swift in Sources */,
+				2DD45EB3FD14EFDE6EFB6214 /* QRNewRouter.swift in Sources */,
+				2DD459751A0D82BE43AD004E /* CacheAuthentication.swift in Sources */,
+				2DD456D0EE7938F04E49245B /* BaseUrlMobileGateway.swift in Sources */,
+				2DD45B283725DCD662E40123 /* AES-256.swift in Sources */,
+				2DD45EA3C84FF95444C76C8E /* Api.swift in Sources */,
+				2DD45AFA1E44E7427F0208D1 /* Route.swift in Sources */,
+				2DD456507DA1DBEA103DA4AD /* ApiPath.swift in Sources */,
+				2DD451CC33617758B36CB238 /* Service.swift in Sources */,
+				2DD4551C003EDB7474AEF089 /* ViewInputText.swift in Sources */,
+				2DD4598DBD5BAFA7CC39E8C3 /* QRAPCustomKeyboardAtom.swift in Sources */,
+				2DD4539075F471B5E7DE9DA4 /* QRAPImageKeyboardAtom.swift in Sources */,
+				2DD45C262EFD44254B20BDCB /* QRLoadingStateView.swift in Sources */,
+				2DD45BA6C5D7DA53927CF7A5 /* QRLottieAnimationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +1878,7 @@
 		};
 		D54F48FA27DF3AD300CF38AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE7CEF5DE35C11E4FF2355DD /* Pods-astrapay-qris-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -461,6 +1906,7 @@
 		};
 		D54F48FB27DF3AD300CF38AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B946D562823B09550AA72A19 /* Pods-astrapay-qris-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -488,6 +1934,7 @@
 		};
 		D54F48FD27DF3AD300CF38AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5FC8E9F0DEA6F6BA03A4FF1 /* Pods-astrapay-qris-iosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -507,6 +1954,7 @@
 		};
 		D54F48FE27DF3AD300CF38AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1FCB9D66B115C0DB73B5D01 /* Pods-astrapay-qris-iosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -526,6 +1974,7 @@
 		};
 		D54F490027DF3AD300CF38AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7F9F04AD33A6F03F658F209 /* Pods-astrapay-qris-ios-astrapay-qris-iosUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -543,6 +1992,7 @@
 		};
 		D54F490127DF3AD300CF38AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69DB05C7E085495CDBE4C8C6 /* Pods-astrapay-qris-ios-astrapay-qris-iosUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

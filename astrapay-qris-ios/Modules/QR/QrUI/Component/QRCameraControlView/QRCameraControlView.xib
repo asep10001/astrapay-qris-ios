@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRCameraControlView" customModule="astrapay" customModuleProvider="target">
+            <connections>
+                <outlet property="flashImageLabel" destination="WUr-bz-S1y" id="Iq6-Cz-gb5"/>
+                <outlet property="flashImageView" destination="ZVw-ml-HhV" id="A1x-eh-9zZ"/>
+                <outlet property="flashStackView" destination="g2T-Ro-wAE" id="MTR-3Y-aiA"/>
+                <outlet property="imageStackView" destination="dht-t9-7EW" id="AAE-JG-hSW"/>
+                <outlet property="qrImageLabel" destination="sHN-eP-qej" id="aiX-eA-MgL"/>
+                <outlet property="qrImageView" destination="ueO-eR-a51" id="eAF-qy-ypI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="QRCameraControlViewIdentifier" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="559" height="152"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PKz-iW-tqW">
+                    <rect key="frame" x="0.0" y="0.0" width="559" height="112"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mul-po-ZO1">
+                            <rect key="frame" x="0.0" y="0.0" width="279.5" height="112"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g2T-Ro-wAE">
+                                    <rect key="frame" x="119.5" y="32" width="40.5" height="48"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_flash" translatesAutoresizingMaskIntoConstraints="NO" id="ZVw-ml-HhV">
+                                            <rect key="frame" x="8.5" y="0.0" width="24" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="rBL-OB-TVI"/>
+                                                <constraint firstAttribute="width" constant="24" id="swZ-Ou-fwF"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flash" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUr-bz-S1y">
+                                            <rect key="frame" x="0.0" y="24" width="40.5" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ZVw-ml-HhV" firstAttribute="centerX" secondItem="g2T-Ro-wAE" secondAttribute="centerX" id="NE2-8H-ZoR"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="g2T-Ro-wAE" firstAttribute="centerX" secondItem="Mul-po-ZO1" secondAttribute="centerX" id="3mY-zf-bvf"/>
+                                <constraint firstItem="g2T-Ro-wAE" firstAttribute="top" secondItem="Mul-po-ZO1" secondAttribute="top" constant="32" id="B2F-1q-ghO"/>
+                                <constraint firstAttribute="bottom" secondItem="g2T-Ro-wAE" secondAttribute="bottom" constant="32" id="Z5k-gl-aNI"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QIm-6K-rx7">
+                            <rect key="frame" x="279.5" y="0.0" width="279.5" height="112"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dht-t9-7EW">
+                                    <rect key="frame" x="102.5" y="32" width="74.5" height="48"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_pay_picture" translatesAutoresizingMaskIntoConstraints="NO" id="ueO-eR-a51">
+                                            <rect key="frame" x="25.5" y="0.0" width="24" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="24" id="Ixp-aM-IIY"/>
+                                                <constraint firstAttribute="height" constant="24" id="UuM-MR-NcC"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHN-eP-qej">
+                                            <rect key="frame" x="0.0" y="24" width="74.5" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ueO-eR-a51" firstAttribute="centerX" secondItem="dht-t9-7EW" secondAttribute="centerX" id="Fi9-ve-zhp"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="dht-t9-7EW" firstAttribute="centerX" secondItem="QIm-6K-rx7" secondAttribute="centerX" id="ABi-Gz-x4I"/>
+                                <constraint firstAttribute="bottom" secondItem="dht-t9-7EW" secondAttribute="bottom" constant="32" id="JBs-dx-pA1"/>
+                                <constraint firstItem="dht-t9-7EW" firstAttribute="top" secondItem="QIm-6K-rx7" secondAttribute="top" constant="32" id="TT6-rk-5n7"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="PKz-iW-tqW" secondAttribute="bottom" id="Con-Dj-PvL"/>
+                <constraint firstItem="PKz-iW-tqW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="T7C-pv-6dc"/>
+                <constraint firstItem="PKz-iW-tqW" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="dO6-ZR-d5w"/>
+                <constraint firstItem="PKz-iW-tqW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="iVi-Ay-Y4z"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="213.768115942029" y="107.14285714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_flash" width="32" height="32"/>
+        <image name="icon_pay_picture" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

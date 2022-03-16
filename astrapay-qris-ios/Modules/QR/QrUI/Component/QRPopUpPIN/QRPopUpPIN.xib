@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRPopUpPIN" customModule="astrapay" customModuleProvider="target">
+            <connections>
+                <outlet property="btnPinView" destination="N83-BJ-6qT" id="4Qq-aT-jK3"/>
+                <outlet property="constraintBottomContainerView" destination="Wv2-fn-BTd" id="Be8-q1-a7z"/>
+                <outlet property="lblWarning" destination="ukE-B4-dOd" id="CuH-tN-60E"/>
+                <outlet property="pinView" destination="KqK-XP-jTh" id="4eq-O0-IcL"/>
+                <outlet property="viewContainer" destination="zQP-sv-yWB" id="o8q-QK-pvI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="popUpPINIdentifier" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="451"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdG-3T-EoB">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="451"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQP-sv-yWB" userLabel="View Container">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="415"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vib-zq-e6G">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="31"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9cn-4y-89w" customClass="UIViewLineTopBottomSheet" customModule="astrapay" customModuleProvider="target">
+                                            <rect key="frame" x="182" y="13.5" width="50" height="4"/>
+                                            <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="9Tv-CM-HXw"/>
+                                                <constraint firstAttribute="height" constant="4" id="SgD-6a-hBr"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="31" id="1jv-Lz-Aaa"/>
+                                        <constraint firstItem="9cn-4y-89w" firstAttribute="centerY" secondItem="Vib-zq-e6G" secondAttribute="centerY" id="Z33-60-Wkz"/>
+                                        <constraint firstItem="9cn-4y-89w" firstAttribute="centerX" secondItem="Vib-zq-e6G" secondAttribute="centerX" id="eyl-Af-cRT"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kaf-Ic-hqI">
+                                    <rect key="frame" x="0.0" y="31" width="414" height="384"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masukkan PIN AstraPay Anda" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9J-DQ-Qmn" customClass="UILabelInterRegular" customModule="astrapay" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="16" width="374" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KqK-XP-jTh" customClass="QRLKPINView" customModule="astrapay" customModuleProvider="target">
+                                            <rect key="frame" x="57" y="38" width="300" height="57"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="57" id="2l0-2V-6vi"/>
+                                                <constraint firstAttribute="width" constant="300" id="t0m-m1-Fvt"/>
+                                            </constraints>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N83-BJ-6qT">
+                                            <rect key="frame" x="57" y="38" width="300" height="57"/>
+                                        </button>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PIN yang Anda Masukkan Salah" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukE-B4-dOd" customClass="UILabelInterMedium" customModule="astrapay" customModuleProvider="target">
+                                            <rect key="frame" x="25" y="100" width="364" height="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.81176470590000005" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="KqK-XP-jTh" firstAttribute="top" secondItem="C9J-DQ-Qmn" secondAttribute="bottom" constant="5" id="2hd-f6-XIP"/>
+                                        <constraint firstItem="ukE-B4-dOd" firstAttribute="top" secondItem="KqK-XP-jTh" secondAttribute="bottom" constant="5" id="82P-57-JIZ"/>
+                                        <constraint firstItem="N83-BJ-6qT" firstAttribute="height" secondItem="KqK-XP-jTh" secondAttribute="height" id="E4A-Go-xnr"/>
+                                        <constraint firstItem="KqK-XP-jTh" firstAttribute="centerX" secondItem="kaf-Ic-hqI" secondAttribute="centerX" id="HK7-GX-cZn"/>
+                                        <constraint firstItem="ukE-B4-dOd" firstAttribute="leading" secondItem="kaf-Ic-hqI" secondAttribute="leading" constant="25" id="Odv-bX-b3Q"/>
+                                        <constraint firstItem="N83-BJ-6qT" firstAttribute="centerY" secondItem="KqK-XP-jTh" secondAttribute="centerY" id="SrT-6o-qYJ"/>
+                                        <constraint firstItem="N83-BJ-6qT" firstAttribute="centerX" secondItem="KqK-XP-jTh" secondAttribute="centerX" id="UjQ-vH-TX9"/>
+                                        <constraint firstAttribute="trailing" secondItem="C9J-DQ-Qmn" secondAttribute="trailing" constant="20" id="VzL-dr-akk"/>
+                                        <constraint firstItem="C9J-DQ-Qmn" firstAttribute="top" secondItem="kaf-Ic-hqI" secondAttribute="top" constant="16" id="XzZ-JP-Qaq"/>
+                                        <constraint firstItem="N83-BJ-6qT" firstAttribute="width" secondItem="KqK-XP-jTh" secondAttribute="width" id="bkb-nY-y2N"/>
+                                        <constraint firstItem="C9J-DQ-Qmn" firstAttribute="leading" secondItem="kaf-Ic-hqI" secondAttribute="leading" constant="20" id="hWF-6N-iCM"/>
+                                        <constraint firstAttribute="trailing" secondItem="ukE-B4-dOd" secondAttribute="trailing" constant="25" id="l08-kp-HMo"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="Vib-zq-e6G" firstAttribute="top" secondItem="zQP-sv-yWB" secondAttribute="top" id="3cW-I4-qmR"/>
+                                <constraint firstAttribute="height" constant="415" id="6YK-18-oVk"/>
+                                <constraint firstItem="kaf-Ic-hqI" firstAttribute="leading" secondItem="zQP-sv-yWB" secondAttribute="leading" id="CuA-nQ-HW3"/>
+                                <constraint firstAttribute="trailing" secondItem="Vib-zq-e6G" secondAttribute="trailing" id="YJj-Pu-WUG"/>
+                                <constraint firstItem="kaf-Ic-hqI" firstAttribute="top" secondItem="Vib-zq-e6G" secondAttribute="bottom" id="YiF-UA-3u4"/>
+                                <constraint firstAttribute="bottom" secondItem="kaf-Ic-hqI" secondAttribute="bottom" id="ZyM-mH-R15"/>
+                                <constraint firstItem="Vib-zq-e6G" firstAttribute="leading" secondItem="zQP-sv-yWB" secondAttribute="leading" id="gQq-8d-EwA"/>
+                                <constraint firstAttribute="trailing" secondItem="kaf-Ic-hqI" secondAttribute="trailing" id="uEI-Fj-orG"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="zQP-sv-yWB" firstAttribute="top" secondItem="tdG-3T-EoB" secondAttribute="top" id="3I1-Mx-f96"/>
+                        <constraint firstItem="zQP-sv-yWB" firstAttribute="width" secondItem="tdG-3T-EoB" secondAttribute="width" id="7rM-h4-Hhl"/>
+                        <constraint firstItem="zQP-sv-yWB" firstAttribute="centerX" secondItem="tdG-3T-EoB" secondAttribute="centerX" id="Geg-6O-1Ca"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="tdG-3T-EoB" secondAttribute="trailing" id="GiO-fC-Vqk"/>
+                <constraint firstItem="tdG-3T-EoB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KIL-kZ-svH"/>
+                <constraint firstAttribute="bottom" secondItem="tdG-3T-EoB" secondAttribute="bottom" id="Wv2-fn-BTd"/>
+                <constraint firstItem="tdG-3T-EoB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lfo-55-Lt1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139" y="108"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="C9J-DQ-Qmn">
+            <size key="intrinsicContentSize" width="190" height="17"/>
+        </designable>
+        <designable name="ukE-B4-dOd">
+            <size key="intrinsicContentSize" width="177.5" height="14.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

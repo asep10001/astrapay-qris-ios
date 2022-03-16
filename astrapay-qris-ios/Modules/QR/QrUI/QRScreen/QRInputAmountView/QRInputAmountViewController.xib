@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRInputAmountViewController" customModule="astrapay" customModuleProvider="target">
+            <connections>
+                <outlet property="amountLabel" destination="ZcG-vj-K0i" id="2An-gV-2rF"/>
+                <outlet property="infoProfileLabel" destination="bLb-Vx-HDB" id="b81-Tl-K3x"/>
+                <outlet property="inputAmountKeyboardView" destination="CZe-Mm-Zgm" id="dVc-jm-XnX"/>
+                <outlet property="jumlahTransferLabel" destination="hn6-0Y-mIS" id="2GX-9N-Sn5"/>
+                <outlet property="profileHeadImage" destination="prj-Pw-yEW" id="9DX-1C-S9g"/>
+                <outlet property="tipsLabel" destination="nNL-Ze-uTr" id="6Pi-K8-ryn"/>
+                <outlet property="titleContentHeader" destination="D22-fF-FVX" id="rGK-Df-w1x"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="7WC-tC-8LB"/>
+                <outlet property="viewButton" destination="VgB-2O-tCV" id="Vqs-hB-KFU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbH-u4-MDy" userLabel="View Container">
+                    <rect key="frame" x="20" y="68" width="374" height="774"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqJ-iF-K6Y" userLabel="View Header">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="58"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ncT-kS-HaZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="58" height="58"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_profile_circle" translatesAutoresizingMaskIntoConstraints="NO" id="prj-Pw-yEW">
+                                            <rect key="frame" x="0.0" y="0.0" width="58" height="58"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="prj-Pw-yEW" firstAttribute="leading" secondItem="ncT-kS-HaZ" secondAttribute="leading" id="JFC-83-8pc"/>
+                                        <constraint firstItem="prj-Pw-yEW" firstAttribute="top" secondItem="ncT-kS-HaZ" secondAttribute="top" id="Wzx-3J-gN5"/>
+                                        <constraint firstAttribute="bottom" secondItem="prj-Pw-yEW" secondAttribute="bottom" id="fWt-gU-xbB"/>
+                                        <constraint firstAttribute="trailing" secondItem="prj-Pw-yEW" secondAttribute="trailing" id="hXU-KP-T11"/>
+                                        <constraint firstAttribute="width" constant="58" id="vCJ-Cx-pkh"/>
+                                    </constraints>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vUa-zZ-hQX">
+                                    <rect key="frame" x="74" y="19.5" width="284" height="19.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLb-Vx-HDB" customClass="UILabelInterSemiBold" customModule="astrapay" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="284" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D22-fF-FVX" customClass="UILabelInterRegular" customModule="astrapay" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="284" height="0.0"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="ncT-kS-HaZ" firstAttribute="leading" secondItem="fqJ-iF-K6Y" secondAttribute="leading" id="4NH-7F-4f2"/>
+                                <constraint firstItem="vUa-zZ-hQX" firstAttribute="leading" secondItem="ncT-kS-HaZ" secondAttribute="trailing" constant="16" id="5mH-m2-PUc"/>
+                                <constraint firstAttribute="bottom" secondItem="ncT-kS-HaZ" secondAttribute="bottom" id="PXO-Av-KKD"/>
+                                <constraint firstItem="vUa-zZ-hQX" firstAttribute="centerY" secondItem="fqJ-iF-K6Y" secondAttribute="centerY" id="bQg-tA-nsO"/>
+                                <constraint firstAttribute="trailing" secondItem="vUa-zZ-hQX" secondAttribute="trailing" constant="16" id="pXx-Gw-dIu"/>
+                                <constraint firstAttribute="height" constant="58" id="uhk-pp-CFe"/>
+                                <constraint firstItem="ncT-kS-HaZ" firstAttribute="top" secondItem="fqJ-iF-K6Y" secondAttribute="top" id="vRk-cQ-p8R"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TX1-Ts-JYe" userLabel="View Amount">
+                            <rect key="frame" x="0.0" y="82" width="374" height="48"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jumlah Transfer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hn6-0Y-mIS" customClass="UILabelInterSemiBold" customModule="astrapay" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="17"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="17" id="fn3-UM-xt7"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Rp 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcG-vj-K0i" customClass="UILabelInterRegular" customModule="astrapay" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="19" width="374" height="29"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="29" id="o9r-es-zqz"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="ZcG-vj-K0i" secondAttribute="bottom" id="19T-Ul-rRh"/>
+                                <constraint firstAttribute="trailing" secondItem="hn6-0Y-mIS" secondAttribute="trailing" id="A8t-ST-478"/>
+                                <constraint firstItem="hn6-0Y-mIS" firstAttribute="leading" secondItem="TX1-Ts-JYe" secondAttribute="leading" id="KC6-xM-hcB"/>
+                                <constraint firstItem="ZcG-vj-K0i" firstAttribute="top" secondItem="hn6-0Y-mIS" secondAttribute="bottom" constant="2" id="KJ1-lH-Lih"/>
+                                <constraint firstItem="ZcG-vj-K0i" firstAttribute="leading" secondItem="TX1-Ts-JYe" secondAttribute="leading" id="Sh9-MS-Zpn"/>
+                                <constraint firstItem="hn6-0Y-mIS" firstAttribute="top" secondItem="TX1-Ts-JYe" secondAttribute="top" id="Wga-cX-1HF"/>
+                                <constraint firstAttribute="trailing" secondItem="ZcG-vj-K0i" secondAttribute="trailing" id="sah-3W-E18"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZe-Mm-Zgm" userLabel="View Keyboard" customClass="InputKeyboardView" customModule="astrapay" customModuleProvider="target">
+                            <rect key="frame" x="30" y="176.5" width="314" height="493.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VgB-2O-tCV" userLabel="View Button" customClass="QRAPButtonAtom" customModule="astrapay" customModuleProvider="target">
+                            <rect key="frame" x="15" y="702" width="344" height="50"/>
+                            <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="tJ5-yw-3Ti"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ Tips Rp 200 (05.00%)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNL-Ze-uTr">
+                            <rect key="frame" x="0.0" y="138" width="183" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="fqJ-iF-K6Y" secondAttribute="trailing" id="0hC-aP-EZS"/>
+                        <constraint firstItem="CZe-Mm-Zgm" firstAttribute="leading" secondItem="fbH-u4-MDy" secondAttribute="leading" constant="30" id="0y3-rD-KeZ"/>
+                        <constraint firstAttribute="trailing" secondItem="CZe-Mm-Zgm" secondAttribute="trailing" constant="30" id="3Ad-Ov-kxa"/>
+                        <constraint firstAttribute="trailing" secondItem="VgB-2O-tCV" secondAttribute="trailing" constant="15" id="C4r-lo-WoZ"/>
+                        <constraint firstItem="fqJ-iF-K6Y" firstAttribute="top" secondItem="fbH-u4-MDy" secondAttribute="top" id="CaD-nT-aum"/>
+                        <constraint firstAttribute="trailing" secondItem="TX1-Ts-JYe" secondAttribute="trailing" id="JxQ-zi-jDq"/>
+                        <constraint firstItem="fqJ-iF-K6Y" firstAttribute="leading" secondItem="fbH-u4-MDy" secondAttribute="leading" id="Obs-TQ-KEq"/>
+                        <constraint firstItem="TX1-Ts-JYe" firstAttribute="top" secondItem="fqJ-iF-K6Y" secondAttribute="bottom" constant="24" id="QDf-bL-ttX"/>
+                        <constraint firstItem="VgB-2O-tCV" firstAttribute="leading" secondItem="fbH-u4-MDy" secondAttribute="leading" constant="15" id="a2Q-PZ-wq2"/>
+                        <constraint firstItem="nNL-Ze-uTr" firstAttribute="top" secondItem="TX1-Ts-JYe" secondAttribute="bottom" constant="8" id="fNS-et-t74"/>
+                        <constraint firstItem="CZe-Mm-Zgm" firstAttribute="top" secondItem="nNL-Ze-uTr" secondAttribute="bottom" constant="18" id="kBC-aw-sGF"/>
+                        <constraint firstItem="VgB-2O-tCV" firstAttribute="top" secondItem="CZe-Mm-Zgm" secondAttribute="bottom" constant="32" id="lIv-HR-NLL"/>
+                        <constraint firstAttribute="bottom" secondItem="VgB-2O-tCV" secondAttribute="bottom" constant="22" id="tcP-MF-J67"/>
+                        <constraint firstItem="TX1-Ts-JYe" firstAttribute="leading" secondItem="fbH-u4-MDy" secondAttribute="leading" id="tlb-Mh-Lgm"/>
+                        <constraint firstItem="nNL-Ze-uTr" firstAttribute="leading" secondItem="ZcG-vj-K0i" secondAttribute="leading" id="vIu-UY-uve"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fbH-u4-MDy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="1e3-Fo-vQj"/>
+                <constraint firstItem="fbH-u4-MDy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="5Wf-DO-sqj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fbH-u4-MDy" secondAttribute="bottom" constant="20" id="Bhs-Nh-wow"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fbH-u4-MDy" secondAttribute="trailing" constant="20" id="dMQ-UN-KWd"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="123.21428571428571"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="D22-fF-FVX">
+            <size key="intrinsicContentSize" width="7.5" height="19.5"/>
+        </designable>
+        <designable name="ZcG-vj-K0i">
+            <size key="intrinsicContentSize" width="48.5" height="29"/>
+        </designable>
+        <designable name="bLb-Vx-HDB">
+            <size key="intrinsicContentSize" width="7.5" height="19.5"/>
+        </designable>
+        <designable name="hn6-0Y-mIS">
+            <size key="intrinsicContentSize" width="104" height="17"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="ic_profile_circle" width="232" height="232"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

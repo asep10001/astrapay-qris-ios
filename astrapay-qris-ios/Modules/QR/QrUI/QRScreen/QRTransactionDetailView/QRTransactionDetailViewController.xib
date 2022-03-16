@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRTransactionDetailViewController" customModule="astrapay" customModuleProvider="target">
+            <connections>
+                <outlet property="bagikanButton" destination="p8E-l5-BPK" id="Lg2-X3-Nfk"/>
+                <outlet property="buttonContainer" destination="A6j-Dj-6EI" id="6J5-ib-uUs"/>
+                <outlet property="detailTransactionTV" destination="1oa-fr-Mn1" id="ffz-bt-TZ2"/>
+                <outlet property="view" destination="ngU-D8-98X" id="hwZ-Cs-CMm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ngU-D8-98X">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1oa-fr-Mn1" userLabel="Detail Transaction TV Cell">
+                    <rect key="frame" x="0.0" y="44" width="414" height="730"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6j-Dj-6EI" userLabel="Button Container">
+                    <rect key="frame" x="0.0" y="784" width="414" height="78"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p8E-l5-BPK" userLabel="Bagikan Button" customClass="QRAPButtonAtom" customModule="astrapay" customModuleProvider="target">
+                            <rect key="frame" x="35" y="14" width="344" height="50"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Dbz-ZZ-e8x"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="p8E-l5-BPK" firstAttribute="top" secondItem="A6j-Dj-6EI" secondAttribute="top" constant="14" id="EfS-t2-6WK"/>
+                        <constraint firstItem="p8E-l5-BPK" firstAttribute="leading" secondItem="A6j-Dj-6EI" secondAttribute="leading" constant="35" id="FUy-Eu-J4U"/>
+                        <constraint firstAttribute="trailing" secondItem="p8E-l5-BPK" secondAttribute="trailing" constant="35" id="TG8-ZT-feH"/>
+                        <constraint firstAttribute="bottom" secondItem="p8E-l5-BPK" secondAttribute="bottom" constant="14" id="qtx-Yw-8Ym"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="j3a-Zj-xnl"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="A6j-Dj-6EI" firstAttribute="top" secondItem="1oa-fr-Mn1" secondAttribute="bottom" constant="10" id="FSJ-zE-Xr1"/>
+                <constraint firstItem="j3a-Zj-xnl" firstAttribute="bottom" secondItem="A6j-Dj-6EI" secondAttribute="bottom" id="JIu-El-L2C"/>
+                <constraint firstItem="1oa-fr-Mn1" firstAttribute="leading" secondItem="j3a-Zj-xnl" secondAttribute="leading" id="MZb-bP-iii"/>
+                <constraint firstItem="j3a-Zj-xnl" firstAttribute="trailing" secondItem="A6j-Dj-6EI" secondAttribute="trailing" id="Ngg-Vb-suB"/>
+                <constraint firstItem="j3a-Zj-xnl" firstAttribute="trailing" secondItem="1oa-fr-Mn1" secondAttribute="trailing" id="fEU-QV-hiV"/>
+                <constraint firstItem="A6j-Dj-6EI" firstAttribute="leading" secondItem="j3a-Zj-xnl" secondAttribute="leading" id="gkD-A9-VJV"/>
+                <constraint firstItem="1oa-fr-Mn1" firstAttribute="top" secondItem="j3a-Zj-xnl" secondAttribute="top" id="qBV-5A-Beb"/>
+            </constraints>
+            <point key="canvasLocation" x="399" y="-514"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

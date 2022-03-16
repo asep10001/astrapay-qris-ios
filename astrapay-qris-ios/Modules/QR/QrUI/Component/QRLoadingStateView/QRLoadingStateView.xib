@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRLoadingStateView" customModule="astrapay" customModuleProvider="target">
+            <connections>
+                <outlet property="lottieAnimationView" destination="byQ-JD-Gtm" id="Mah-DL-m2K"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="LoadingStateViewIdentifier" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="byQ-JD-Gtm" customClass="QRLottieAnimationView" customModule="astrapay" customModuleProvider="target">
+                    <rect key="frame" x="12" y="56" width="390" height="794"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="byQ-JD-Gtm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="5ps-AS-i8j"/>
+                <constraint firstItem="byQ-JD-Gtm" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="CyV-85-KSj"/>
+                <constraint firstItem="byQ-JD-Gtm" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Emw-st-zFF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="byQ-JD-Gtm" secondAttribute="trailing" constant="12" id="b8P-E3-z4r"/>
+                <constraint firstItem="byQ-JD-Gtm" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="l4s-GW-L2X"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="byQ-JD-Gtm" secondAttribute="bottom" constant="12" id="luZ-2j-uoJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                    <integer key="value" value="15"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="-223" y="89"/>
+        </view>
+    </objects>
+</document>
