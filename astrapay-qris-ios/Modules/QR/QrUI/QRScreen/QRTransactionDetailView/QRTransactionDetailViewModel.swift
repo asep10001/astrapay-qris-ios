@@ -66,7 +66,7 @@ struct QRTransactionDetailViewModel{
         }
         if currentValue.contains(".,") {
             if !(currentValue.isEmpty) {
-                return QRAPFormatter.currency(number: Int(currentValue) ?? 0)
+                return APFormatter.currency(number: Int(currentValue) ?? 0)
             } else {
                 return "Rp -"
             }
@@ -74,7 +74,7 @@ struct QRTransactionDetailViewModel{
             if !(currentValue.isEmpty) {
                 let feeTotal = Double(currentValue) ?? 0.0
                 let feeResult = Int(feeTotal)
-                return QRAPFormatter.currency(number: feeResult)
+                return APFormatter.currency(number: feeResult)
             } else {
                 return "Rp -"
             }

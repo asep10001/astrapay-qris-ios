@@ -9,6 +9,10 @@
 import UIKit
 import Lottie
 
+protocol QRResultPaymentViewControllerProtocol{
+    func didGoBackToHome()
+}
+
 struct QRResultPaymentViewControllerPayload {
     var merchantName: String?
     var dateTrx: String?
@@ -28,8 +32,11 @@ class QRResultPaymentViewController: UIViewController, UIGestureRecognizerDelega
     @IBOutlet weak var additionalMerchant: UILabel!
     @IBOutlet weak var additionalDate: UILabel!
     
-    @IBOutlet weak var lottieAnimationView: QRLottieAnimationView!
-    
+    @IBOutlet weak var lottieAnimationView: LottieAnimationView!
+
+    var delegateSdk: QRResultPaymentViewControllerProtocol?
+
+
     var productName: String?
     var productNameDetail: String?
 //    var titleScreen: String = ""
@@ -52,10 +59,12 @@ class QRResultPaymentViewController: UIViewController, UIGestureRecognizerDelega
     }
     
     var qrPayload = QRPayloadViewProperty()
-    func initQRPayload(payload : QRPayloadViewProperty){
+
+    func initQRPayload(payload : QRPayloadViewProperty, isPaylater: Bool = false){
         self.qrPayload = payload
         let qrResultPaymentViewModelPayload = QRResultPaymentViewModelPayload(qrGetDetailTransaksiByIdDtoViewData: payload.qrGetDetailTransaksiByIdDtoViewData)
         self.viewModel.initVM(qrResultPaymentViewModelPayload: qrResultPaymentViewModelPayload)
+        self.isPaylater = isPaylater
     }
 
     
@@ -219,6 +228,7 @@ extension QRResultPaymentViewController: QRResultPaymentViewModelProtocol {
 
         self.topButton.coreButton.addTapGestureRecognizer {
             //MARK: perlu dibikin delegate
+            self.delegateSdk?.didGoBackToHome()
             AppState.switchToHome(completion: nil)
         }
 
@@ -229,7 +239,7 @@ extension QRResultPaymentViewController: QRResultPaymentViewModelProtocol {
                 return
             }
 
-            self.qrNewRouter?.navigateToGetDetailTransaksi(qrGetDetailTransaksiByIdDtoViewData: qrGetDetailTransaksiByIdDtoViewData)
+            self.qrNewRouter?.navigateToGetDetailTransaksi(qrGetDetailTransaksiByIdDtoViewData: qrGetDetailTransaksiByIdDtoViewData, isPaylater: self.isPaylater)
         }
 
     }
@@ -247,6 +257,7 @@ extension QRResultPaymentViewController: QRResultPaymentViewModelProtocol {
         self.bottomButton.coreButton.addTapGestureRecognizer {
 
             //MARK: Perlu dibikin delegate
+            self.delegateSdk?.didGoBackToHome()
             AppState.switchToHome(completion: nil)
         }
     }

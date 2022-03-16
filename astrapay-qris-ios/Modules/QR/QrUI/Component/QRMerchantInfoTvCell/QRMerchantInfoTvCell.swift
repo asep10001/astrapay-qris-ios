@@ -51,7 +51,7 @@ class QRMerchantInfoTvCell: UITableViewCell {
     func setLabelImage(nameMerchant:String){
         lblImageNameMerchant.text = setName(nameMerchant: nameMerchant)
         lblImageNameMerchant.textColor = .white
-        lblImageNameMerchant.font = UIFont.setupFont(size: 38, fontType: .interBold)
+        lblImageNameMerchant.font = UIFont.font(size: 38, fontType: .interBold)
         lblImageNameMerchant.textAlignment = .center
         lblImageNameMerchant.clipsToBounds = true
         setRoundIV()

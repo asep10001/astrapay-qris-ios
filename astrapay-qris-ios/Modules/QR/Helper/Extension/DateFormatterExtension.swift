@@ -46,15 +46,15 @@ enum DFCurrentDateFormatQR : String{
 }
 
 extension DateFormatter {
-    static func generateCurrentDateQR(_ dateFormat : FromTypeDateQR) -> String {
+    static func generateCurrentDateQR(_ dateFormat : FromTypeDate) -> String {
         let dateFormatter : DateFormatter = DateFormatter()
         dateFormatter.dateFormat = dateFormat.rawValue
-        dateFormatter.locale = Locale(identifier: LocaleDateQR.id.rawValue)
+        dateFormatter.locale = Locale(identifier: LocaleDate.id.rawValue)
         let dateString = dateFormatter.string(from: Date())
         return dateString
     }
 
-    static func dateConvertQR(valueDate: String, from: FromTypeDateQR, to: FromTypeDateQR, locale: LocaleDateQR = .id) -> String {
+    static func dateConvertQR(valueDate: String, from: FromTypeDate, to: FromTypeDate, locale: LocaleDate = .id) -> String {
         let inputFormatter = DateFormatter()
         inputFormatter.locale = Locale(identifier: locale.rawValue)
         inputFormatter.dateFormat = from.rawValue

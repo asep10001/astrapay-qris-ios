@@ -227,8 +227,8 @@ extension QRViewController: QRViewModelProtocol {
     }
 
     func goToLoginPage(){
-//            AppState.switchToLoginPin(completion: nil)
-        print("todo something")
+            AppState.switchToLoginPin(completion: nil)
+
     }
 
 

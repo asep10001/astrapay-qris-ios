@@ -8,10 +8,6 @@
 
 import UIKit
 
-struct ContentDetailPayload {
-    var title: String = ""
-    var content: String = ""
-}
 
 protocol QRTrxDetailItemTVCellViewProtocol {
     var contentTrxDetail : ContentDetailPayload {get}
@@ -24,8 +20,8 @@ struct QRTrxDetailItemTVCellPayload {
 
 class QRTrxDetailItemTVCell: UITableViewCell {
 
-    @IBOutlet weak var titleLabel: QRUILabelInterRegular!
-    @IBOutlet weak var contentLabel: QRUILabelInterSemiBold!
+    @IBOutlet weak var titleLabel: UILabelInterRegular!
+    @IBOutlet weak var contentLabel: UILabelInterSemiBold!
     
     static let identifier = "QRTrxDetailItemTVCellIdentifier"
     static let nibName = "QRTrxDetailItemTVCell"
@@ -38,9 +34,9 @@ class QRTrxDetailItemTVCell: UITableViewCell {
         self.titleLabel.text = payload.title
         self.contentLabel.text = payload.content
         self.selectionStyle = .none
-        self.titleLabel.font = UIFont.setupFont(size: 16, fontType: .interRegular)
+        self.titleLabel.font = UIFont.font(size: 16, fontType: .interRegular)
         self.titleLabel.textColor = BaseColor.Properties.blackColor
-        self.contentLabel.font = UIFont.setupFont(size: 16, fontType: .interSemiBold)
+        self.contentLabel.font = UIFont.font(size: 16, fontType: .interSemiBold)
         self.contentLabel.textColor = BaseColor.Properties.blackColor
         self.contentLabel.lineBreakMode = .byWordWrapping
     }

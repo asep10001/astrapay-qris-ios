@@ -59,7 +59,7 @@
                                 <constraint firstAttribute="width" constant="164" id="kCw-iQ-usP"/>
                             </constraints>
                         </imageView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QoK-7X-lAZ" customClass="QRLottieAnimationView" customModule="astrapay" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QoK-7X-lAZ" customClass="LottieAnimationView" customModule="astrapay" customModuleProvider="target">
                             <rect key="frame" x="125" y="113" width="164" height="156"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <userDefinedRuntimeAttributes>

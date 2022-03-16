@@ -50,11 +50,11 @@ class QRCameraControlView: UIView {
     }
     
     func setupAction(){
-        imageStackView.addTapGestureRecognizerQR(action: {
+        imageStackView.addTapGestureRecognizer(action: {
             self.delegate?.didQRImagePressed()
         })
         
-        flashStackView.addTapGestureRecognizerQR(action: {
+        flashStackView.addTapGestureRecognizer(action: {
             self.delegate?.didFlashPressed()
         })
     }

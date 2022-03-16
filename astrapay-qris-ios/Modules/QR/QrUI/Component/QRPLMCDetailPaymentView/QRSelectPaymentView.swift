@@ -69,7 +69,7 @@ class QRSelectPaymentView: UIView {
         self.contentView = content
         
         self.titleLabel.text = title
-        self.titleLabel.font = UIFont.setupFont(size: 16, fontType: .interSemiBold)
+        self.titleLabel.font = UIFont.font(size: 16, fontType: .interSemiBold)
         self.separatorView.backgroundColor = BaseColor.separatorView
 
         self.setupTableView()
@@ -168,10 +168,12 @@ extension QRSelectPaymentView: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row {
         case 0:
             var cell = tableView.cellForRow(at: indexPath) as! QRDetailPaymentTVCellAstrapay
+            self.delegate?.isPaylaterSelected(isPaylater: true)
             cell.hiddenSelectedPaymentImage()
             break
         case 1:
             var cell = tableView.cellForRow(at: indexPath) as! QRDetailPaymentTVCellPLMC
+            self.delegate?.isPaylaterSelected(isPaylater: false)
             cell.hiddenSelectedPaymentImage()
 
             break

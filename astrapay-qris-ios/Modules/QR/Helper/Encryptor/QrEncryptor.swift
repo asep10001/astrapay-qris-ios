@@ -15,7 +15,7 @@ struct QrEncryptorPayload{
 class QrEncryptor {
     var key : Data = ".bersamaqris987.".data(using: .utf8)!
     static let arr : [UInt8] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-    var iv : Data = Data(QrEncryptor.arr)
+    var iv : Data = Data(Encryptor.arr)
     var salt : Data = "!behelpfulpeople!".data(using: .utf8)!
 
     struct QRISEncryptorPayload{
@@ -27,7 +27,7 @@ class QrEncryptor {
         static let key = "Astrapay150!"
     }
 
-    init(_ payload : QrEncryptorPayload) {
+    init(_ payload : EncryptorPayload) {
         self.key = payload.key.data(using: .utf8)!
         self.salt = payload.salt.data(using: .utf8)!
     }
@@ -68,9 +68,9 @@ class QrEncryptor {
     }
 
     static func encryptPassword(phoneNumber: String, password: String) -> String {
-        let encryptor = QrEncryptor(QrEncryptorPayload(
-                key: QrEncryptor.CommonEncryptorPayload.key,
-                salt: "\(phoneNumber)-\(DateFormatter.generateCurrentDateQR(FromTypeDateQR.yyyyMMddStrip))"))
+        let encryptor = Encryptor(EncryptorPayload(
+                key: Encryptor.CommonEncryptorPayload.key,
+                salt: "\(phoneNumber)-\(DateFormatter.generateCurrentDate(.yyyyMMddStrip))"))
         return encryptor.encrypt(password)
     }
 

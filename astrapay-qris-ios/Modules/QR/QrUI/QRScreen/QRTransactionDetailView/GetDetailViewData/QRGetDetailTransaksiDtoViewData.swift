@@ -8,8 +8,8 @@ import Foundation
 
 struct QRGetDetailTransaksiByIdDtoViewData{
     var transactionNumber: String?
-    var basicPrice: Int?
-    var totalPrice: Int?
+    var basicPrice: Double?
+    var totalPrice: Double?
     var status, merchantName, merchantCity: String?
     var terminalLabel: String?
     var reconcileCode: String?

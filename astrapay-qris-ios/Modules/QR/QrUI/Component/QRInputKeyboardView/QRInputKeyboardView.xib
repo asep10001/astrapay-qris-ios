@@ -38,7 +38,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3fH-Q4-DKa">
                                     <rect key="frame" x="0.0" y="0.0" width="250" height="70"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uor-dp-McQ" customClass="QRAPCustomKeyboardAtom" customModule="astrapay" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uor-dp-McQ" customClass="APCustomKeyboardAtom" customModule="astrapay" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
@@ -46,11 +46,11 @@
                                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="70" id="gXj-35-enU"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iy2-tp-GCO" customClass="QRAPCustomKeyboardAtom" customModule="astrapay" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iy2-tp-GCO" customClass="APCustomKeyboardAtom" customModule="astrapay" customModuleProvider="target">
                                             <rect key="frame" x="90" y="0.0" width="70" height="70"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EUC-Gs-sAY" customClass="QRAPCustomKeyboardAtom" customModule="astrapay" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EUC-Gs-sAY" customClass="APCustomKeyboardAtom" customModule="astrapay" customModuleProvider="target">
                                             <rect key="frame" x="180" y="0.0" width="70" height="70"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
@@ -73,7 +73,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xiS-Wh-gCI">
                                     <rect key="frame" x="0.0" y="85" width="250" height="70"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rhd-KC-jAp" customClass="QRAPCustomKeyboardAtom" customModule="astrapay" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rhd-KC-jAp" customClass="APCustomKeyboardAtom" customModule="astrapay" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
@@ -81,11 +81,11 @@
                                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="70" id="juf-l3-F8D"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbZ-fO-eCT" customClass="QRAPCustomKeyboardAtom" customModule="astrapay" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbZ-fO-eCT" customClass="APCustomKeyboardAtom" customModule="astrapay" customModuleProvider="target">
                                             <rect key="frame" x="90" y="0.0" width="70" height="70"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nht-95-QoU" customClass="QRAPCustomKeyboardAtom" customModule="astrapay" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nht-95-QoU" customClass="APCustomKeyboardAtom" customModule="astrapay" customModuleProvider="target">
                                             <rect key="frame" x="180" y="0.0" width="70" height="70"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
@@ -108,7 +108,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" spacing="20" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r2e-G8-8s5">
                                     <rect key="frame" x="0.0" y="170" width="250" height="70"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VJJ-g2-Vuy" customClass="QRAPCustomKeyboardAtom" customModule="astrapay" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VJJ-g2-Vuy" customClass="APCustomKeyboardAtom" customModule="astrapay" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
@@ -116,11 +116,11 @@
                                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="70" id="bee-Xb-xub"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pxx-Ca-vSq" customClass="QRAPCustomKeyboardAtom" customModule="astrapay" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pxx-Ca-vSq" customClass="APCustomKeyboardAtom" customModule="astrapay" customModuleProvider="target">
                                             <rect key="frame" x="90" y="0.0" width="70" height="70"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gek-KL-Uu5" customClass="QRAPCustomKeyboardAtom" customModule="astrapay" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gek-KL-Uu5" customClass="APCustomKeyboardAtom" customModule="astrapay" customModuleProvider="target">
                                             <rect key="frame" x="180" y="0.0" width="70" height="70"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
@@ -143,7 +143,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" spacing="20" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ivg-1R-Pmg">
                                     <rect key="frame" x="0.0" y="255" width="250" height="70"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94D-5o-PJd" customClass="QRAPCustomKeyboardAtom" customModule="astrapay" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94D-5o-PJd" customClass="APCustomKeyboardAtom" customModule="astrapay" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
@@ -151,11 +151,11 @@
                                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="70" id="sYJ-ZU-lyH"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCr-cu-fmW" customClass="QRAPCustomKeyboardAtom" customModule="astrapay" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCr-cu-fmW" customClass="APCustomKeyboardAtom" customModule="astrapay" customModuleProvider="target">
                                             <rect key="frame" x="90" y="0.0" width="70" height="70"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fp7-zJ-527" customClass="QRAPImageKeyboardAtom" customModule="astrapay" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fp7-zJ-527" customClass="APImageKeyboardAtom" customModule="astrapay" customModuleProvider="target">
                                             <rect key="frame" x="180" y="0.0" width="70" height="70"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>

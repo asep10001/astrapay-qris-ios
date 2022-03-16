@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="QRPLMCTenorLoanTrxTVCell" customModule="astrapay" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Wr-Dz-R3d">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pilih Metode Pembayaran Paylater" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oF3-iW-DPh" customClass="UILabelInterSemiBold" customModule="astrapay" customModuleProvider="target">
+                                <rect key="frame" x="16" y="8" width="288" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="SF7-KE-Dwm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dfi-A1-DcZ">
+                                <rect key="frame" x="16" y="36" width="288" height="94"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="XcO-p4-NzL"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="oF3-iW-DPh" secondAttribute="trailing" constant="16" id="0Df-fQ-BIR"/>
+                            <constraint firstAttribute="bottom" secondItem="dfi-A1-DcZ" secondAttribute="bottom" id="3Vl-Jm-pp0"/>
+                            <constraint firstAttribute="trailing" secondItem="dfi-A1-DcZ" secondAttribute="trailing" constant="16" id="NB4-fU-9pU"/>
+                            <constraint firstItem="dfi-A1-DcZ" firstAttribute="top" secondItem="oF3-iW-DPh" secondAttribute="bottom" constant="8" id="YSZ-4M-GtU"/>
+                            <constraint firstItem="dfi-A1-DcZ" firstAttribute="leading" secondItem="8Wr-Dz-R3d" secondAttribute="leading" constant="16" id="ali-Ce-dvA"/>
+                            <constraint firstItem="oF3-iW-DPh" firstAttribute="leading" secondItem="8Wr-Dz-R3d" secondAttribute="leading" constant="16" id="bWj-ea-91p"/>
+                            <constraint firstItem="oF3-iW-DPh" firstAttribute="top" secondItem="8Wr-Dz-R3d" secondAttribute="top" constant="8" id="obK-sL-eEl"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="8Wr-Dz-R3d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="9Yp-Mn-eRX"/>
+                    <constraint firstItem="8Wr-Dz-R3d" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="RSe-Uz-fzM"/>
+                    <constraint firstAttribute="bottom" secondItem="8Wr-Dz-R3d" secondAttribute="bottom" id="qM9-Fd-8Wx"/>
+                    <constraint firstAttribute="trailing" secondItem="8Wr-Dz-R3d" secondAttribute="trailing" id="tkN-Zh-ifL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="consHeightTenorPayment" destination="SF7-KE-Dwm" id="GAb-i1-4F7"/>
+                <outlet property="constraitHeightTbTenor" destination="XcO-p4-NzL" id="gkn-JC-0lL"/>
+                <outlet property="lblChooseMethodPayment" destination="oF3-iW-DPh" id="QXX-FX-VFO"/>
+                <outlet property="tbTenorTrxPLMC" destination="dfi-A1-DcZ" id="bf5-w1-ji9"/>
+            </connections>
+            <point key="canvasLocation" x="5.7971014492753632" y="62.946428571428569"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="oF3-iW-DPh">
+            <size key="intrinsicContentSize" width="246" height="19.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -21,18 +21,18 @@ protocol QRInputKeyboardViewProtocol {
 @IBDesignable
 class QRInputKeyboardView: UIView {
  
-    @IBOutlet weak var keyboardOne: QRAPCustomKeyboardAtom!
-    @IBOutlet weak var keyboardTwo: QRAPCustomKeyboardAtom!
-    @IBOutlet weak var keyboardThree: QRAPCustomKeyboardAtom!
-    @IBOutlet weak var keyboardFour: QRAPCustomKeyboardAtom!
-    @IBOutlet weak var keyboardFive: QRAPCustomKeyboardAtom!
-    @IBOutlet weak var keyboardSix: QRAPCustomKeyboardAtom!
-    @IBOutlet weak var keyboardSeven: QRAPCustomKeyboardAtom!
-    @IBOutlet weak var keyboardEight: QRAPCustomKeyboardAtom!
-    @IBOutlet weak var keyboardNine: QRAPCustomKeyboardAtom!
-    @IBOutlet weak var keyboardZeroTriple: QRAPCustomKeyboardAtom!
-    @IBOutlet weak var keyboardZero: QRAPCustomKeyboardAtom!
-    @IBOutlet weak var keyboardRemove: QRAPImageKeyboardAtom!
+    @IBOutlet weak var keyboardOne: APCustomKeyboardAtom!
+    @IBOutlet weak var keyboardTwo: APCustomKeyboardAtom!
+    @IBOutlet weak var keyboardThree: APCustomKeyboardAtom!
+    @IBOutlet weak var keyboardFour: APCustomKeyboardAtom!
+    @IBOutlet weak var keyboardFive: APCustomKeyboardAtom!
+    @IBOutlet weak var keyboardSix: APCustomKeyboardAtom!
+    @IBOutlet weak var keyboardSeven: APCustomKeyboardAtom!
+    @IBOutlet weak var keyboardEight: APCustomKeyboardAtom!
+    @IBOutlet weak var keyboardNine: APCustomKeyboardAtom!
+    @IBOutlet weak var keyboardZeroTriple: APCustomKeyboardAtom!
+    @IBOutlet weak var keyboardZero: APCustomKeyboardAtom!
+    @IBOutlet weak var keyboardRemove: APImageKeyboardAtom!
     
     var delegate : QRInputKeyboardViewProtocol?
     
@@ -103,73 +103,73 @@ class QRInputKeyboardView: UIView {
     }
     
     private func setupAction(){
-        self.keyboardOne.coreButtonKeyboard.addTapGestureRecognizerQR(action: {
+        self.keyboardOne.coreButtonKeyboard.addTapGestureRecognizer(action: {
 //            self.delegate?.keyPressed(press: .one)
             self.onKeyPressed(value: "1")
             self.keyboardOne.animatePressedButton()
         })
         
-        self.keyboardTwo.coreButtonKeyboard.addTapGestureRecognizerQR(action: {
+        self.keyboardTwo.coreButtonKeyboard.addTapGestureRecognizer(action: {
 //            self.delegate?.keyPressed(press: .two)
             self.onKeyPressed(value: "2")
             self.keyboardTwo.animatePressedButton()
         })
         
-        self.keyboardThree.coreButtonKeyboard.addTapGestureRecognizerQR(action: {
+        self.keyboardThree.coreButtonKeyboard.addTapGestureRecognizer(action: {
 //            self.delegate?.keyPressed(press: .three)
             self.onKeyPressed(value: "3")
             self.keyboardThree.animatePressedButton()
         })
         
-        self.keyboardFour.coreButtonKeyboard.addTapGestureRecognizerQR(action: {
+        self.keyboardFour.coreButtonKeyboard.addTapGestureRecognizer(action: {
 //            self.delegate?.keyPressed(press: .four)
             self.onKeyPressed(value: "4")
             self.keyboardFour.animatePressedButton()
         })
         
-        self.keyboardFive.coreButtonKeyboard.addTapGestureRecognizerQR(action: {
+        self.keyboardFive.coreButtonKeyboard.addTapGestureRecognizer(action: {
 //            self.delegate?.keyPressed(press: .five)
             self.onKeyPressed(value: "5")
             self.keyboardFive.animatePressedButton()
         })
         
-        self.keyboardSix.coreButtonKeyboard.addTapGestureRecognizerQR(action: {
+        self.keyboardSix.coreButtonKeyboard.addTapGestureRecognizer(action: {
 //            self.delegate?.keyPressed(press: .six)
             self.onKeyPressed(value: "6")
             self.keyboardSix.animatePressedButton()
         })
         
-        self.keyboardSeven.coreButtonKeyboard.addTapGestureRecognizerQR(action: {
+        self.keyboardSeven.coreButtonKeyboard.addTapGestureRecognizer(action: {
 //            self.delegate?.keyPressed(press: .seven)
             self.onKeyPressed(value: "7")
             self.keyboardSeven.animatePressedButton()
         })
         
-        self.keyboardEight.coreButtonKeyboard.addTapGestureRecognizerQR(action: {
+        self.keyboardEight.coreButtonKeyboard.addTapGestureRecognizer(action: {
 //            self.delegate?.keyPressed(press: .eight)
             self.onKeyPressed(value: "8")
             self.keyboardEight.animatePressedButton()
         })
         
-        self.keyboardNine.coreButtonKeyboard.addTapGestureRecognizerQR(action: {
+        self.keyboardNine.coreButtonKeyboard.addTapGestureRecognizer(action: {
 //            self.delegate?.keyPressed(press: .nine)
             self.onKeyPressed(value: "9")
             self.keyboardNine.animatePressedButton()
         })
         
-        self.keyboardZeroTriple.coreButtonKeyboard.addTapGestureRecognizerQR(action: {
+        self.keyboardZeroTriple.coreButtonKeyboard.addTapGestureRecognizer(action: {
 //            self.delegate?.keyPressed(press: .tripleZero)
             self.onKeyPressed(value: "000")
             self.keyboardZeroTriple.animatePressedButton()
         })
         
-        self.keyboardZero.coreButtonKeyboard.addTapGestureRecognizerQR(action: {
+        self.keyboardZero.coreButtonKeyboard.addTapGestureRecognizer(action: {
 //            self.delegate?.keyPressed(press: .zero)
             self.onKeyPressed(value: "0")
             self.keyboardZero.animatePressedButton()
         })
         
-        self.keyboardRemove.coreButtonKeyboard.addTapGestureRecognizerQR(action: {
+        self.keyboardRemove.coreButtonKeyboard.addTapGestureRecognizer(action: {
 //            self.delegate?.keyPressed(press: .delete)
             self.onRemoveDeleteTapped()
             self.keyboardRemove.animatePressedButton()
@@ -207,7 +207,7 @@ class QRInputKeyboardView: UIView {
             let fieldPriceString = currentPrice.filter(ViewProperty.filterNumber.contains)
             let resultRemovePrice = fieldPriceString.dropLast()
             fieldPriceNumber = Int(resultRemovePrice) ?? 0
-            self.amountString = "\(fieldPriceNumber.toIDRQR() ?? "Rp 0")"
+            self.amountString = "\(fieldPriceNumber.toIDR() ?? "Rp 0")"
             self.currentAmount.append("\(resultRemovePrice)")
             self.amountDouble = Double(self.currentAmount.joined().filter(QRInputKeyboardView.ViewProperty.filterNumber.contains)) ?? 0
             self.delegate?.currentAmount(amount: amountDouble)

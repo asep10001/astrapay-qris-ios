@@ -38,10 +38,12 @@ class QRTransactionDetailViewController: UIViewController {
         var qrGetDetailTransaksiByIdDtoViewData: QRGetDetailTransaksiByIdDtoViewData?
     }
     var qrPayload = QRPayloadViewProperty()
-    func initQRPayload(payload : QRPayloadViewProperty){
+    func initQRPayload(payload : QRPayloadViewProperty, isPaylater: Bool = false){
         self.qrPayload = payload
 
         self.viewModel = QRTransactionDetailViewModel(qrGetDetailTransaksiByIdDtoViewData: self.qrPayload.qrGetDetailTransaksiByIdDtoViewData)
+
+        self.isPaylater = isPaylater
 
     }
 
@@ -71,7 +73,7 @@ class QRTransactionDetailViewController: UIViewController {
     }
     
     func setupAction() {
-        self.bagikanButton.coreButton.addTapGestureRecognizerQR(action: {
+        self.bagikanButton.coreButton.addTapGestureRecognizer(action: {
             UIGraphicsBeginImageContext(self.view.frame.size)
             self.view.layer.render(in: UIGraphicsGetCurrentContext()!)
             let image = UIGraphicsGetImageFromCurrentImageContext()

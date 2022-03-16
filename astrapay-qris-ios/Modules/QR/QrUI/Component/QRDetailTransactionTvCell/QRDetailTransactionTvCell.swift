@@ -17,11 +17,11 @@ protocol QRDetailTransactionTvCellProtocol : class {
 }
 
 class QRDetailTransactionTvCell: UITableViewCell {
-    @IBOutlet weak var lblValueJumlahTransaksi: QRUILabelInterRegular!
-    @IBOutlet weak var lblValuePercentageTips: QRUILabelInterMedium!
-    @IBOutlet weak var lblValueTips: QRUILabelInterRegular!
-    @IBOutlet weak var lblValueTotalPayment: QRUILabelInterSemiBold!
-    @IBOutlet weak var viewBtnEditTips: QRAPButtonAtom!
+    @IBOutlet weak var lblValueJumlahTransaksi: UILabelInterRegular!
+    @IBOutlet weak var lblValuePercentageTips: UILabelInterMedium!
+    @IBOutlet weak var lblValueTips: UILabelInterRegular!
+    @IBOutlet weak var lblValueTotalPayment: UILabelInterSemiBold!
+    @IBOutlet weak var viewBtnEditTips: APButtonAtom!
 
 
     static let identifier = "qRDetailTransactionTvCellIdentifier"
@@ -46,18 +46,18 @@ class QRDetailTransactionTvCell: UITableViewCell {
     func setupView(payloadView : QRDetailTransactionCellPayload){
 
         //ini hasil dari input amount
-        lblValueJumlahTransaksi.text = payloadView.jumlahTransaksi.toIDRQR(withSymbol: true)
+        lblValueJumlahTransaksi.text = payloadView.jumlahTransaksi.toIDR(withSymbol: true)
         setTips(tipsPercentage: payloadView.tipsPercentage, tips: payloadView.tips, tipType: payloadView.tipType)
 
         //ini total payment dari hasil tambah jumlah transaksi dan tips
-        lblValueTotalPayment.text = payloadView.totalPayment.toIDRQR(withSymbol: true)
+        lblValueTotalPayment.text = payloadView.totalPayment.toIDR(withSymbol: true)
 
     }
 
 
 
     func setupAction(){
-        viewBtnEditTips.coreButton.addTapGestureRecognizerQR{
+        viewBtnEditTips.coreButton.addTapGestureRecognizer{
             self.delegate?.didPressTipsButton()
         }
     }
@@ -65,15 +65,6 @@ class QRDetailTransactionTvCell: UITableViewCell {
 
 extension QRDetailTransactionTvCell {
     func setTips(tipsPercentage: String, tips:Int,tipType : QRISNewTipType){
-        //5% = 05.00%
-        //
-//        var stringPercentage : String = ""
-//        if tipsPercentage < 10 {
-//            stringPercentage = "0\(String(Int(tipsPercentage)))." + "00%"
-//        }else {
-//            stringPercentage = "\(String(Int(tipsPercentage)))." + "00%"
-//        }
-//
 
 
     //MARK: ini hanya percobaan
@@ -84,19 +75,19 @@ extension QRDetailTransactionTvCell {
             viewBtnEditTips.isHidden = true
             if tips != 0 {
                 lblValuePercentageTips.text = QRDetailTransactionTvCell.titleTips
-                lblValueTips.text = tips.toIDRQR()
+                lblValueTips.text = tips.toIDR()
             }else {
                 lblValueTips.text = "FREE"
             }
         case .any :
             lblValuePercentageTips.text = QRDetailTransactionTvCell.titleTips
             viewBtnEditTips.isHidden = false
-            lblValueTips.text = tips.toIDRQR()
+            lblValueTips.text = tips.toIDR()
         case .percentage :
             viewBtnEditTips.isHidden = true
             if Double(tipsPercentage) != 0 {
                 lblValuePercentageTips.text = QRDetailTransactionTvCell.titleTips + " (\(tipsPercentage)%)"
-                lblValueTips.text = tips.toIDRQR()//"\(tips) %"
+                lblValueTips.text = tips.toIDR()//"\(tips) %"
             }else {
                 lblValuePercentageTips.text = QRDetailTransactionTvCell.titleTips + " (\(tipsPercentage)%)"
                 lblValueTips.text = "Rp. 0"

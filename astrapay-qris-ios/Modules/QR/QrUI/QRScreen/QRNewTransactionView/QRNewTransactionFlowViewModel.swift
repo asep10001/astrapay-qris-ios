@@ -102,6 +102,9 @@ class QRNewTransactionFlowViewModel {
     var isPaylater: Bool = false
 
 
+    var otpId: String = "0"
+
+
 
     //Property for view controller (general)
 
@@ -219,11 +222,11 @@ extension QRNewTransactionFlowViewModel {
     func postToTransactionPinToClient(qrPaymentAfterInputPinPayload: QRPaymentAfterInputPinPayload){
         var qrTransactionPinRequest: QRTransactionPinRequest = QRTransactionPinRequest(tipAmount: qrPaymentAfterInputPinPayload.tip , amount: qrPaymentAfterInputPinPayload.totalAmount, payments: qrPaymentAfterInputPinPayload.paymentMethod, pin: qrPaymentAfterInputPinPayload.pin)
         //MARK:  perlu bikin negatif case jika inquirynya aja udah null
-        guard let qrInquiryResponse = self.qrInquiryDtoViewData else {
+        guard let qrInquiryDtoViewData = self.qrInquiryDtoViewData else {
             return
         }
         //ini perlu dibikin request struct tersendiri aja
-        self.qrClient.postToTransactionPin(request: qrTransactionPinRequest, qrInquiryDtoViewData: qrInquiryResponse, completion: {
+        self.qrClient.postToTransactionPin(request: qrTransactionPinRequest, qrInquiryDtoViewData: qrInquiryDtoViewData, completion: {
             (result) in
             //MARK: dari result ini kan dia ngebalikin isNeedOtp, jika dia membutuhkan otp maka harus ada delegate untuk memunculkan otp
             switch result.status {
@@ -238,6 +241,7 @@ extension QRNewTransactionFlowViewModel {
                 if qrTransactionPinResponse.needOtp == true {
                     self.delegate?.didNeedOtp()
                     self.qrTransactionPinResponse = qrTransactionPinResponse
+                    self.otpId = String(qrTransactionPinResponse.otp?.otpId ?? 0)
                 } else {
                     if self.isPaylater {
                         self.delegate?.didPostToTransactionPaylaterThroughPin()
@@ -253,16 +257,7 @@ extension QRNewTransactionFlowViewModel {
                             return
                         }
                     }
-                    if let responseCode = result.responseCode {
-                        if responseCode == 401 {
-                            self.delegate?.didGoToLoginPageFromTransactionProcess()
-                            return
-                        }
-                        if responseCode >= 400{
-                            self.delegate?.didFailedPostToTransactionPinBecauseBadRequest()
-                            return
-                        }
-                    }
+
                     guard let astrapayError = result.errorData else {
                         print("Error is nil")
                         return
@@ -276,24 +271,35 @@ extension QRNewTransactionFlowViewModel {
                                 if additionalData.key == "retryCount"{
                                     retryInPin = additionalData.value ?? "0"
                                     self.delegate?.didFailedPostToTransactionPinBecausePinIsWrong(retryPin: retryInPin)
-                                    break
+                                    return
                                 }
                             }
                         }
 
                         if detail.code == "PIN-SUBMIT-TEMPORARY-LOCK"{
                             self.delegate?.didFailedPostToTransactionPinBecauseTemporaryLock()
-                            break
+                            return
                         }
 
                         if detail.code == "PIN-SUBMIT-PERMANENT-LOCK"{
                             self.delegate?.didFailedPostToTransactionPinBecausePermanentLock()
-                            break
+                            return
                         }
 
                         if detail.code == "OTP-REQUEST-LOCK" {
                             self.delegate?.didFailedPostToTransactionPinBecauseOtpRequestLimitExceeded()
-                            break
+                            return
+                        }
+
+                        if let responseCode = result.responseCode {
+                            if responseCode == 401 {
+                                self.delegate?.didGoToLoginPageFromTransactionProcess()
+                                return
+                            }
+                            if responseCode >= 400{
+                                self.delegate?.didFailedPostToTransactionPinBecauseBadRequest()
+                                return
+                            }
                         }
                     }
                 print(result.message + " ini adalah errornya")
@@ -316,23 +322,16 @@ extension QRNewTransactionFlowViewModel {
                 if let result = result.data {
                     if self.isPaylater {
                         self.delegate?.didPostToTransactionPaylaterThroughOtp()
+                        return
                     }
                     self.delegate?.didSuccessPostToTransctionOtp(idTransaksi: String(result.id ?? 0))
+                    return
                 }
                 print(true)
 
             case false:
 
-                if let responseCode = result.responseCode {
-                    if responseCode == 401 {
-                        self.delegate?.didGoToLoginPageFromTransactionProcess()
-                        return
-                    }
-                    if responseCode >= 400{
-                        self.delegate?.didFailedPostToTransactionPinBecauseBadRequest()
-                        return
-                    }
-                }
+
                 if let isTimeout = result.isTimeOut {
                     if isTimeout {
                         self.delegate?.didTransactionOtpGetTimeOut()
@@ -358,6 +357,17 @@ extension QRNewTransactionFlowViewModel {
                }
                 //MARK: perlu dibikin logic jika error
                 print(false)
+
+                if let responseCode = result.responseCode {
+                    if responseCode == 401 {
+                        self.delegate?.didGoToLoginPageFromTransactionProcess()
+                        return
+                    }
+                    if responseCode >= 400{
+                        self.delegate?.didFailedPostToTransactionPinBecauseBadRequest()
+                        return
+                    }
+                }
             }
 
         }
@@ -366,7 +376,9 @@ extension QRNewTransactionFlowViewModel {
 //MARK: Hit resend otp
 extension QRNewTransactionFlowViewModel{
     func getResendOtp(inquiryId: String){
-        self.getResendOtpClient(inquiryId: inquiryId)
+        DispatchQueue.main.async {
+            self.getResendOtpClient(inquiryId: inquiryId)
+        }
     }
     func getResendOtpClient(inquiryId: String){
         self.qrClient.getResendOtp(requestIdInquiry: String(self.qrInquiryDtoViewData?.id ?? 0), completion: {
@@ -377,6 +389,8 @@ extension QRNewTransactionFlowViewModel{
                     assertionFailure("resend otp dto is null")
                     return
                 }
+                self.otpId = String(resendOtpDtoResponse.otpId)
+                break
             case false:
                 guard let astrapayError = result.errorData else {
                     print("Error is is nil on otp")
@@ -384,11 +398,13 @@ extension QRNewTransactionFlowViewModel{
                 }
 
 
+
                 for detail in astrapayError.details{
                     if detail.code == "OTP-REQUEST-LOCK" {
                         self.delegate?.didFailedResendOtpBecauseOtpRequestLimitExceeded()
                     }
                 }
+                break
             }
         })
     }
@@ -445,6 +461,7 @@ extension QRNewTransactionFlowViewModel {
 
 
      func getDetailTransaksiClient(idTransaksi: String){
+         var transaksiId = idTransaksi
       self.qrClient.getDetailTransaksiById(requestIdTransaksi: idTransaksi){ (result) in
           switch result.status {
             case true:
@@ -458,6 +475,16 @@ extension QRNewTransactionFlowViewModel {
 
             }
       }
+    }
+}
+
+//MARK: if is paylater
+extension QRNewTransactionFlowViewModel {
+    func ifIsPaylater(){
+        if self.isPaylater {
+            self.delegate?.didPostToTransactionPaylaterThroughPin()
+            return
+        }
     }
 }
 

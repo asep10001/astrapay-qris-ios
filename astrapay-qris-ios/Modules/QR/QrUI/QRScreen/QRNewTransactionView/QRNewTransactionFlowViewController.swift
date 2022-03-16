@@ -44,7 +44,6 @@ class QRNewTransactionFlowViewController: UIViewController {
         static let heightOfDetailPaymentCell : CGFloat = QRDetailPaymentTvCell.heightOfCell
         static let heightOfNominalTransaction : CGFloat = QRNominalTransactionTvCell.heightOfCell
         var btnTitle : String = "BAYAR"
-        var btnBalanceErrorMessage : String = "Saldo tidak cukup"
         static let navigationTitle = "Bayar"
         static let defaultCurrency = "Rp. 0"
         static let constantHeightPopUp = 360
@@ -266,6 +265,10 @@ extension QRNewTransactionFlowViewController {
 //            self.btnPayment.setAtomic(type: .disabled, title: "BAYAR")
 //        }
         self.btnPayment.coreButton.setTapGestureRecognizer {
+            if self.viewModel.isPaylater {
+                self.viewModel.ifIsPaylater()
+                return
+            }
             self.showPopUpPin()
         }
     }
@@ -366,6 +369,11 @@ extension QRNewTransactionFlowViewController: QRNewTransactionFlowViewModelProto
     //MARK: Paylater transaksi
     func didPostToTransactionPaylaterThroughPin() {
         //router ke paylater
+        guard let qrInquryDtoViewData = self.viewModel.qrInquiryDtoViewData else {
+            return
+        }
+        var qrPaylaterTransactionPayload = QRPaylaterTransactionPayload(amounTransaction: self.viewModel.amountTransaction ?? 0, tipTransaction: self.viewModel.tipAmount ?? 0, totalAmountTransaction: self.viewModel.totalAmountTransaction ?? 0, qrInquiryDtoViewData: qrInquryDtoViewData)
+        self.qrNewRouter?.navigateToTenorLoanPage(model: qrPaylaterTransactionPayload)
     }
 
     func didPostToTransactionPaylaterThroughOtp() {
@@ -589,7 +597,7 @@ extension QRNewTransactionFlowViewController: QRPopUpOTPProtocol {
             )
 
             var qrTransactionOtpRequestForPathAndHeader: QRTransactionOtpRequestForPathAndHeader = QRTransactionOtpRequestForPathAndHeader(
-                    otpId: String(self.viewModel.qrTransactionPinResponse?.otp?.otpId ?? 0),
+                    otpId: self.viewModel.otpId,
             transactionToken: self.viewModel.qrInquiryDtoViewData?.transactionToken ?? "-"
             )
             self.viewModel.postToTransactionOtp(qrTransactionOtpRequest: qrTransactionOtpRequest, qrTransactionOtpRequestForPathAndHeader: qrTransactionOtpRequestForPathAndHeader)
@@ -597,7 +605,9 @@ extension QRNewTransactionFlowViewController: QRPopUpOTPProtocol {
 
     }
     func didPressResendButton(){
-        self.viewModel.getResendOtp(inquiryId: String(self.viewModel.qrInquiryDtoViewData?.id ?? 0))
+        DispatchQueue.main.async {
+            self.viewModel.getResendOtp(inquiryId: String(self.viewModel.qrInquiryDtoViewData?.id ?? 0))
+        }
     }
 
 }

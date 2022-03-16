@@ -36,7 +36,7 @@ class QRPopUp: UIView {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
-    @IBOutlet weak var actionButton: QRAPButtonAtom!
+    @IBOutlet weak var actionButton: APButtonAtom!
     @IBOutlet weak var containView: UIView!
     
     private let amountPreferred = 5000000
@@ -118,10 +118,10 @@ extension QRPopUp{
         self.subtitleLabel.text = self.qrPopUpPayload?.subtitleLableText ?? "-"
         self.actionButton.setAtomic(type: .filled, title: self.qrPopUpPayload?.titleButton ?? "-")
 
-        self.titleLabel.font = UIFont.setupFont(size: 22, fontType: .interSemiBold)
-        self.subtitleLabel.font = UIFont.setupFont(size: 14, fontType: .interRegular)
+        self.titleLabel.font = UIFont.font(size: 22, fontType: .interSemiBold)
+        self.subtitleLabel.font = UIFont.font(size: 14, fontType: .interRegular)
 
-        self.actionButton.coreButton.addTapGestureRecognizerQR(action: {
+        self.actionButton.coreButton.addTapGestureRecognizer(action: {
             self.delegate?.didActionButtonPressed()
         })
     }
@@ -141,10 +141,10 @@ extension QRPopUp{
         }
         self.actionButton.setAtomic(type: .filled, title: "OK")
 
-        self.titleLabel.font = UIFont.setupFont(size: 22, fontType: .interSemiBold)
-        self.subtitleLabel.font = UIFont.setupFont(size: 14, fontType: .interRegular)
+        self.titleLabel.font = UIFont.font(size: 22, fontType: .interSemiBold)
+        self.subtitleLabel.font = UIFont.font(size: 14, fontType: .interRegular)
 
-        self.actionButton.coreButton.addTapGestureRecognizerQR(action: {
+        self.actionButton.coreButton.addTapGestureRecognizer(action: {
             self.delegate?.didActionButtonPressed()
         })
     }
@@ -159,10 +159,10 @@ extension QRPopUp {
         self.subtitleLabel.text = "Maaf kode QR ini tidak terdaftar di sistem kami, coba scan kode lainnya ya."
         self.actionButton.setAtomic(type: .filled, title: "OK")
 
-        self.titleLabel.font = UIFont.setupFont(size: 22, fontType: .interSemiBold)
-        self.subtitleLabel.font = UIFont.setupFont(size: 14, fontType: .interRegular)
+        self.titleLabel.font = UIFont.font(size: 22, fontType: .interSemiBold)
+        self.subtitleLabel.font = UIFont.font(size: 14, fontType: .interRegular)
 
-        self.actionButton.coreButton.addTapGestureRecognizerQR(action: {
+        self.actionButton.coreButton.addTapGestureRecognizer(action: {
             self.delegate?.didActionButtonPressed()
         })
     }
@@ -178,10 +178,10 @@ extension QRPopUp{
         self.subtitleLabel.text = "Kamu sudah 3 kali salah PIN Coba kembali setelah 1 jam"
         self.actionButton.setAtomic(type: .filled, title: "Kembali ke Beranda")
 
-        self.titleLabel.font = UIFont.setupFont(size: 22, fontType: .interSemiBold)
-        self.subtitleLabel.font = UIFont.setupFont(size: 14, fontType: .interRegular)
+        self.titleLabel.font = UIFont.font(size: 22, fontType: .interSemiBold)
+        self.subtitleLabel.font = UIFont.font(size: 14, fontType: .interRegular)
 
-        self.actionButton.coreButton.addTapGestureRecognizerQR(action: {
+        self.actionButton.coreButton.addTapGestureRecognizer(action: {
             self.delegate?.didActionButtonPressed()
         })
 
@@ -194,10 +194,10 @@ extension QRPopUp{
         self.subtitleLabel.text = "Kamu sudah melebihi batas memasukkan PIN. Hubungi CS untuk pemulihan akun"
         self.actionButton.setAtomic(type: .filled, title: "Kembali ke Beranda")
 
-        self.titleLabel.font = UIFont.setupFont(size: 22, fontType: .interSemiBold)
-        self.subtitleLabel.font = UIFont.setupFont(size: 14, fontType: .interRegular)
+        self.titleLabel.font = UIFont.font(size: 22, fontType: .interSemiBold)
+        self.subtitleLabel.font = UIFont.font(size: 14, fontType: .interRegular)
 
-        self.actionButton.coreButton.addTapGestureRecognizerQR(action: {
+        self.actionButton.coreButton.addTapGestureRecognizer(action: {
             self.delegate?.didActionButtonPressed()
         })
 }

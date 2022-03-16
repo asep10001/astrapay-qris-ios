@@ -51,15 +51,15 @@ class QRDetailPaymentTVCellAstrapay: UITableViewCell {
         self.informationLabel.text = content.information
         self.selectedPaymentImage.image = UIImage(named: self.nameSelectedImage)
 
-        self.paymentNameLabel.font = UIFont.setupFont(size: 14, fontType: .interSemiBold)
-        self.balanceLabel.font = UIFont.setupFont(size: 14, fontType: .interRegular)
-        self.informationLabel.font = UIFont.setupFont(size: 12, fontType: .interRegular)
-        self.informationLabel.textColor = QRBaseColor.QRProperties.baseColor
+        self.paymentNameLabel.font = UIFont.font(size: 14, fontType: .interSemiBold)
+        self.balanceLabel.font = UIFont.font(size: 14, fontType: .interRegular)
+        self.informationLabel.font = UIFont.font(size: 12, fontType: .interRegular)
+        self.informationLabel.textColor = BaseColor.Properties.baseColor
 
 //        self.selectedPaymentImage.isHidden = false
         self.containerView.roundCorners(value: 10)
         self.containerView.layer.borderWidth = 1
-        self.containerView.layer.borderColor = QRBaseColor.QRProperties.baseDisabledColor.cgColor
+        self.containerView.layer.borderColor = BaseColor.Properties.baseDisabledColor.cgColor
         self.selectionStyle = .none
 
 //        var userBalance: Int = Int(self.delegate?.getUserBalance() ?? "0")
@@ -90,10 +90,6 @@ class QRDetailPaymentTVCellAstrapay: UITableViewCell {
     }
 }
 
-extension QRDetailPaymentTVCellAstrapay{
-
-
-}
 extension QRDetailPaymentTVCellAstrapay: QRDetailPaymentTVCellAstrapayViewModelProtocol {
     func didUserBalanceIsNotEnoughCompareToAmount(){
         DispatchQueue.main.async(execute: {

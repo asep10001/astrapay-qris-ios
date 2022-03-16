@@ -20,4 +20,5 @@ struct QRTransactionOtpRequestForPathAndHeader: Encodable{
 struct QRTransactionOtpResponse: Decodable {
     var id: Int?
     var transactionNumber: String?
+    var paylaterWebUrl: String?
 }

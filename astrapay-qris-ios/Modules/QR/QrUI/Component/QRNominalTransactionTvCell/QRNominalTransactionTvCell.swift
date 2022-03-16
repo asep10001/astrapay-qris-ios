@@ -13,7 +13,7 @@ struct QRNominalTransactionCellPayload{
 }
 
 class QRNominalTransactionTvCell: UITableViewCell {
-    @IBOutlet weak var lbJumlahNominalTransaction: QRUILabelInterMedium!
+    @IBOutlet weak var lbJumlahNominalTransaction: UILabelInterMedium!
     
     static let identifier = "qRNominalTvCellIdentifier"
     static let nibName = "QRNominalTransactionTvCell"
@@ -31,7 +31,7 @@ class QRNominalTransactionTvCell: UITableViewCell {
     }
     
     func setupView(payloadView : QRNominalTransactionCellPayload){
-        lbJumlahNominalTransaction.text = payloadView.jumlahNominal.toIDRQR(withSymbol: true)
+        lbJumlahNominalTransaction.text = payloadView.jumlahNominal.toIDR(withSymbol: true)
     }
     
 }

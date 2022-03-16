@@ -20,7 +20,7 @@ class QRUILabelInterLight: UILabel {
     }
     
     private func setUILabel() {
-        font = UIFont.setupFont(size: font.pointSize, fontType: .interLight)
+        font = UIFont.font(size: font.pointSize, fontType: .interLight)
     }
 
 }

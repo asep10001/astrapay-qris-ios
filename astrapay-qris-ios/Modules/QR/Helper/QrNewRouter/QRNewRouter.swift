@@ -20,6 +20,15 @@ class QRNewRouter {
     //MARK: navigasi ke input amount setelah kita scan qr
 
 
+
+    func navigateToTenorLoanPage(model: QRPaylaterTransactionPayload){
+        if isAbleToNavigate && model != nil{
+            self.isAbleToNavigate = false
+            let vcInputAmount = QRPLMaucashQrisLoanTrxVC(qrPaylaterTransactionPayload: model)
+            self.vc?.navigationController?.pushViewController(vcInputAmount, animated:true)
+            self.isAbleToNavigate = true
+        }
+    }
     func navigateToHistoryPage(){
         DispatchQueue.main.async {
             guard let vcHist = UIStoryboard(name:MainTransactionHistoryVC.storyboardName, bundle:nil).instantiateViewController(withIdentifier: MainTransactionHistoryVC.identifierVC) as? MainTransactionHistoryVC else {
@@ -67,25 +76,25 @@ class QRNewRouter {
     
     
     //MARK: navigasi ke result payment setelah kita click bayar dan memasukkan pin
-    func navigateToResulPaymentAfterClickBayarAndInputPin(qrGetDetailTransaksiByIdDtoViewData: QRGetDetailTransaksiByIdDtoViewData){
+    func navigateToResulPaymentAfterClickBayarAndInputPin(qrGetDetailTransaksiByIdDtoViewData: QRGetDetailTransaksiByIdDtoViewData, isPaylater: Bool = false){
       
         if isAbleToNavigate && qrGetDetailTransaksiByIdDtoViewData != nil{
             self.isAbleToNavigate = false
             let qrResultPaymentViewController = QRResultPaymentViewController()
             var qrPayloadViewProperty = QRResultPaymentViewController.QRPayloadViewProperty(qrGetDetailTransaksiByIdDtoViewData: qrGetDetailTransaksiByIdDtoViewData)
-            qrResultPaymentViewController.initQRPayload(payload: qrPayloadViewProperty)
+            qrResultPaymentViewController.initQRPayload(payload: qrPayloadViewProperty, isPaylater: isPaylater)
             
             self.vc?.navigationController?.pushViewController(qrResultPaymentViewController, animated: true)
             self.isAbleToNavigate = true
         }
     }
 
-    func navigateToGetDetailTransaksi(qrGetDetailTransaksiByIdDtoViewData: QRGetDetailTransaksiByIdDtoViewData) {
+    func navigateToGetDetailTransaksi(qrGetDetailTransaksiByIdDtoViewData: QRGetDetailTransaksiByIdDtoViewData, isPaylater: Bool = false) {
         if isAbleToNavigate && qrGetDetailTransaksiByIdDtoViewData != nil{
             self.isAbleToNavigate = false
             let qrDetailTransactionViewController = QRTransactionDetailViewController()
             var qrPayloadViewProperty = QRTransactionDetailViewController.QRPayloadViewProperty(qrGetDetailTransaksiByIdDtoViewData: qrGetDetailTransaksiByIdDtoViewData)
-            qrDetailTransactionViewController.initQRPayload(payload: qrPayloadViewProperty)
+            qrDetailTransactionViewController.initQRPayload(payload: qrPayloadViewProperty, isPaylater: isPaylater)
 
             self.vc?.navigationController?.pushViewController(qrDetailTransactionViewController, animated: true)
             self.isAbleToNavigate = true

@@ -40,9 +40,9 @@ class QRDetailPaymentTVCellPLMC: UITableViewCell {
         self.selectedPaymentImage.image = UIImage(named: self.nameSelectedImage)
 
         
-        self.paymentNameLabel.font = UIFont.setupFont(size: 14, fontType: .interSemiBold)
-        self.balanceLabel.font = UIFont.setupFont(size: 14, fontType: .interRegular)
-        self.informationLabel.font = UIFont.setupFont(size: 12, fontType: .interRegular)
+        self.paymentNameLabel.font = UIFont.font(size: 14, fontType: .interSemiBold)
+        self.balanceLabel.font = UIFont.font(size: 14, fontType: .interRegular)
+        self.informationLabel.font = UIFont.font(size: 12, fontType: .interRegular)
         self.informationLabel.textColor = QRBaseColor.QRProperties.baseColor
         
 //        self.selectedPaymentImage.isHidden = true

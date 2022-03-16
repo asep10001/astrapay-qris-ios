@@ -7,6 +7,6 @@ import Foundation
 
 struct QRResendOtpDto: Codable {
     let phoneNumber: String
-    let otpID: Int
+    let otpId: Int
     let expiry: String
 }

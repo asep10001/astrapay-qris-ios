@@ -27,6 +27,7 @@ struct QRTransactionPinResponse: Decodable{
     var transactionPinToken: TokenTransactionDto?
     var otp: OtpDto?
     var needOtp: Bool?
+    var paylaterWebUrl: String?
 }
 
 
@@ -34,6 +35,8 @@ struct QRTransactionPinResponse: Decodable{
 struct PaymentDto: Codable{
     var method: String?
     var amount: Int?
+    var partner: String?
+    var tenor: String?
 }
 
 //MARK: Dalemannya response

@@ -29,8 +29,6 @@ extension UIViewController {
 
     static let QRtoleranceHeightOfDismissingViewIphoneStandard : CGFloat = 0.5
     static let QRtoleranceHeightOfDismissingViewIphone7More : CGFloat = 0.35
-
-    static var popUpBottomDelegate : PopUpBottomProtocol?
     
     enum NavigationTheme {
         case normal
@@ -103,7 +101,7 @@ extension UIViewController {
     }
 
     @objc private func panGestureActs(_ recognizer: UIPanGestureRecognizer) {
-        if let viewWithTag = self.view.viewWithTag(UIViewController.QRtagSubview) {
+        if let viewWithTag = self.view.viewWithTag(UIViewController.tagSubview) {
             let height = viewWithTag.frame.height
 
             var isUseAccsLabelNav = false
@@ -129,15 +127,15 @@ extension UIViewController {
         let translation = recognizer.translation(in: view)
         let fullView = UIScreen.main.bounds.height
 
-        if let viewWithTag = self.view.viewWithTag(UIViewController.QRtagSubview) {
+        if let viewWithTag = self.view.viewWithTag(UIViewController.tagSubview) {
 
             var toleranceHeight : CGFloat {
                 let conditionIphone7More = UIScreen.main.bounds.height > 700
 
                 if conditionIphone7More {
-                    return UIViewController.QRtoleranceHeightOfDismissingViewIphone7More
+                    return UIViewController.toleranceHeightOfDismissingViewIphone7More
                 }else {
-                    return UIViewController.QRtoleranceHeightOfDismissingViewIphoneStandard
+                    return UIViewController.toleranceHeightOfDismissingViewIphoneStandard
                 }
             }
 
@@ -157,7 +155,7 @@ extension UIViewController {
                         height: viewWithTag.frame.height)
             }else if conditionClose {
                 if isGestureEnded {
-                    UIView.animate(withDuration: UIViewController.QRbtmSheetAnimationCloseDuration,
+                    UIView.animate(withDuration: UIViewController.btmSheetAnimationCloseDuration,
                             delay: 0, options: [.allowUserInteraction],
                             animations: {
                                 viewWithTag.frame = CGRect(x: 0,
@@ -195,7 +193,7 @@ extension UIViewController {
                 }
 
                 if isGestureEnded {
-                    UIView.animate(withDuration: UIViewController.QRbtmSheetAnimationDuration,
+                    UIView.animate(withDuration: UIViewController.btmSheetAnimationDuration,
                             delay: 0,
                             options: [.allowUserInteraction],
                             animations: {
@@ -264,7 +262,7 @@ extension UIViewController {
         viewContainer.frame = UIScreen.main.bounds
         viewContainer.tag = tagPlaceholder
         viewContainer.backgroundColor = UIColor.black.withAlphaComponent(0.4)
-        viewContainer.addTapGestureRecognizerQR(action: {
+        viewContainer.addTapGestureRecognizer(action: {
             self.removePlaceHolderView()
         })
 
@@ -353,7 +351,7 @@ extension UIViewController {
 
     func dismissPopUpViewQR() {
     if let viewWithTag = self.view.viewWithTag(UIViewController.QRtagContainerPopUP) {
-            UIView.animate(withDuration: UIViewController.QRpopUpAnimationfadeDuration, animations: {
+            UIView.animate(withDuration: UIViewController.popUpAnimationfadeDuration, animations: {
                 viewWithTag.alpha = 0
             }, completion: {
                 finished in
@@ -364,7 +362,7 @@ extension UIViewController {
         }
 
         if let subViewWithTag = self.view.viewWithTag(UIViewController.QRtagSubviewPopUP) {
-            UIView.animate(withDuration: UIViewController.QRpopUpAnimationfadeDuration, animations: {
+            UIView.animate(withDuration: UIViewController.popUpAnimationfadeDuration, animations: {
                 subViewWithTag.alpha = 0
             }, completion: {
                 finished in
@@ -387,18 +385,18 @@ extension UIViewController {
 
 
     private func removePlaceHolderView(){
-        if let viewWithTag = self.view.viewWithTag(UIViewController.QRtagContainer) {
+        if let viewWithTag = self.view.viewWithTag(UIViewController.tagContainer) {
             viewWithTag.removeFromSuperview()
         }
-        if let subViewWithTag = self.view.viewWithTag(UIViewController.QRtagSubview) {
+        if let subViewWithTag = self.view.viewWithTag(UIViewController.tagSubview) {
             subViewWithTag.removeFromSuperview()
         }
     }
 
-    func stateLoadingQR(state: StateLoading) {
+    func stateLoadingQR(state: StateLoad) {
         switch state {
         case .show:
-            let loadingView = QRLoadingStateView()
+            let loadingView = LoadingStateView()
             loadingView.setupView()
             loadingView.roundCorners(value: 15)
             popUpStateLoadingQR(withView: loadingView)

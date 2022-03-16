@@ -138,6 +138,17 @@ extension QRInputAmountViewController{
         self.tipsLabel.textColor = QRBaseColor.disabledTitleColor
 
     }
+
+    private func setTimeTrxId(dateTimeAt: String) -> String {
+        let dateFormatter : DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm:ss"
+        var dateTime = ""
+        if let date = dateFormatter.date(from: dateTimeAt){
+            dateTime = dateFormatter.string(from: date)
+
+        }
+        return dateTime
+    }
 }
 
 

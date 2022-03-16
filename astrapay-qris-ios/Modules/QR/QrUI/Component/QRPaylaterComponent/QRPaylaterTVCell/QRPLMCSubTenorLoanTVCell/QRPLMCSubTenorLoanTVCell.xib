@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="QRPLMCSubTenorLoanTVCell" customModule="astrapay" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ISR-ez-DuR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZQE-A6-tIU" customClass="QRAPButtonAtom" customModule="astrapay" customModuleProvider="target">
+                                <rect key="frame" x="16" y="4" width="288" height="36"/>
+                                <viewLayoutGuide key="safeArea" id="wOU-rs-Z06"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="p9B-i1-NPC"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tenor_no_checklist" translatesAutoresizingMaskIntoConstraints="NO" id="6oY-tp-TrC">
+                                <rect key="frame" x="16" y="7" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="DHf-qJ-Tmy"/>
+                                    <constraint firstAttribute="height" constant="30" id="SJr-Hf-hTR"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q32-bZ-swn" customClass="UILabelInterRegular" customModule="astrapay" customModuleProvider="target">
+                                <rect key="frame" x="54" y="13.5" width="250" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="6oY-tp-TrC" secondAttribute="bottom" constant="7" id="0LU-x5-T3I"/>
+                            <constraint firstAttribute="trailing" secondItem="q32-bZ-swn" secondAttribute="trailing" constant="16" id="29j-qs-rsW"/>
+                            <constraint firstItem="6oY-tp-TrC" firstAttribute="top" secondItem="ISR-ez-DuR" secondAttribute="top" constant="7" id="C4m-Z2-H5i"/>
+                            <constraint firstItem="ZQE-A6-tIU" firstAttribute="top" secondItem="ISR-ez-DuR" secondAttribute="top" constant="4" id="Ork-hz-igC"/>
+                            <constraint firstItem="q32-bZ-swn" firstAttribute="centerY" secondItem="ISR-ez-DuR" secondAttribute="centerY" id="V7C-9b-9mt"/>
+                            <constraint firstAttribute="bottom" secondItem="ZQE-A6-tIU" secondAttribute="bottom" constant="4" id="hRL-1N-hic"/>
+                            <constraint firstItem="q32-bZ-swn" firstAttribute="leading" secondItem="6oY-tp-TrC" secondAttribute="trailing" constant="8" id="pDx-pr-DG0"/>
+                            <constraint firstItem="6oY-tp-TrC" firstAttribute="centerY" secondItem="ISR-ez-DuR" secondAttribute="centerY" id="uS6-f9-paY"/>
+                            <constraint firstItem="ZQE-A6-tIU" firstAttribute="leading" secondItem="ISR-ez-DuR" secondAttribute="leading" constant="16" id="uX0-oX-dVC"/>
+                            <constraint firstAttribute="trailing" secondItem="ZQE-A6-tIU" secondAttribute="trailing" constant="16" id="yEY-7L-r1e"/>
+                            <constraint firstItem="6oY-tp-TrC" firstAttribute="leading" secondItem="ISR-ez-DuR" secondAttribute="leading" constant="16" id="zE0-Gy-gEn"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="ISR-ez-DuR" secondAttribute="bottom" id="3a8-2I-A2A"/>
+                    <constraint firstItem="ISR-ez-DuR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Jsb-0R-h1A"/>
+                    <constraint firstAttribute="trailing" secondItem="ISR-ez-DuR" secondAttribute="trailing" id="dUg-3i-keL"/>
+                    <constraint firstItem="ISR-ez-DuR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kjV-uD-PYu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="butonTenorPLMC" destination="ZQE-A6-tIU" id="emy-A6-K7Z"/>
+                <outlet property="ivCheckButton" destination="6oY-tp-TrC" id="6Ah-o5-ILm"/>
+                <outlet property="lblTenorPLMC" destination="q32-bZ-swn" id="abe-qe-VFW"/>
+            </connections>
+            <point key="canvasLocation" x="24.637681159420293" y="48.883928571428569"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="q32-bZ-swn">
+            <size key="intrinsicContentSize" width="35.5" height="17"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="ic_tenor_no_checklist" width="21" height="21"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

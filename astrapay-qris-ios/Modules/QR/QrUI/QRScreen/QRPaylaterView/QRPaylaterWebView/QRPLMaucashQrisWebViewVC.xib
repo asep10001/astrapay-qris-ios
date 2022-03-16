@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRPLMaucashQrisWebViewVC" customModule="astrapay" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="tKp-zM-mwH" id="Ink-ip-DI5"/>
+                <outlet property="viewActivityIndicator" destination="xPW-m5-gQ6" id="vAN-XQ-fB5"/>
+                <outlet property="viewWebKit" destination="HUd-mc-lWW" id="8IK-Np-fvy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="tKp-zM-mwH">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RAL-kA-Sc7">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xPW-m5-gQ6" userLabel="View Activity Indicator">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                            <subviews>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Zyy-qO-RMb">
+                                    <rect key="frame" x="157" y="-50" width="100" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="ENn-hf-sPc"/>
+                                        <constraint firstAttribute="width" constant="100" id="mHx-s5-chb"/>
+                                    </constraints>
+                                    <color key="color" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </activityIndicatorView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="Zyy-qO-RMb" firstAttribute="centerX" secondItem="xPW-m5-gQ6" secondAttribute="centerX" id="aQX-hQ-cdU"/>
+                                <constraint firstItem="Zyy-qO-RMb" firstAttribute="centerY" secondItem="xPW-m5-gQ6" secondAttribute="centerY" id="mRH-je-DRu"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HUd-mc-lWW" userLabel="View Web Kit">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="HUd-mc-lWW" secondAttribute="trailing" id="4OS-fv-9UD"/>
+                        <constraint firstItem="HUd-mc-lWW" firstAttribute="top" secondItem="xPW-m5-gQ6" secondAttribute="bottom" id="7fj-Hm-G6u"/>
+                        <constraint firstItem="HUd-mc-lWW" firstAttribute="centerX" secondItem="RAL-kA-Sc7" secondAttribute="centerX" id="9kf-gL-htH"/>
+                        <constraint firstAttribute="bottom" secondItem="HUd-mc-lWW" secondAttribute="bottom" id="GJe-mR-SKh"/>
+                        <constraint firstItem="HUd-mc-lWW" firstAttribute="leading" secondItem="RAL-kA-Sc7" secondAttribute="leading" id="Oh2-N6-N6W"/>
+                        <constraint firstItem="xPW-m5-gQ6" firstAttribute="top" secondItem="RAL-kA-Sc7" secondAttribute="top" id="YTx-6w-14m"/>
+                        <constraint firstItem="xPW-m5-gQ6" firstAttribute="leading" secondItem="RAL-kA-Sc7" secondAttribute="leading" id="lt5-1X-Y3r"/>
+                        <constraint firstAttribute="trailing" secondItem="xPW-m5-gQ6" secondAttribute="trailing" id="mBp-ce-OT1"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="ELB-oC-8dK"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ELB-oC-8dK" firstAttribute="bottom" secondItem="RAL-kA-Sc7" secondAttribute="bottom" id="ELG-mz-mSK"/>
+                <constraint firstItem="ELB-oC-8dK" firstAttribute="trailing" secondItem="RAL-kA-Sc7" secondAttribute="trailing" id="Rn8-4L-MAV"/>
+                <constraint firstItem="RAL-kA-Sc7" firstAttribute="top" secondItem="ELB-oC-8dK" secondAttribute="top" id="VWy-Em-Qq4"/>
+                <constraint firstItem="RAL-kA-Sc7" firstAttribute="leading" secondItem="tKp-zM-mwH" secondAttribute="leading" id="pxZ-St-EaU"/>
+            </constraints>
+            <point key="canvasLocation" x="-17" y="131"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

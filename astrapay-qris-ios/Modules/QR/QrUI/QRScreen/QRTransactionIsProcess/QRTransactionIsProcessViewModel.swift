@@ -13,7 +13,7 @@ protocol QRTransactionIsProcessViewModelProtocol{
 struct QRTransactionIsProcessViewModel{
 
     var delegate: QRTransactionIsProcessViewModelProtocol?
-    func navigateToHome(){
+    func navigateToHistoryListPage(){
         self.delegate?.goToHome()
         self.delegate?.goToHistoryPage()
     }

@@ -7,6 +7,9 @@ import Foundation
 
 
 public struct QRInquiryDtoViewData: Decodable {
+    init(){
+
+    }
     init(qrInquiryResponse: QRInquiryResponse?){
         self.id = qrInquiryResponse?.id
         self.transactionToken = qrInquiryResponse?.transactionToken

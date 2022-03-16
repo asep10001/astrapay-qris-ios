@@ -9,10 +9,7 @@
 import Foundation
 import UIKit
 
-enum ShadowPosition {
-    case Top
-    case Bottom
-}
+
 //MARK: SET TAP GESTURE
 extension UIView {
     

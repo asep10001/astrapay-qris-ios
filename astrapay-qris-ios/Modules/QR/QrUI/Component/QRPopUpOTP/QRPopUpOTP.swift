@@ -89,7 +89,7 @@ class QRPopUpOTP: UIView {
     
     func setupView(){
         DispatchQueue.main.async(execute: {
-            self.containerView.roundedTopMessageQR(isFullScreen: true)
+            self.containerView.roundedTopMessage(isFullScreen: true)
         })
             
         self.setupTextfield()

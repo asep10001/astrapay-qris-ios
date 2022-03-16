@@ -13,8 +13,13 @@ public protocol QRClientProtocol{
 public struct QRClient {
 
 
+
     var userId = "1999"
     var urlBaseQrisService: String = ""
+
+    struct ClientProperty{
+        static let AUTH_TOKEN = Prefs.getAuthNewAccessToken()
+    }
 
     init(){
         switch (BuildModeEndpoint.buildMode){
@@ -32,6 +37,9 @@ public struct QRClient {
 
     }
 
+    let headerForMobileGateWay = ["Authorization":"Bearer \(ClientProperty.AUTH_TOKEN)",
+                                  "Content-Type": "application/json"]
+
 
 //    let urlBaseQrisService = "https://qris-sit-api.astrapay.com/qris-service"
 //    let urlBaseQrisService = "http://bc3b-180-244-166-129.ngrok.io/qris-service"
@@ -40,8 +48,8 @@ public struct QRClient {
 
     public func constructHeaderGeneral() -> HTTPHeaders {
         let header: HTTPHeaders = [
-            "X-Application-Token": "\(Prefs.getUser()!.token)" , //hardcode aja dulu nanti
-            "Authorization": "Bearer \(Prefs.getAuthNewAccessToken())",
+            "X-Application-Token": "\(Prefs.getUser()!.token)",
+            "Authorization": "Bearer \(ClientProperty.AUTH_TOKEN)",
             "Content-Type": "application/json"
         ]
         return header
@@ -49,15 +57,13 @@ public struct QRClient {
 
     public func constructHeaderForInquiryApi() -> HTTPHeaders {
         let header: HTTPHeaders = [
-            "X-Application-Token": "\(Prefs.getUser()!.accessToken)" , //hardcode aja dulu nanti
-            "X-SDK-Token": "XTOKEN",
-            "Authorization": "Bearer \(Prefs.getAuthNewAccessToken())",
-//            "Authorization": "Bearer sadsadaa",
-
+            QRConstant.HEADER_X_APPLICATION_TOKEN: "\(Prefs.getUser()!.accessToken)" , //hardcode aja dulu nanti
+            QRConstant.HEADER_X_SDK_TOKEN: QRConstant.XTOKEN,
+            "Authorization": "Bearer \(ClientProperty.AUTH_TOKEN)",
             "Content-Type": "application/qris",
 
             //ini sebenernya user id udah ga perlu, cuma buat nge test aja kalo gateway lagi ga bisa
-            "x-user-id":self.userId
+            QRConstant.HEADER_USER_ID:self.userId
         ]
         return header
     }
@@ -75,27 +81,25 @@ public struct QRClient {
 
             switch response.result{
             case .success(let value):
-                print("Ini adalah \(try? response.result.get())")
+
 
                 var responseResult = try? response.result.get()
-
                 var resultDictionary = responseResult as! Dictionary<String, Any>
-
-
-                print(resultDictionary.jsonStringRepresentation)
                 var dictString = resultDictionary.jsonStringRepresentation
 
 
                 if let dictString = dictString{
                     var responseJson = dictString.data(using: .utf8)
                     let responseSuccessPostOtp = try? JSONDecoder().decode(QRInquiryResponse.self, from: responseJson!)
+
+                    // ini jika sukses
                     if let responseSuccessPostOtp = responseSuccessPostOtp{
                         completion(QRResponse(status: true, message: "OK", data:responseSuccessPostOtp, errorData: nil))
                         print("success resendOtp: \(responseSuccessPostOtp)")
                     }
 
 
-
+                    // ini untuk error
                     let responseErrorPostOtp = try? JSONDecoder().decode(AstrapayErrorResponse.self, from: responseJson!)
                     print("Error resendOtp: \(responseErrorPostOtp)")
                     if let responseErrorPostOtp = responseErrorPostOtp{
@@ -141,12 +145,13 @@ extension QRClient{
     //MARK: Transaction pin client
     func postToTransactionPin(request: QRTransactionPinRequest, qrInquiryDtoViewData: QRInquiryDtoViewData, completion: @escaping(_:QRResponse<QRTransactionPinResponse>) -> Void) -> DataRequest {
         var header = self.constructHeaderGeneral()
-        header["X-Transaction-Token"] = qrInquiryDtoViewData.transactionToken
-        header["X-SDK-Token"] = "XTOKEN"
-
-        header["x-user-id"] = self.userId
+        header[QRConstant.HEADER_X_TRANSACTION_TOKEN] = qrInquiryDtoViewData.transactionToken
+        header[QRConstant.HEADER_X_SDK_TOKEN] = QRConstant.XTOKEN
+        header[QRConstant.HEADER_USER_ID] = self.userId
         let transactionPinUrl: String = "\(urlBaseQrisService)/transactions"
 
+
+        //this how to make request from dto to become param/dictionay
         var requestToDictionary : [String: Any]? {
             guard let data = try? JSONEncoder().encode(request) else { return nil }
             guard let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] else { return nil }
@@ -154,30 +159,24 @@ extension QRClient{
         }
 
         print(requestToDictionary)
-        guard let requestToDictionary = requestToDictionary else {
-            fatalError("Request to dictionary fatal error")
-        }
+         let requestBody = requestToDictionary ?? [:]
 
 
-        let request = AF.request(transactionPinUrl, method: .post, parameters: requestToDictionary, encoding: JSONEncoding.default, headers: header){$0.timeoutInterval = 60}
+
+        let request = AF.request(transactionPinUrl, method: .post, parameters: requestBody, encoding: JSONEncoding.default, headers: header){$0.timeoutInterval = 60}
                 .responseJSON {
                 response in
 
                     debugPrint(response)
 
-
                     switch response.result {
                     case .success (let value):
 
-                        print("Ini adalah \(try? response.result.get())")
-
                         var responseResult = try? response.result.get()
-
                         var resultDictionary = responseResult as! Dictionary<String, Any>
-
-
                         print(resultDictionary.jsonStringRepresentation)
                         var dictString = resultDictionary.jsonStringRepresentation
+
 
                         if let dictString = dictString{
                             var responseJson = dictString.data(using: .utf8)
@@ -218,8 +217,6 @@ extension QRClient{
 
                     }
             }
-
-        
         return request
     }
 
@@ -228,39 +225,25 @@ extension QRClient{
     //MARK: Transaksi otp client
     func postToTransactionOtpAfterInputPin(request: QRTransactionOtpRequest, requestForPathAndHeader: QRTransactionOtpRequestForPathAndHeader, completion: @escaping(_:QRResponse<QRTransactionOtpResponse>) -> Void) -> DataRequest {
         var header = self.constructHeaderGeneral()
-        header["X-SDK-Token"] = "XTOKEN"
-        header["x-user-id"] = self.userId
-        header["X-Transaction-Token"] = requestForPathAndHeader.transactionToken ?? "-"
-
-
+        header[QRConstant.HEADER_X_SDK_TOKEN] = "XTOKEN"
+        header[QRConstant.HEADER_USER_ID] = self.userId
+        header[QRConstant.HEADER_X_TRANSACTION_TOKEN] = requestForPathAndHeader.transactionToken ?? "-"
         let transactionUrlOtp = "\(urlBaseQrisService)/transactions/otps/\(requestForPathAndHeader.otpId ?? "-")"
-
         var requestToDictionary : [String: Any]? {
             guard let data = try? JSONEncoder().encode(request) else { return nil }
             guard let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] else { return nil }
             return json
         }
-
         print(requestToDictionary)
-        guard let requestToDictionary = requestToDictionary else {
-            fatalError("Request to dictionary fatal error")
-        }
-
-        let request = AF.request(transactionUrlOtp, method: .post, parameters: requestToDictionary, encoding: JSONEncoding.default, headers: header){$0.timeoutInterval = 60}
+        let requestBody = requestToDictionary ?? [:]
+        let request = AF.request(transactionUrlOtp, method: .post, parameters: requestBody, encoding: JSONEncoding.default, headers: header){$0.timeoutInterval = 60}
         .responseJSON { response in
-
             debugPrint(response)
-
-
             switch response.result{
             case .success(let value):
-                print("Ini adalah \(try? response.result.get())")
 
                 var responseResult = try? response.result.get()
-
                 var resultDictionary = responseResult as! Dictionary<String, Any>
-
-
                 print(resultDictionary.jsonStringRepresentation)
                 var dictString = resultDictionary.jsonStringRepresentation
 
@@ -274,22 +257,12 @@ extension QRClient{
                             print("success resendOtp: \(responseSuccessPostOtp)")
                         }
                     }
-
-
-
                     let responseErrorPostOtp = try? JSONDecoder().decode(AstrapayErrorResponse.self, from: responseJson!)
                     print("Error resendOtp: \(responseErrorPostOtp)")
                     if let responseErrorPostOtp = responseErrorPostOtp{
                         completion(QRResponse(status: false, message: response.error?.errorDescription ?? "-", data:nil, errorData: responseErrorPostOtp))
                     }
             }
-
-
-
-//                let responseErrorPin =  try? JSONDecoder().decode(QRTransactionPinResponse.self, from: responseJson!)
-
-//                print(responseErrorPin)
-
             case .failure(let error):
                 var errorCode = error._code
                 if errorCode == QRErrorConstant.TIMEOUT_ERROR_CODE {
@@ -309,14 +282,7 @@ extension QRClient{
                     break
                 }
             }
-//            switch response.result {
-//            case .failure(let error):
-//                completion(QRResponse(status: false, message: error.localizedDescription, data: nil))
-//            case .success (let data):
-//                completion(QRResponse(status: true, message: "OK", data: data))
-//            }
         }
-
         return request
     }
 }
@@ -324,10 +290,11 @@ extension QRClient{
 //MARK: Get transaction detail by id
 extension QRClient{
     func getDetailTransaksiById(requestIdTransaksi: String, completion: @escaping(_:QRResponse<QRGetDetailTransaksiByIdResponse>) -> Void) -> DataRequest {
-        let getDetailUrl: String = "\(urlBaseQrisService)/me/transactions/\(requestIdTransaksi)"
 
+
+        let getDetailUrl: String = "\(urlBaseQrisService)/me/transactions/\(requestIdTransaksi)"
         var headers: HTTPHeaders = self.constructHeaderGeneral()
-        headers["x-user-id"] = self.userId
+        headers[QRConstant.HEADER_USER_ID] = self.userId
 
         let request = AF.request(getDetailUrl, method: .get, parameters: nil, encoding: URLEncoding.default, headers: headers)
         .responseDecodable(of: QRGetDetailTransaksiByIdResponse.self) {
@@ -337,25 +304,42 @@ extension QRClient{
 
             switch response.result {
             case .failure(let error):
-                completion(QRResponse(status: false, message: error.localizedDescription, data: nil))
+                var errorCode = error._code
+                if errorCode == QRErrorConstant.TIMEOUT_ERROR_CODE {
+                    completion(QRResponse(status: false, message: response.error?.errorDescription ?? "-", data: nil, errorData: nil, isTimeOut: true))
+                    break
+                }
+
+                switch response.response?.statusCode {
+                case 401:
+                    completion(QRResponse(status: false, message: response.error?.errorDescription ?? "-", data:nil, errorData: nil, isTimeOut: false,responseCode: response.response?.statusCode))
+                    break
+                case .none:
+                    completion(QRResponse(status: false, message: "-", data: nil, isTimeOut: false, responseCode: nil))
+                    break
+                case .some(_):
+                    completion(QRResponse(status: false, message: "-", data: nil, isTimeOut: false, responseCode: nil))
+                    break
+                }
             case .success(let data):
                 completion(QRResponse(status: true, message: "OK", data: data))
+                break
             }
         }
         return request
     }
 
     func getDetailTransaksiByToken(requestTokenTransaksi: String, completion: @escaping(_:QRResponse<QRGetDetailTransaksiByIdResponseDto>) -> Void) -> DataRequest {
-        let getDetailUrl: String = "\(urlBaseQrisService)/me/transactions?token=\(requestTokenTransaksi)"
 
+        let getDetailUrl: String = "\(urlBaseQrisService)/me/transactions?token=\(requestTokenTransaksi)"
         var headers: HTTPHeaders = self.constructHeaderGeneral()
-        headers["x-user-id"] = self.userId
+        headers[QRConstant.HEADER_USER_ID] = self.userId
+
+
         let request = AF.request(getDetailUrl, method: .get, parameters: nil, encoding: URLEncoding.default, headers: headers)
         {$0.timeoutInterval = 60}.responseJSON {
                     response in
-
                     debugPrint(response)
-
                     switch response.result{
                     case .success(let value):
                         print("Ini adalah \(try? response.result.get())")
@@ -375,6 +359,7 @@ extension QRClient{
                             if let responseSuccessPostOtp = responseSuccessPostOtp{
                                 completion(QRResponse(status: true, message: "OK", data:responseSuccessPostOtp, errorData: nil))
                                     print("success resendOtp: \(responseSuccessPostOtp)")
+                                break
                             }
 
 
@@ -383,6 +368,7 @@ extension QRClient{
                             print("Error resendOtp: \(responseErrorPostOtp)")
                             if let responseErrorPostOtp = responseErrorPostOtp{
                                 completion(QRResponse(status: false, message: response.error?.errorDescription ?? "-", data:nil, errorData: responseErrorPostOtp))
+                                break
                             }
                         }
 
@@ -396,6 +382,19 @@ extension QRClient{
                         var errorCode = error._code
                         if errorCode == QRErrorConstant.TIMEOUT_ERROR_CODE {
                             completion(QRResponse(status: false, message: response.error?.errorDescription ?? "-", data: nil, errorData: nil, isTimeOut: true))
+                            break
+                        }
+
+                        switch response.response?.statusCode {
+                        case 401:
+                            completion(QRResponse(status: false, message: response.error?.errorDescription ?? "-", data:nil, errorData: nil, isTimeOut: false,responseCode: response.response?.statusCode))
+                            break
+                        case .none:
+                            completion(QRResponse(status: false, message: "-", data: nil, isTimeOut: false, responseCode: nil))
+                            break
+                        case .some(_):
+                            completion(QRResponse(status: false, message: "-", data: nil, isTimeOut: false, responseCode: nil))
+                            break
                         }
                     }
                 }
@@ -407,11 +406,11 @@ extension QRClient{
 //MARK: Resend Otp
 extension QRClient{
     func getResendOtp(requestIdInquiry: String, completion: @escaping(_:QRResponse<QRResendOtpDto>) -> Void) -> DataRequest {
+
+
         let getResendOtpUrl: String = "\(urlBaseQrisService)/inquiries/\(requestIdInquiry)/otps"
-
         var headers: HTTPHeaders = self.constructHeaderGeneral()
-        headers["X-SDK-Token"] = "XTOKEN"
-
+        headers[QRConstant.HEADER_X_SDK_TOKEN] = QRConstant.XTOKEN
 
 
         let request = AF.request(getResendOtpUrl, method: .get, parameters: nil, encoding: URLEncoding.default, headers: headers)
@@ -419,44 +418,84 @@ extension QRClient{
                     response in
 
                     debugPrint(response)
-                    print("Ini adalah \(try! response.result.get())")
 
-                    var responseResult = try! response.result.get()
-
-                    var resultDictionary = responseResult as! Dictionary<String, Any>
+                    switch response.result{
+                    case .success:
 
 
-                    print(resultDictionary.jsonStringRepresentation)
-                    var dictString = resultDictionary.jsonStringRepresentation
+                        var responseResult = try! response.result.get()
+                        var resultDictionary = responseResult as! Dictionary<String, Any>
+                        print(resultDictionary.jsonStringRepresentation)
+                        var dictString = resultDictionary.jsonStringRepresentation
 
 
-                    if let dictString = dictString{
-                        var responseJson = dictString.data(using: .utf8)
-                        let responseSuccessResendOtp = try? JSONDecoder().decode(QRResendOtpDto.self, from: responseJson!)
-                        print("success resendOtp: \(responseSuccessResendOtp)")
-                        let responseErrorResendOtp = try? JSONDecoder().decode(AstrapayErrorResponse.self, from: responseJson!)
-                        print("Error resendOtp: \(responseErrorResendOtp)")
+                        if let dictString = dictString{
+                            var responseJson = dictString.data(using: .utf8)
+                            let responseSuccessResendOtp = try? JSONDecoder().decode(QRResendOtpDto.self, from: responseJson!)
+                            if let responseSuccessResendOtp = responseSuccessResendOtp{
+                                completion(QRResponse(status: true, message: "OK", data:responseSuccessResendOtp, errorData: nil))
+                                print("success resendOtp: \(responseSuccessResendOtp)")
+                                return
+                            }
 
-                        if let responseSuccessResendOtp = responseSuccessResendOtp{
-                            completion(QRResponse(status: true, message: "OK", data:responseSuccessResendOtp, errorData: nil))
+                            let responseErrorResendOtp = try? JSONDecoder().decode(AstrapayErrorResponse.self, from: responseJson!)
+                            print("Error resendOtp: \(responseErrorResendOtp)")
+                            if let responseErrorResendOtp = responseErrorResendOtp{
+                                completion(QRResponse(status: false, message: response.error?.errorDescription ?? "-", data:nil, errorData: responseErrorResendOtp))
+                                return
+                            }
+
+                        }
+                    case .failure(let error):
+                        var errorCode = error._code
+                        if errorCode == QRErrorConstant.TIMEOUT_ERROR_CODE {
+                            completion(QRResponse(status: false, message: response.error?.errorDescription ?? "-", data: nil, errorData: nil, isTimeOut: true))
+                            break
                         }
 
-                        if let responseErrorResendOtp = responseErrorResendOtp{
-                            completion(QRResponse(status: false, message: response.error?.errorDescription ?? "-", data:nil, errorData: responseErrorResendOtp))
+                        switch response.response?.statusCode {
+                        case 401:
+                            completion(QRResponse(status: false, message: response.error?.errorDescription ?? "-", data:nil, errorData: nil, isTimeOut: false,responseCode: response.response?.statusCode))
+                            break
+                        case .none:
+                            completion(QRResponse(status: false, message: "-", data: nil, isTimeOut: false, responseCode: nil))
+                            break
+                        case .some(_):
+                            completion(QRResponse(status: false, message: "-", data: nil, isTimeOut: false, responseCode: nil))
+                            break
                         }
-
-//                let responseErrorPin =  try? JSONDecoder().decode(QRTransactionPinResponse.self, from: responseJson!)
-
-//                print(responseErrorPin)
-
                     }
-//                    switch response.result {
-//                    case .failure(let error):
-//                        completion(QRResponse(status: false, message: error.localizedDescription, data: nil))
-//                    case .success(let data):
-//                        completion(QRResponse(status: true, message: "OK", data: data))
-//                    }
                 }
+        return request
+    }
+}
+
+//MARK: patch transaction paylater
+extension QRClient {
+    func patchQrisTrxPLMC(id: Int, completion:@escaping(QRResponse<PatchTrxQrisPLMC>) -> Void) -> DataRequest {
+        var urlPatchTrxQrisPLMC : String = "\(urlBaseQrisService)/paylater-service/transactions/\(id)/paylater"
+
+        let request = AF.request(urlPatchTrxQrisPLMC,method: .patch, parameters: nil, encoding: URLEncoding.default, headers: self.constructHeaderGeneral())
+        .responseDecodable(of: PatchTrxQrisPLMC.self, completionHandler: {
+            response in
+            debugPrint(response)
+
+            switch response.result {
+            case .failure(let error):
+                switch error._code{
+                case QRErrorConstant.TIMEOUT_ERROR_CODE:
+                    completion(QRResponse(status: false, message: error.localizedDescription, data: nil, errorData: nil, isTimeOut: true, responseCode: response.response?.statusCode))
+                    break
+                default:
+                    completion(QRResponse(status: false, message: error.localizedDescription, data: nil, errorData: nil, isTimeOut: false, responseCode: response.response?.statusCode))
+                    break
+
+                }
+            case .success(let data):
+                completion(QRResponse(status: true, message: "OK", data: data))
+            }
+
+        })
         return request
     }
 }

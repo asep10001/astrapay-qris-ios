@@ -41,9 +41,9 @@ class QRAPButtonAtom: UIView {
             case .nude:
                 return UIColor.clear
             case .nudeWhite:
-                return UIColor(hexString: "#ffffff")
+                return UIColor(string: "#ffffff")
             case .nudeNoBorder :
-                return UIColor(hexString: "#ffffff")
+                return UIColor(string: "#ffffff")
             case .disabled:
                 return QRBaseColor.QRProperties.baseDisabledColor//UIColor(string: "#e5e5e5")
             case .clear:
@@ -72,7 +72,7 @@ class QRAPButtonAtom: UIView {
         var titleColor: UIColor {
             switch self {
             case .filled:
-                return UIColor(hexString: "#ffffff")
+                return UIColor(string: "#ffffff")
             case .nude:
                 return  QRBaseColor.QRProperties.baseColor//UIColor(string: "#0376bf")
             case .nudeWhite:
@@ -84,7 +84,7 @@ class QRAPButtonAtom: UIView {
             case .clear:
                 return QRBaseColor.QRProperties.baseColor//UIColor(string: "#0376bf")
             case .hightlight:
-                return UIColor(hexString: "#ffffff")
+                return UIColor(string: "#ffffff")
             case .filledYellow:
                 return QRBaseColor.black
             case .nudeOrange:
@@ -119,7 +119,7 @@ class QRAPButtonAtom: UIView {
             case .clear:
                 return UIColor.clear
             case .hightlight:
-                return UIColor(hexString: "#ffffff")
+                return UIColor(string: "#ffffff")
             case .filledYellow:
                 return QRBaseColor.QRProperties.dandelion
             case .nudeOrange:

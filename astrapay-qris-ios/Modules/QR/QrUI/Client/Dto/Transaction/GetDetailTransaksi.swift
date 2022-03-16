@@ -22,12 +22,12 @@ struct QRGetDetailTransaksiByIdResponseDto: Codable {
 struct QRGetDetailTransaksiByIdResponse: Codable {
         var id: Int?
         var refMerchantCategoryCode, transactionNumber: String?
-        var basicPrice, serviceCharge: Int?
+        var basicPrice, serviceCharge: Double?
         var includedServiceCharge: Double?
-        var convenienceFee, tax, includedTaxPrice, farePrice: Int?
-        var margin, tip, tipPercentage: Int?
+        var convenienceFee, tax, includedTaxPrice, farePrice: Double?
+        var margin, tip, tipPercentage: Double?
         var tipType: String?
-        var totalPrice: Int?
+        var totalPrice: Double?
         var status, qrIssuer, merchantName, merchantCity: String?
         var merchantPostalCode, merchantCountryCode, additionalDataValue, terminalLabel: String?
         var merchantQrID: Int?
@@ -43,7 +43,7 @@ struct QRGetDetailTransaksiByIdResponse: Codable {
         var refundStatus, postedAt, refTransactionAt: String?
         var transactionHasAcquirer: [TransactionHasAcquirer]?
         var transactionIssuer: TransactionIssuer?
-        var maximumAmount: Int?
+        var maximumAmount: Double?
         var createdAt, updatedAt: String?
 
 }

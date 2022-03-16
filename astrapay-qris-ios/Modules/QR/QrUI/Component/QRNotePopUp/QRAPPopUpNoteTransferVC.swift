@@ -16,10 +16,10 @@ class QRAPPopUpNoteTransferVC: UIViewController {
     @IBOutlet weak var vwSuperContainer: UIView!
     @IBOutlet weak var vwSwipe: UIView!
     @IBOutlet weak var tfInputNote: UITextField!
-    @IBOutlet weak var vwButton: QRAPButtonAtom!
+    @IBOutlet weak var vwButton: APButtonAtom!
     @IBOutlet weak var constantHeightButton: NSLayoutConstraint!
     
-    @IBOutlet weak var titleLabel: QRUILabelInterRegular!
+    @IBOutlet weak var titleLabel: UILabelInterRegular!
     
     var noteTransfer: String = ""
     

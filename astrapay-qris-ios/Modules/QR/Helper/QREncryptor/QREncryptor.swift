@@ -16,28 +16,28 @@
 //
 //
 //class Encryptor {
-//
+//    
 //    let cache = container.resolve(CacheAuthentication.self)!
-//
+//    
 //    var key : Data = ".bersamaqris987.".data(using: .utf8)!
 //    static let arr : [UInt8] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 //    var iv : Data = Data(Encryptor.arr)
 //    var salt : Data = "!behelpfulpeople!".data(using: .utf8)!
-//
+//    
 //    struct QRISEncryptorPayload{
 //        static let key = ".bersamaqris987."
 //        static let salt = "!behelpfulpeople!"
 //    }
-//
+//    
 //    struct CommonEncryptorPayload {
 //        static let key = "Astrapay150!"
 //    }
-//
+//    
 //    init(_ payload : EncryptorPayload) {
 //        self.key = payload.key.data(using: .utf8)!
 //        self.salt = payload.salt.data(using: .utf8)!
 //    }
-//
+//    
 //    func encrypt(_
 //        params: String) -> String {
 //        var returnValue = ""
@@ -55,7 +55,7 @@
 //            return "Encrypt Error"
 //        }
 //    }
-//
+//    
 //    func decrypt(_ params : String) -> String {
 //        var returnValue = ""
 //        do {
@@ -72,27 +72,27 @@
 //            return "Decrypt Error"
 //        }
 //    }
-//
+//    
 //    static func encryptPassword(phoneNumber: String, password: String) -> String {
 //        let encryptor = Encryptor(EncryptorPayload(
 //                        key: Encryptor.CommonEncryptorPayload.key,
 //                        salt: "\(phoneNumber)-\(DateFormatter.generateCurrentDate(.yyyyMMddStrip))"))
 //        return encryptor.encrypt(password)
 //    }
-//
-//
-//
+//    
+//    
+//    
 //    //MARK: BOTTOM WILL NOT USED
 //    func encryptRequest(keys : String,
 //                        iv: String = "0000000000000000",
 //                        salt: String,
 //                        params: String) -> String {
 //        var returnValue = ""
-//
+//        
 //        self.key = keys.data(using: .utf8)!
 //        self.iv = iv.data(using: .utf8)!
 //        self.salt = salt.data(using: .utf8)!
-//
+//        
 //        do {
 //            var digest = "".data(using: .utf8)!
 //            let resps = Data(base64Encoded: params, options: .ignoreUnknownCharacters)!
@@ -108,14 +108,14 @@
 //            return "Decrypt Error"
 //        }
 //    }
-//
-//
+//   
+//    
 //    func decryptQRISTranslate(_ params : String) -> String{
 //        var returnValue = ""
-//
+//        
 //        self.key = QRISEncryptorPayload.key.data(using: .utf8)!
 //        self.salt = QRISEncryptorPayload.salt.data(using: .utf8)!
-//
+//        
 //        do {
 //            print(params)
 //            var digest = Data()//"".data(using: .utf8)!
@@ -135,7 +135,7 @@
 //            return "Decrypt Error"
 //        }
 //    }
-//
+//    
 //    func encryptQRISRequest(_ params : String)-> String{
 //        var returnValue = ""
 //        self.key = QRISEncryptorPayload.key.data(using: .utf8)!
@@ -147,7 +147,7 @@
 //            let key = try AES256.createKey(key: self.key, salt: salt)
 //            let aes = try AES256(key: key, iv: iv)
 //            let encrypted = try aes.encrypt(digest)
-//
+//            
 //            returnValue = encrypted.base64EncodedString()
 //            return returnValue
 //        } catch {
@@ -155,7 +155,7 @@
 //            return "Encrypt Error"
 //        }
 //    }
-//
+//    
 //}
 //
 //extension Encryptor {
@@ -168,7 +168,7 @@
 //        let encryptedData = encryptor.encrypt(stringRequest)
 //        return encryptedData
 //    }
-//
+//    
 //    func encryptRequestData<E: Encodable>(body: E?) -> EncryptedModelRequest {
 //        var model = EncryptedModelRequest(account: "", data: "")
 //        do {

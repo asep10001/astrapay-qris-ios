@@ -9,8 +9,9 @@
 import UIKit
 import Lottie
 
-protocol QRTransactionIsProcessProtocol{
-    func didBackToHomeFromHistory()
+protocol QRTransactionIsProcessSdkProtocol {
+    func didGoBackToHome()
+    func didGoToHistoryList()
 }
 
 struct QRTransactionIsProcessPayload {
@@ -35,11 +36,11 @@ class QRTransactionIsProcessViewController: UIViewController, UIGestureRecognize
     @IBOutlet weak var additionalMerchant: UILabel!
     @IBOutlet weak var additionalDate: UILabel!
     
-    @IBOutlet weak var lottieAnimationView: QRLottieAnimationView!
+    @IBOutlet weak var lottieAnimationView: LottieAnimationView!
     
 
 
-    var delegate: QRTransactionIsProcessProtocol?
+    var delegateSdk: QRTransactionIsProcessSdkProtocol?
     var qrNewRouter: QRNewRouter?
 
     var qrTransactionIsProcessPayload: QRTransactionIsProcessPayload?
@@ -55,9 +56,7 @@ class QRTransactionIsProcessViewController: UIViewController, UIGestureRecognize
         super.init(coder: aDecoder)
     }
 
-    
-//    let vm = Global.locator.transaction
-//    let api = Global.locator
+
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: animated)
@@ -95,8 +94,6 @@ class QRTransactionIsProcessViewController: UIViewController, UIGestureRecognize
         self.bottomButton.setAtomic(type: .nude, title: self.qrTransactionIsProcessPayload?.titleBottomButtom ?? "-")
         self.additionalInfoView.isHidden = true
     }
-
-    
 }
 
 
@@ -106,25 +103,29 @@ extension QRTransactionIsProcessViewController {
 
     func setupActionButtom(){
         //Kembali ke beranda
-        self.topButton.coreButton.addTapGestureRecognizerQR {
+        self.topButton.coreButton.addTapGestureRecognizer {
+
+
             //MARK: perlu dibikin delegate
+            //MARK: Delegate
+            self.delegateSdk?.didGoBackToHome()
             AppState.switchToHome(completion: nil)
         }
 
 
         //Lihat riwayat
-        self.bottomButton.coreButton.addTapGestureRecognizerQR {
+        self.bottomButton.coreButton.addTapGestureRecognizer {
+
+
             //ini harusnya ke riwayat history by delegate maupun secara langsung
-
-            self.viewModel.navigateToHome()
-
-
-
+            //MARK: Delegate
+            self.delegateSdk?.didGoToHistoryList()
+            self.viewModel.navigateToHistoryListPage()
         }
 
     }
     func buttonSetupForTransactionFailed(){
-        self.topButton.coreButton.addTapGestureRecognizerQR {
+        self.topButton.coreButton.addTapGestureRecognizer {
             DispatchQueue.main.async {
                 for controller in self.navigationController!.viewControllers as Array {
                     if controller.isKind(of: QRViewController.self) {
@@ -134,9 +135,11 @@ extension QRTransactionIsProcessViewController {
                 }
             }
         }
-        self.bottomButton.coreButton.addTapGestureRecognizerQR {
+        self.bottomButton.coreButton.addTapGestureRecognizer {
 
             //MARK: Perlu dibikin delegate
+            //MARK: Delegate
+            self.delegateSdk?.didGoBackToHome()
             AppState.switchToHome(completion: nil)
         }
     }
@@ -146,7 +149,7 @@ extension QRTransactionIsProcessViewController: QRTransactionIsProcessViewModelP
     func goToHome(){
         DispatchQueue.main.async {
             for controller in self.navigationController!.viewControllers as Array {
-                if controller.isKind(of: HomeVC.self) {
+                if controller.isKind(of: MainHomeVC.self) {
                     self.navigationController!.popToViewController(controller, animated: true)
                     break
                 }
@@ -155,6 +158,7 @@ extension QRTransactionIsProcessViewController: QRTransactionIsProcessViewModelP
     }
 
     func goToHistoryPage(){
+        self.delegateSdk?.didGoToHistoryList()
         self.qrNewRouter?.navigateToHistoryPage()
 
     }
